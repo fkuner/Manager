@@ -8,11 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
-    <!--
-    <StackPanel>
-        <TextBlock HorizontalAlignment="Center" Text="The following is the part of Todo"/>
-    </StackPanel>
-    -->
+    
     
     <Grid>
         <CommandBar Background="Transparent" IsOpen="False" DefaultLabelPosition="Right">
