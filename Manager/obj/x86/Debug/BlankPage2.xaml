@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="Manager.BlankPage2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Manager"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    
+    <!--
+    <StackPanel>
+        <TextBlock HorizontalAlignment="Center" Text="The following is the part of Todo"/>
+    </StackPanel>
+    -->
+    
+    <Grid>
+        <CommandBar Background="Transparent" IsOpen="False" DefaultLabelPosition="Right">
+            <AppBarButton Icon="Add" Label="Add"/>
+            <AppBarButton Icon="ReShare" Label="Share"/>
+            <AppBarButton Icon="Edit" Label="Edit"/>
+            <!--
+                <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="Setting" Label="Settings"/>
+            </CommandBar.SecondaryCommands>
+            -->
+          
+        </CommandBar>
+    </Grid>
+</Page>
+
