@@ -54,7 +54,7 @@ namespace Manager
                         break;
 
                     case "BlankPage3":
-                        PageFrame.Navigate(typeof(BlankPage1));
+                        PageFrame.Navigate(typeof(BlankPage3));
                         break;
 
                  
