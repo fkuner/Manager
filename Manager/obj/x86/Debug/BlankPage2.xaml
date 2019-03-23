@@ -8,24 +8,22 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
-    <!--
-    <StackPanel>
-        <TextBlock HorizontalAlignment="Center" Text="The following is the part of Todo"/>
-    </StackPanel>
-    -->
+    
     
     <Grid>
         <CommandBar Background="Transparent" IsOpen="False" DefaultLabelPosition="Right">
             <AppBarButton Icon="Add" Label="Add"/>
             <AppBarButton Icon="ReShare" Label="Share"/>
             <AppBarButton Icon="Edit" Label="Edit"/>
+            <AppBarButton x:ConnectionId='2' Icon="Mail" Label="Mail"                         />
             <!--
                 <CommandBar.SecondaryCommands>
                 <AppBarButton Icon="Setting" Label="Settings"/>
             </CommandBar.SecondaryCommands>
             -->
-          
+      
         </CommandBar>
+        
     </Grid>
 </Page>
 

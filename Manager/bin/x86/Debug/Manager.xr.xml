@@ -27,6 +27,7 @@
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="Icon" />
       <RootProperty Name="Label" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Manager.BlankPage2" />
     <RootType FullName="Manager.BlankPage3" />

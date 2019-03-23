@@ -15,12 +15,14 @@
             <AppBarButton Icon="Add" Label="Add"/>
             <AppBarButton Icon="ReShare" Label="Share"/>
             <AppBarButton Icon="Edit" Label="Edit"/>
+            <AppBarButton Icon="Mail" Label="Mail" Click="MainButton_Click"/>
             <!--
                 <CommandBar.SecondaryCommands>
                 <AppBarButton Icon="Setting" Label="Settings"/>
             </CommandBar.SecondaryCommands>
             -->
-          
+      
         </CommandBar>
+        
     </Grid>
 </Page>
