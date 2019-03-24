@@ -1,0 +1,73 @@
+﻿<Page
+    x:Class="Manager.Remind"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Manager"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="OrangeRed">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="Assets/image.jpg"/>
+
+        <Button Content="设置"
+                Grid.Row="1"
+                HorizontalAlignment="Center"
+                Margin="0,30,0,0">
+            <Button.Flyout>
+                <Flyout x:Name="MyFlyout">
+                    <StackPanel>
+                        <TextBlock 
+                            Text="设置月消费限额"
+                            FontSize="20"/>
+                        <TextBox
+                            PlaceholderText="这里填写当月最大消费额"/>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Content="确定"/>
+                            <Button Content="退出" Margin="20,0,0,0"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Flyout>
+            </Button.Flyout>
+        </Button>
+
+        <TextBlock Grid.Row="2"
+                   FontSize="18"
+                   Text="当前月消费限额:"
+                   Foreground="White"
+                   HorizontalAlignment="Center"
+                   Margin="20,20,20,0"/>
+
+        <TextBlock Grid.Row="2"
+                   Grid.Column="1"
+                   FontSize="18"
+                   Text="这里显示当前的月消费限额:"
+                   Foreground="White"
+                   Margin="20,20,20,0"/>
+        <TextBlock Grid.Row="3"
+                   FontSize="18"
+                   Text="消费预警:"
+                   HorizontalAlignment="Center"
+                   Foreground="White"
+                   Margin="20,20,20,0"/>
+        <TextBlock Grid.Row="3"
+                   Grid.Column="1"
+                   FontSize="18"
+                   Text="这里我想设置一个动画表示当你的阈值快要接近限定值时，会发出警报:"
+                   Foreground="White"
+                   Margin="20,20,20,0"/>
+    </Grid>
+</Page>

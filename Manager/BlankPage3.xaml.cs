@@ -25,6 +25,27 @@ namespace Manager
         public BlankPage3()
         {
             this.InitializeComponent();
+            MyFrame.Navigate(typeof(Calendar));
+        }
+
+        private void Record_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(Record));
+        }
+
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(Search));
+        }
+
+        private void Remind_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(Remind));
+        }
+
+        private void Event_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(typeof(Calendar));
         }
     }
 }

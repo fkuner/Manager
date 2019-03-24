@@ -128,11 +128,23 @@
     <Compile Include="BlankPage3.xaml.cs">
       <DependentUpon>BlankPage3.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Calendar.xaml.cs">
+      <DependentUpon>Calendar.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Record.xaml.cs">
+      <DependentUpon>Record.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Remind.xaml.cs">
+      <DependentUpon>Remind.xaml</DependentUpon>
+    </Compile>
     <Compile Include="rootFrame\PointerPressed.cs" />
+    <Compile Include="Search.xaml.cs">
+      <DependentUpon>Search.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -141,6 +153,23 @@
     <None Include="Manager_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\background.jpg" />
+    <Content Include="Assets\CM.png" />
+    <Content Include="Assets\coffee-icon.png" />
+    <Content Include="Assets\color-logo.png" />
+    <Content Include="Assets\complete-icon.png" />
+    <Content Include="Assets\donut-icon.png" />
+    <Content Include="Assets\image.jpg" />
+    <Content Include="Assets\Image2.jpg" />
+    <Content Include="Assets\Money.jpg" />
+    <Content Include="Assets\schedule-icon.png" />
+    <Content Include="Assets\SeaM.png" />
+    <Content Include="Assets\ticket.jpg" />
+    <Content Include="Assets\UWP-031-A.png" />
+    <Content Include="Assets\UWP-031-B.png" />
+    <Content Include="Assets\UWP-031-C.png" />
+    <Content Include="Assets\UWP-031-D.png" />
+    <Content Include="Assets\white-logo.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -167,9 +196,25 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Calendar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Record.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Remind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
