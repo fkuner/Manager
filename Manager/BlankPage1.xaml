@@ -8,8 +8,29 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <StackPanel>
-        <TextBlock HorizontalAlignment="Center" Text="The following is the part of Memo"/>
-    </StackPanel>
+    <Grid>
+        <RelativePanel Margin="20" HorizontalAlignment="Stretch">
+            <RelativePanel.Resources>
+                <Style TargetType="AppBarButton">
+                    <Setter Property="IsCompact" Value="True"/>
+                </Style>
+            </RelativePanel.Resources>
+            <AppBarButton x:Name="openFileButton" Icon="OpenFile"
+                  Click="OpenButton_Click" ToolTipService.ToolTip="Open file"/>
+            <AppBarButton Icon="Save" Click="SaveButton_Click"
+                  ToolTipService.ToolTip="Save file"
+                  RelativePanel.RightOf="openFileButton" Margin="8,0,0,0"/>
+
+            <AppBarButton Icon="Bold" Click="BoldButton_Click" ToolTipService.ToolTip="Bold"
+                  RelativePanel.LeftOf="italicButton" Margin="0,0,8,0"/>
+            <AppBarButton x:Name="italicButton" Icon="Italic" Click="ItalicButton_Click"
+                  ToolTipService.ToolTip="Italic" RelativePanel.LeftOf="underlineButton" Margin="0,0,8,0"/>
+            <AppBarButton x:Name="underlineButton" Icon="Underline" Click="UnderlineButton_Click"
+                  ToolTipService.ToolTip="Underline" RelativePanel.AlignRightWithPanel="True"/>
+
+            <RichEditBox x:Name="editor" Height="200" RelativePanel.Below="openFileButton"
+                 RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True"/>
+        </RelativePanel>
+    </Grid>
     
 </Page>

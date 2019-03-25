@@ -33,79 +33,12 @@ namespace Manager
         {
             this.InitializeComponent();
         }
-
-        /*
-        private async void SendMail(Contact recipient, StorageFile attchmentFile)
-        {
-            // Windows.ApplicationModel.Email
-            EmailMessage message = new EmailMessage();
-            // Mail subject
-            message.Subject = "This is a test mail.";
-
-            message.Body = "This is a test mail, please ignore.";
-
-            if (attchmentFile != null)
-            {
-                RandomAccessStreamReference stream =
-                    RandomAccessStreamReference.CreateFromFile(attchmentFile);
-
-                EmailAttachment attachment = new EmailAttachment(attchmentFile.Name, stream);
-
-                // Set mail's attachment
-                message.Attachments.Add(attachment);
-            }
-
-            ContactEmail email = recipient.Emails.FirstOrDefault();
-
-            if (email != null)
-            {
-                EmailRecipient emailRecipient = new EmailRecipient(email.Address);
-
-                message.To.Add(emailRecipient);
-            }
-
-            await EmailManager.ShowComposeNewEmailAsync(message);
-        }
-        private async System.Threading.Tasks.Task MainButton_ClickAsync(object sender, RoutedEventArgs e)
-        {
-            ContactPicker contactPicker = new ContactPicker();
-
-            contactPicker.SelectionMode = ContactSelectionMode.Fields;
-
-            contactPicker.DesiredFieldsWithContactFieldType.Add(ContactFieldType.Email);
-            contactPicker.DesiredFieldsWithContactFieldType.Add(ContactFieldType.Address);
-            contactPicker.DesiredFieldsWithContactFieldType.Add(ContactFieldType.PhoneNumber);
-
-            //Select one or more contacts
-            IList<Contact> contacts = await contactPicker.PickContactsAsync();
-
-            if (contacts != null &&
-                contacts.Count > 0)
-            {
-                for (int i = 0; i < contacts.Count; i++)
-                {
-                    // TODO:    
-                }
-            }
-
-            //// Select only one contact
-            Contact contact = await contactPicker.PickContactAsync();
-
-            if (contact != null)
-            {
-                  //TODO:...
-            }
-
-            SendMail(contact,null);
-        }  
-        */
-        
         private async void MainButton_Click(object sender, RoutedEventArgs e)
         {
             String subject = "test";
             String messageBody = "test";
             //Windows.ApplicationModel.Contacts.Contact 
-            /*
+            
             Contact contact = new Contact()
             {
                 Emails =
@@ -118,10 +51,10 @@ namespace Manager
                 }
             };
             await ComposeEmail(contact, subject, messageBody);
-            */
+            
 
             //如果要挑选人脉中的联系人
-           
+            /*
             ContactPicker contactPicker = new ContactPicker();
 
             contactPicker.SelectionMode = ContactSelectionMode.Fields;
@@ -141,8 +74,7 @@ namespace Manager
                     await ComposeEmail(contact, subject, messageBody);
                 }
             }
-            
-            
+            */
         }
 
         private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipient,
@@ -160,6 +92,16 @@ namespace Manager
             }
 
             await Windows.ApplicationModel.Email.EmailManager.ShowComposeNewEmailAsync(emailMessage);
+        }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = new Button();
+        }
+
+        private void AppBarButton_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -11,17 +11,24 @@
     
     
     <Grid>
-        <CommandBar Background="Transparent" IsOpen="False" DefaultLabelPosition="Right">
-            <AppBarButton Icon="Add" Label="Add"/>
-            <AppBarButton Icon="ReShare" Label="Share"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <CommandBar Background="Transparent" 
+                    IsOpen="False" 
+                    DefaultLabelPosition="Right"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    HorizontalAlignment="Right">
+            <AppBarButton Icon="Add" Label="Add" Click="AppBarButton_Click"/>
+            <AppBarButton Icon="ReShare" Label="Share" Click="AppBarButton_Click_1"/>
             <AppBarButton Icon="Edit" Label="Edit"/>
             <AppBarButton Icon="Mail" Label="Mail" Click="MainButton_Click"/>
-            <!--
-                <CommandBar.SecondaryCommands>
-                <AppBarButton Icon="Setting" Label="Settings"/>
-            </CommandBar.SecondaryCommands>
-            -->
-      
         </CommandBar>
         
     </Grid>

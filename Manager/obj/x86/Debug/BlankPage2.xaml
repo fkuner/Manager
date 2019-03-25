@@ -11,19 +11,37 @@
     
     
     <Grid>
-        <CommandBar Background="Transparent" IsOpen="False" DefaultLabelPosition="Right">
-            <AppBarButton Icon="Add" Label="Add"/>
-            <AppBarButton Icon="ReShare" Label="Share"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <CommandBar Background="Transparent" 
+                    IsOpen="False" 
+                    DefaultLabelPosition="Right"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    HorizontalAlignment="Right">
+            <AppBarButton x:ConnectionId='3' Icon="Add" Label="Add"                           />
+            <AppBarButton x:ConnectionId='4' Icon="ReShare" Label="Share"                             />
             <AppBarButton Icon="Edit" Label="Edit"/>
-            <AppBarButton x:ConnectionId='2' Icon="Mail" Label="Mail"                         />
-            <!--
-                <CommandBar.SecondaryCommands>
-                <AppBarButton Icon="Setting" Label="Settings"/>
-            </CommandBar.SecondaryCommands>
-            -->
-      
+            <AppBarButton x:ConnectionId='5' Icon="Mail" Label="Mail"                         />
         </CommandBar>
-        
+        <StackPanel x:ConnectionId='2' x:Name="EntranceStackPanel" Orientation="Horizontal">
+            <StackPanel.ChildrenTransitions>
+                <TransitionCollection>
+                    <EntranceThemeTransition IsStaggeringEnabled="True" />
+                </TransitionCollection>
+            </StackPanel.ChildrenTransitions>
+            <Rectangle Width="50" Height="50" Margin="5" Fill="LightBlue" />
+            <Rectangle Width="50" Height="50" Margin="5" Fill="LightBlue" />
+            <Rectangle Width="50" Height="50" Margin="5" Fill="LightBlue" />
+            <Rectangle Width="50" Height="50" Margin="5" Fill="LightBlue" />
+            <Rectangle Width="50" Height="50" Margin="5" Fill="LightBlue" />
+        </StackPanel>
     </Grid>
 </Page>
 
