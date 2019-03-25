@@ -7,10 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    
-    
-    
-    <Grid>
+
+
+ 
+    <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="*" />
@@ -30,6 +30,17 @@
             <AppBarButton Icon="Edit" Label="Edit"/>
             <AppBarButton Icon="Mail" Label="Mail" Click="MainButton_Click"/>
         </CommandBar>
+        <StackPanel Name="stackPanel1">
+            <ListView x:Name="listView1"
+                  Grid.Row="1">
+                
+                <x:String>Item 1</x:String>
+                <x:String>Item 2</x:String>
+                <x:String>Item 3</x:String>
+                <x:String>Item 4</x:String>
+                <x:String>Item 5</x:String>
+            </ListView>
+        </StackPanel>
         
     </Grid>
 </Page>

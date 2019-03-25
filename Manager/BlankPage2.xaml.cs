@@ -96,7 +96,11 @@ namespace Manager
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            Button button = new Button();
+            //ListView listView1 = new ListView();
+            //listView1.Items.Add("Item new");
+            TextBox textbox = new TextBox();
+            //stackPanel1.Children.Add(listView1);
+            stackPanel1.Children.Add(textbox);
         }
 
         private void AppBarButton_Click_1(object sender, RoutedEventArgs e)
