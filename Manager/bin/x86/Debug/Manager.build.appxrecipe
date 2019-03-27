@@ -34,6 +34,9 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\Assets\UWP-ji-1.jpg">
+      <PackagePath>Assets\UWP-ji-1.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\Assets\background.jpg">
       <PackagePath>Assets\background.jpg</PackagePath>
     </AppxPackagedFile>

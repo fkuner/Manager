@@ -155,6 +155,7 @@
     <None Include="Manager_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\UWP-ji-1.jpg" />
     <Content Include="Assets\background.jpg" />
     <Content Include="Assets\CM.png" />
     <Content Include="Assets\coffee-icon.png" />

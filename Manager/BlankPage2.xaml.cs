@@ -27,11 +27,22 @@ namespace Manager
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+    ///
+   
     public sealed partial class BlankPage2 : Page
     {
+        /*public List<string> TodoEvent { get; set; }
+            = new List<string>();
+            */
+        public string TodoEvent { get; set; }
         public BlankPage2()
         {
             this.InitializeComponent();
+
+            TodoEvent = "heelo world!";
+
+
+
         }
         private async void MainButton_Click(object sender, RoutedEventArgs e)
         {

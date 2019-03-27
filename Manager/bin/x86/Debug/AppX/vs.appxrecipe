@@ -30,13 +30,13 @@
     <AppXManifest Include="F:\大三下\uvp\Manager\Manager\Manager\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-27T13:31:38.673</Modified>
+      <Modified>2019-03-27T16:24:10.909</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\bin\x86\Debug\Manager.exe">
       <PackagePath>entrypoint\Manager.exe</PackagePath>
-      <Modified>2019-03-27T13:31:38.176</Modified>
+      <Modified>2019-03-27T16:24:09.446</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.3\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -45,6 +45,10 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2018-10-22T17:33:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\Assets\UWP-ji-1.jpg">
+      <PackagePath>Assets\UWP-ji-1.jpg</PackagePath>
+      <Modified>2019-03-27T14:01:45.739</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\Assets\background.jpg">
       <PackagePath>Assets\background.jpg</PackagePath>
@@ -158,43 +162,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\bin\x86\Debug\Manager.xr.xml">
       <PackagePath>Manager.xr.xml</PackagePath>
-      <Modified>2019-03-27T13:30:16.085</Modified>
+      <Modified>2019-03-27T16:24:08.561</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-03-27T13:31:37.905</Modified>
+      <Modified>2019-03-27T16:24:08.755</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\bin\x86\Debug\BlankPage1.xbf">
       <PackagePath>BlankPage1.xbf</PackagePath>
-      <Modified>2019-03-27T13:31:37.905</Modified>
+      <Modified>2019-03-27T16:24:08.756</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\bin\x86\Debug\BlankPage2.xbf">
       <PackagePath>BlankPage2.xbf</PackagePath>
-      <Modified>2019-03-27T13:31:37.906</Modified>
+      <Modified>2019-03-27T16:24:08.757</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\bin\x86\Debug\BlankPage3.xbf">
       <PackagePath>BlankPage3.xbf</PackagePath>
-      <Modified>2019-03-27T13:31:37.906</Modified>
+      <Modified>2019-03-27T16:24:08.758</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\bin\x86\Debug\Calendar.xbf">
       <PackagePath>Calendar.xbf</PackagePath>
-      <Modified>2019-03-27T13:31:37.907</Modified>
+      <Modified>2019-03-27T16:24:08.759</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-03-27T13:31:37.907</Modified>
+      <Modified>2019-03-27T16:24:08.760</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\bin\x86\Debug\Record.xbf">
       <PackagePath>Record.xbf</PackagePath>
-      <Modified>2019-03-27T13:31:37.908</Modified>
+      <Modified>2019-03-27T16:24:08.761</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\bin\x86\Debug\Remind.xbf">
       <PackagePath>Remind.xbf</PackagePath>
-      <Modified>2019-03-27T13:31:37.908</Modified>
+      <Modified>2019-03-27T16:24:08.762</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\bin\x86\Debug\Search.xbf">
       <PackagePath>Search.xbf</PackagePath>
-      <Modified>2019-03-27T13:31:37.909</Modified>
+      <Modified>2019-03-27T16:24:08.763</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -202,11 +206,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-03-27T13:23:28.911</Modified>
+      <Modified>2019-03-27T14:18:10.306</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\bin\x86\Debug\Core\Manager.exe">
       <PackagePath>Manager.exe</PackagePath>
-      <Modified>2019-03-27T13:31:38.668</Modified>
+      <Modified>2019-03-27T16:24:10.893</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
