@@ -8136,24 +8136,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lenovo\\.nuget\\packages\\": {},
+    "C:\\Users\\26838\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\source\\repos\\Manager\\Manager\\Manager.csproj",
+      "projectUniqueName": "F:\\大三下\\uvp\\Manager\\Manager\\Manager\\Manager.csproj",
       "projectName": "Manager",
-      "projectPath": "C:\\Users\\Lenovo\\source\\repos\\Manager\\Manager\\Manager.csproj",
-      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\source\\repos\\Manager\\Manager\\obj\\",
+      "projectPath": "F:\\大三下\\uvp\\Manager\\Manager\\Manager\\Manager.csproj",
+      "packagesPath": "C:\\Users\\26838\\.nuget\\packages\\",
+      "outputPath": "F:\\大三下\\uvp\\Manager\\Manager\\Manager\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\26838\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
