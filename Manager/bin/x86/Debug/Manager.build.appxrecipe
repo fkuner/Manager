@@ -55,6 +55,9 @@
     <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\Assets\UWP-ji-0.jpg">
       <PackagePath>Assets\UWP-ji-0.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\Assets\UWP-ji-2.jpg">
+      <PackagePath>Assets\UWP-ji-2.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="F:\大三下\uvp\Manager\Manager\Manager\Assets\CM.png">
       <PackagePath>Assets\CM.png</PackagePath>
     </AppxPackagedFile>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -31,15 +32,16 @@ namespace Manager
    
     public sealed partial class BlankPage2 : Page
     {
-        /*public List<string> TodoEvent { get; set; }
-            = new List<string>();
-            */
-        public string TodoEvent { get; set; }
+        public ObservableCollection<string> TodoEvent { get; set; }
+            = new ObservableCollection<string>();
+            
+       // public string TodoEvent { get; set; }
         public BlankPage2()
         {
             this.InitializeComponent();
 
-            TodoEvent = "heelo world!";
+            TodoEvent.Add( "heelo world!");
+            TodoEvent.Add("nihao shijie!");
 
 
 

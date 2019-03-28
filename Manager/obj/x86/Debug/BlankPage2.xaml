@@ -66,13 +66,13 @@
                     Grid.Column="1"
                     Grid.Row="1"
                     HorizontalAlignment="Right">
-            <AppBarButton Icon="Add" Label="Add" Click="AppBarButton_Click"/>
-            <AppBarButton Icon="ReShare" Label="Share" Click="AppBarButton_Click_1"/>
+            <AppBarButton x:ConnectionId='3' Icon="Add" Label="Add"                           />
+            <AppBarButton x:ConnectionId='4' Icon="ReShare" Label="Share"                             />
             <AppBarButton Icon="Edit" Label="Edit"/>
-            <AppBarButton Icon="Mail" Label="Mail" Click="MainButton_Click"/>
+            <AppBarButton x:ConnectionId='5' Icon="Mail" Label="Mail"                         />
         </CommandBar>
        
-        <StackPanel Name="stackPanel1"
+        <StackPanel x:ConnectionId='2' Name="stackPanel1"
                     Grid.Row="2" Grid.ColumnSpan="2">
 
 
@@ -124,3 +124,4 @@
     </Grid>
        
 </Page>
+
