@@ -21,6 +21,7 @@ using Windows.ApplicationModel.Email;
 using System.Threading.Tasks;
 using Manager.Models;
 using Manager.ViewModels;
+using Manager.Services;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -31,6 +32,9 @@ namespace Manager
     /// </summary>
     public sealed partial class BlankPage2 : Page
     {
+
+        private List<TodoItem> todoItems;
+
         public BlankPage2()
         {
             this.InitializeComponent();
@@ -97,16 +101,19 @@ namespace Manager
             await Windows.ApplicationModel.Email.EmailManager.ShowComposeNewEmailAsync(emailMessage);
         }
 
-        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        private async void  AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             
             TextBox textbox = new TextBox();
             //testTextBlock.Text = textbox.Text;
           
             TodoItem todoItem = new TodoItem();
-            
+            textbox.Name = "test";
+            todoItem.Content = "test";
             stackPanel1.Children.Add(textbox);
-            
+
+            //TodoItemService todoItemService = new TodoItemService();
+            //await todoItemService.AddAsync(todoItem);
         }
         private void click(object sender,RoutedEventArgs e)
         {
@@ -115,6 +122,11 @@ namespace Manager
         private void AppBarButton_Click_1(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void TestButton_Click(object sender, RoutedEventArgs e)
+        {
+            TextBlock textBlock = new TextBlock();
         }
     }
 }

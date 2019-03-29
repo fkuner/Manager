@@ -58,6 +58,15 @@ namespace Manager.ViewModels
                 FirstTodoItem = todoItemList[0];
                 TodoItems = todoItemList;
             }));
+
+        public RelayCommand AddCommand =>
+            _refreshCommand ?? (_refreshCommand = new RelayCommand(async () => {
+                var todoItemService = new TodoItemService();
+                TodoItem todoItem = new TodoItem();
+                todoItem.Content = "the second todoitem";
+                await todoItemService.AddAsync(todoItem);
+            }));
+
     }
 
 }
