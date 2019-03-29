@@ -238,3 +238,13 @@ F:\大三下\uvp\Manager\Manager\Manager\obj\x86\Debug\qualifiers.txt.intermedia
 F:\大三下\uvp\Manager\Manager\Manager\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 F:\大三下\uvp\Manager\Manager\Manager\obj\x86\Debug\ProjectArchitectures.txt
 F:\大三下\uvp\Manager\Manager\Manager\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636758264200000000.json
+C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\CommonServiceLocator.dll
+C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\GalaSoft.MvvmLight.dll
+C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\Lenovo\source\repos\Manager\Manager\obj\x86\Debug\GalaSoft.MvvmLight.Platform.pri.xml
+C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Newtonsoft.Json.pdb

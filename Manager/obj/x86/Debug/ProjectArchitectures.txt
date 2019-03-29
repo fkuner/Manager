@@ -1,1 +1,1 @@
-F:\大三下\uvp\Manager\Manager\Manager\Manager.csproj;x86
+C:\Users\Lenovo\source\repos\Manager\Manager\Manager.csproj;x86

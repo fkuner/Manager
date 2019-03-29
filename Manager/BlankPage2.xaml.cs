@@ -19,6 +19,8 @@ using Windows.UI.Xaml.Navigation;
 using Windows.ApplicationModel.Contacts;
 using Windows.ApplicationModel.Email;
 using System.Threading.Tasks;
+using Manager.Models;
+using Manager.ViewModels;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -32,6 +34,7 @@ namespace Manager
         public BlankPage2()
         {
             this.InitializeComponent();
+            DataContext = new BlankPage2ViewModel();
         }
         private async void MainButton_Click(object sender, RoutedEventArgs e)
         {
@@ -96,13 +99,19 @@ namespace Manager
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            //ListView listView1 = new ListView();
-            //listView1.Items.Add("Item new");
+            
             TextBox textbox = new TextBox();
-            //stackPanel1.Children.Add(listView1);
+            //testTextBlock.Text = textbox.Text;
+          
+            TodoItem todoItem = new TodoItem();
+            
             stackPanel1.Children.Add(textbox);
+            
         }
+        private void click(object sender,RoutedEventArgs e)
+        {
 
+        }
         private void AppBarButton_Click_1(object sender, RoutedEventArgs e)
         {
 

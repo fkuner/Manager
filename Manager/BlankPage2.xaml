@@ -43,16 +43,22 @@
         </CommandBar>
         <StackPanel Name="stackPanel1"
                     Grid.Row="2">
-            <!--<ListView x:Name="listView1"
-                  Grid.Row="1">
-                
-                <x:String>Item 1</x:String>
-                <x:String>Item 2</x:String>
-                <x:String>Item 3</x:String>
-                <x:String>Item 4</x:String>
-                <x:String>Item 5</x:String>
-            </ListView>  -->
+            <Line Stroke="Red" X2="1960" Margin="0,50,0,0"/>
+            <Line Stroke="Red" X2="1960" Margin="0,50,0,0"/>
+            <Line Stroke="Red" X2="1960" Margin="0,50,0,0"/>
+            <Line Stroke="Red" X2="1960" Margin="0,50,0,0"/>
+            <Button Content="Query"
+                Name="QueryButton"
+                Command="{Binding RefreshCommand}" />
+            <TextBlock Name="ContentTextBlock"
+                   Text="{Binding FirstTodoItem.Content}" />
+            <ListView ItemsSource="{Binding TodoItems}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Content}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackPanel>
-        
     </Grid>
 </Page>

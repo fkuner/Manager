@@ -1,0 +1,1 @@
+C:\Users\Lenovo\source\repos\Manager\Manager\Manager.csproj;arm
