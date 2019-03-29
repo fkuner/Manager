@@ -24,11 +24,13 @@ namespace Manager
     /// </summary>
     public sealed partial class MainPage : Page
     {
+       
         // MainPage.xaml.cs
         public MainPage()
         {
             this.InitializeComponent();
             PageFrame.Navigate(typeof(BlankPage1));
+          
         }
         public object BlankPage1 { get; set; }
 
