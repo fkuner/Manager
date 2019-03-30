@@ -1,11 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
-  <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="TodoItems" />
-    <RootPropertyPathName Name="Content" />
-    <RootPropertyPathName Name="FirstTodoItem" />
-    <RootPropertyPathName Name="RefreshCommand" />
-  </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
       <RootProperty Name="Resources" />
@@ -93,69 +87,26 @@
       <RootProperty Name="IsOpen" />
       <RootProperty Name="DefaultLabelPosition" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="PrimaryCommands" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Shapes.Line">
-      <RootProperty Name="Stroke" />
-      <RootProperty Name="X2" />
-      <RootProperty Name="Margin" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Name" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Content" />
-      <RootProperty Name="Command" />
-      <RootProperty Name="Style" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Name" />
+      <RootProperty Name="Style" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Flyout" />
       <RootEvent Name="Click" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="Name" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Foreground" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="HorizontalAlignment" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
-      <RootProperty Name="ItemsSource" />
-      <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="ItemContainerTransitions" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="Name" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="Foreground" />
-      <RootProperty Name="Margin" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Slider">
-      <RootProperty Name="Name" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Maximum" />
-      <RootProperty Name="Minimum" />
-      <RootProperty Name="Width" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ProgressBar">
-      <RootProperty Name="Name" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Maximum" />
-      <RootProperty Name="Value" />
-    </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
-      <RootProperty Name="Mode" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.Binding" />
-    <RootType FullName="Windows.UI.Xaml.DataTemplate">
-      <RootProperty Name="Template" />
-    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.AddDeleteThemeTransition" />
     <RootType FullName="Windows.UI.Xaml.Media.Imaging.BitmapImage">
       <RootProperty Name="UriSource" />
       <RootProperty Name="DecodePixelHeight" />
@@ -170,8 +121,22 @@
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="Text" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
     <RootType FullName="Manager.BlankPage3" />
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Manager.Calendar" />

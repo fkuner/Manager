@@ -15,6 +15,10 @@ namespace Manager.ViewModels
     /// </summary>
     class BlankPage2ViewModel : ViewModelBase
     {
+        private TodoItemService todoItemService=new TodoItemService(); 
+        
+       
+
         /// <summary>
         /// 第一个TodoItem。
         /// </summary>
@@ -53,20 +57,31 @@ namespace Manager.ViewModels
         /// </summary>
         public RelayCommand RefreshCommand =>
             _refreshCommand ?? (_refreshCommand = new RelayCommand(async () => {
-                var todoItemService = new TodoItemService();
+                //var todoItemService = new TodoItemService();
                 var todoItemList = await todoItemService.ListAsync();
                 FirstTodoItem = todoItemList[0];
                 TodoItems = todoItemList;
             }));
 
+        /// <summary>
+        /// 增加命令
+        /// </summary>
+        private RelayCommand _addCommand;
+
+        /// <summary>
+        /// 增加命令
+        /// </summary>
         public RelayCommand AddCommand =>
-            _refreshCommand ?? (_refreshCommand = new RelayCommand(async () => {
-                var todoItemService = new TodoItemService();
-                TodoItem todoItem = new TodoItem();
-                todoItem.Content = "the second todoitem";
-                await todoItemService.AddAsync(todoItem);
+            _addCommand ?? (_addCommand = new RelayCommand(async () => {
+                await todoItemService.AddAsync(_addTodoItem);
             }));
 
-    }
+        private TodoItem _addTodoItem=new TodoItem();
+        public TodoItem AddTodoItem
+        {
+            get => _addTodoItem;
+            set =>  Set(nameof(AddTodoItem), ref _addTodoItem, value);
+        }
 
+    }
 }
