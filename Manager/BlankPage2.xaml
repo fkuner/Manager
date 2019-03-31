@@ -96,29 +96,7 @@
             </Border>
 
             <Line Stroke="Red"   X2="400"></Line>
-        
-<!--
-            <ParallaxView Source="{Binding ElementName=listView}" VerticalShift="500"  
-                          Grid.Row="2" Grid.ColumnSpan="2">
-                <Image Source="ms-appx:///Assets/UWP-ji-1.jpg" Grid.Row="2" Grid.ColumnSpan="2"
-                       />
-                </ParallaxView>
-            
-            <ListView x:Name="listView" ItemsSource="{x:Bind TodoEvent}" 
-                      Grid.Row="2" Grid.ColumnSpan="2">
-                    <ListView.Header>
-                        <Grid>
-                            <ParallaxView Source="{x:Bind listView}" VerticalShift="100"
-                                          VerticalSourceOffsetKind="Absolute" VerticalSourceStartOffset="-50"
-                                          VerticalSourceEndOffset="250">
-                                <Image Source="ms-appx:///Assets/UWP-ji-1.jpg" />
-                            </ParallaxView>
-                            <TextBlock Text="Scroll the list to see parallaxing of images" />
-                        </Grid>
-                    </ListView.Header>
-                </ListView>
-
-        -->  
+       
         </StackPanel>
         
     </Grid>
