@@ -82,6 +82,6 @@ namespace Manager.ViewModels
             get => _addTodoItem;
             set =>  Set(nameof(AddTodoItem), ref _addTodoItem, value);
         }
-
+ 
     }
 }

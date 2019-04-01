@@ -30,13 +30,13 @@
     <AppXManifest Include="F:\Manager\Manager\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-31T10:09:27.522</Modified>
+      <Modified>2019-04-01T06:37:36.538</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="F:\Manager\Manager\bin\x86\Debug\Manager.exe">
       <PackagePath>entrypoint\Manager.exe</PackagePath>
-      <Modified>2019-03-31T10:09:26.198</Modified>
+      <Modified>2019-04-01T06:37:35.200</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\tangyijun\.nuget\packages\commonservicelocator\2.0.2\lib\netstandard2.0\CommonServiceLocator.dll">
       <PackagePath>CommonServiceLocator.dll</PackagePath>
@@ -178,43 +178,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Manager\Manager\bin\x86\Debug\Manager.xr.xml">
       <PackagePath>Manager.xr.xml</PackagePath>
-      <Modified>2019-03-31T07:45:40.439</Modified>
+      <Modified>2019-04-01T06:35:48.288</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Manager\Manager\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-03-31T10:09:25.929</Modified>
+      <Modified>2019-04-01T06:37:34.891</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Manager\Manager\bin\x86\Debug\BlankPage1.xbf">
       <PackagePath>BlankPage1.xbf</PackagePath>
-      <Modified>2019-03-31T10:09:25.929</Modified>
+      <Modified>2019-04-01T06:37:34.892</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Manager\Manager\bin\x86\Debug\BlankPage2.xbf">
       <PackagePath>BlankPage2.xbf</PackagePath>
-      <Modified>2019-03-31T10:09:25.930</Modified>
+      <Modified>2019-04-01T06:37:34.892</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Manager\Manager\bin\x86\Debug\BlankPage3.xbf">
       <PackagePath>BlankPage3.xbf</PackagePath>
-      <Modified>2019-03-31T10:09:25.930</Modified>
+      <Modified>2019-04-01T06:37:34.892</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Manager\Manager\bin\x86\Debug\Calendar.xbf">
       <PackagePath>Calendar.xbf</PackagePath>
-      <Modified>2019-03-31T10:09:25.930</Modified>
+      <Modified>2019-04-01T06:37:34.893</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Manager\Manager\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-03-31T10:09:25.930</Modified>
+      <Modified>2019-04-01T06:37:34.893</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Manager\Manager\bin\x86\Debug\Record.xbf">
       <PackagePath>Record.xbf</PackagePath>
-      <Modified>2019-03-31T10:09:25.930</Modified>
+      <Modified>2019-04-01T06:37:34.893</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Manager\Manager\bin\x86\Debug\Remind.xbf">
       <PackagePath>Remind.xbf</PackagePath>
-      <Modified>2019-03-31T10:09:25.931</Modified>
+      <Modified>2019-04-01T06:37:34.894</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Manager\Manager\bin\x86\Debug\Search.xbf">
       <PackagePath>Search.xbf</PackagePath>
-      <Modified>2019-03-31T10:09:25.931</Modified>
+      <Modified>2019-04-01T06:37:34.894</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -226,7 +226,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Manager\Manager\bin\x86\Debug\Core\Manager.exe">
       <PackagePath>Manager.exe</PackagePath>
-      <Modified>2019-03-31T10:09:27.508</Modified>
+      <Modified>2019-04-01T06:37:36.517</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

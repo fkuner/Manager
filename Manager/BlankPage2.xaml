@@ -2,7 +2,6 @@
     x:Class="Manager.BlankPage2"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:extensions="using:Microsoft.Toolkit.Uwp.UI.Extensions"
     xmlns:local="using:Manager"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -17,6 +16,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -44,7 +44,9 @@
             <AppBarButton Icon="Mail" Label="Mail" Click="MainButton_Click"/>
             <AppBarButton Icon="Delete" Label="Delete"/>
         </CommandBar>
-        <StackPanel Name="stackPanel1"
+        
+        
+        <StackPanel Name="stackPanel2"
                     Grid.Row="2">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -57,6 +59,7 @@
                     <RowDefinition/>
 
                 </Grid.RowDefinitions>
+                
                 <Button
                         VerticalAlignment="Stretch"
                         Content="add"
@@ -72,6 +75,7 @@
                     </ListView.ItemContainerTransitions>
                 </ListView>
             </Grid>
+            
             <!--
             <Line Stroke="Red" X2="1960" Margin="0,50,0,0"/>
             <Line Stroke="Red" X2="1960" Margin="0,50,0,0"/>
@@ -98,6 +102,35 @@
             <Button Content="click me to add"
                     Command="{Binding AddCommand}"/>
             -->
+
+        </StackPanel>
+
+       
+        <StackPanel Name="stackPanel1"
+                    Grid.Row="3" Grid.ColumnSpan="2">
+
+
+            <Border BorderThickness="1" BorderBrush="#FF00008B" Background="#FFFFFFFF">
+                <TextBox Text="Text inside a border" FontSize="18" Foreground="Black" />
+            </Border>
+            <Border BorderThickness="1" BorderBrush="#FF00008B" Background="#FFFFFFFF">
+                <TextBox Text="Text inside a border" FontSize="18" Foreground="Black" />
+            </Border>
+            <Border BorderThickness="1" BorderBrush="#FF00008B" Background="#FFFFFFFF">
+                <TextBox Text="Text inside a border" FontSize="18" Foreground="Black" />
+            </Border>
+            <Border BorderThickness="1" BorderBrush="#FF00008B" Background="#FFFFFFFF">
+                <TextBox Text="Text inside a border" FontSize="18" Foreground="Black" />
+            </Border>
+            <Border BorderThickness="1" BorderBrush="#FF00008B" Background="#FFFFFFFF">
+                <TextBox Text="Text inside a border" FontSize="18" Foreground="Black" />
+            </Border>
+            <Border BorderThickness="1" BorderBrush="#FF00008B" Background="#FFFFFFFF">
+                <TextBox Text="Text inside a border" FontSize="18" Foreground="Black" />
+            </Border>
+
+            <Line Stroke="Red"   X2="400"></Line>
+       
         </StackPanel>
 
     </Grid>
