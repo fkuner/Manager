@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-01T03:50:53.422</Modified>
+      <Modified>2019-04-01T06:20:37.030</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Manager.exe">
       <PackagePath>entrypoint\Manager.exe</PackagePath>
-      <Modified>2019-04-01T03:50:52.306</Modified>
+      <Modified>2019-04-01T06:20:36.387</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\commonservicelocator\2.0.2\lib\netstandard2.0\CommonServiceLocator.dll">
       <PackagePath>CommonServiceLocator.dll</PackagePath>
@@ -178,43 +178,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Manager.xr.xml">
       <PackagePath>Manager.xr.xml</PackagePath>
-      <Modified>2019-03-30T05:32:13.259</Modified>
+      <Modified>2019-04-01T06:16:32.816</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-04-01T03:50:51.968</Modified>
+      <Modified>2019-04-01T06:20:36.141</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\BlankPage1.xbf">
       <PackagePath>BlankPage1.xbf</PackagePath>
-      <Modified>2019-04-01T03:50:51.968</Modified>
+      <Modified>2019-04-01T06:20:36.142</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\BlankPage2.xbf">
       <PackagePath>BlankPage2.xbf</PackagePath>
-      <Modified>2019-04-01T03:50:51.968</Modified>
+      <Modified>2019-04-01T06:20:36.142</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\BlankPage3.xbf">
       <PackagePath>BlankPage3.xbf</PackagePath>
-      <Modified>2019-04-01T03:50:51.969</Modified>
+      <Modified>2019-04-01T06:20:36.142</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Calendar.xbf">
       <PackagePath>Calendar.xbf</PackagePath>
-      <Modified>2019-04-01T03:50:51.969</Modified>
+      <Modified>2019-04-01T06:20:36.143</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-04-01T03:50:51.970</Modified>
+      <Modified>2019-04-01T06:20:36.143</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Record.xbf">
       <PackagePath>Record.xbf</PackagePath>
-      <Modified>2019-04-01T03:50:51.970</Modified>
+      <Modified>2019-04-01T06:20:36.143</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Remind.xbf">
       <PackagePath>Remind.xbf</PackagePath>
-      <Modified>2019-04-01T03:50:51.970</Modified>
+      <Modified>2019-04-01T06:20:36.143</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Search.xbf">
       <PackagePath>Search.xbf</PackagePath>
-      <Modified>2019-04-01T03:50:51.971</Modified>
+      <Modified>2019-04-01T06:20:36.143</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -226,7 +226,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Core\Manager.exe">
       <PackagePath>Manager.exe</PackagePath>
-      <Modified>2019-04-01T03:50:53.394</Modified>
+      <Modified>2019-04-01T06:20:37.022</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
