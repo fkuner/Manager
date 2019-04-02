@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,30 +23,58 @@ namespace Manager
     /// </summary>
     public sealed partial class BlankPage3 : Page
     {
+        
         public BlankPage3()
         {
             this.InitializeComponent();
-            MyFrame.Navigate(typeof(Calendar));
+            this.ViewModel = new RecordingViewModel();
+            ObservableCollection<string> listItems = new ObservableCollection<string>();
+            listItems.Add("Item1");
+            listItems.Add("Item2");
+            listItems.Add("Item3");
+            listItems.Add("Item4");
+            listItems.Add("Item5");
+            EventListView.ItemsSource = listItems;
+        }
+        public RecordingViewModel ViewModel
+        {
+            get;
+            set;
+        }
+    }
+
+    public class Recording
+    {
+        public string ArtisName { get; set; }
+        public string CompositionName { get; set; }
+        public DateTime ReleaseDateTime { get; set; }
+
+        public Recording()
+        {
+            this.ArtisName = "Wolfgang";
+            this.CompositionName = "Andante in C for Piano";
+            this.ReleaseDateTime = new DateTime(1761, 1, 1);
         }
 
-        private void Record_Click(object sender, RoutedEventArgs e)
+        public string OnlineSummary
         {
-            MyFrame.Navigate(typeof(Record));
+            get
+            {
+                return $"{this.CompositionName} by {this.ArtisName},released:"
+                    + this.ReleaseDateTime.ToString("d");
+            }
         }
-
-        private void Search_Click(object sender, RoutedEventArgs e)
+    }
+    
+    public class RecordingViewModel
+    {
+        private Recording defaultRecording = new Recording();
+        public Recording DefaultRecording
         {
-            MyFrame.Navigate(typeof(Search));
-        }
-
-        private void Remind_Click(object sender, RoutedEventArgs e)
-        {
-            MyFrame.Navigate(typeof(Remind));
-        }
-
-        private void Event_Click(object sender, RoutedEventArgs e)
-        {
-            MyFrame.Navigate(typeof(Calendar));
+            get
+            {
+                return this.defaultRecording;
+            }
         }
     }
 }

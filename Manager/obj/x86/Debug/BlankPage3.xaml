@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="Manager.BlankPage3"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -8,87 +8,34 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Page.Resources>
-        <Style TargetType="Button" x:Key="NavigationButtonStyle">
-            <Setter Property="Background" Value="Black"/>
-            <Setter Property="HorizontalAlignment" Value="Stretch"/>
-            <Setter Property="VerticalAlignment" Value="Stretch"/>
-            <Setter Property="BorderBrush" Value="Gray"/>
-            <Setter Property="Margin" Value="0,0,2,0"/>
-        </Style>
-
-        <Style TargetType="Image" x:Key="IconImageStyle">
-            <Setter Property="Height" Value="20"/>
-            <Setter Property="Width" Value="20"/>
-            <Setter Property="Margin" Value="0,0,10,0"/>
-        </Style>
-    </Page.Resources>
-
-
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <TextBlock x:ConnectionId='2'                                                         >
+                
+            </TextBlock>
 
-            <Button x:ConnectionId='3' Name="Event"
-                    Grid.Column="0"
-                    Style="{StaticResource NavigationButtonStyle}"
-                                       >
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="Assets/schedule-icon.png" Style="{StaticResource IconImageStyle}"/>
-                    <TextBlock Text="AddEvent" Foreground="White"/>
-                </StackPanel>
-            </Button>
+            <ListView x:ConnectionId='3' x:Name="EventListView"
+                      SelectionMode="Single"
+                      > 
+            </ListView>
+        </StackPanel>
 
-            <Button x:ConnectionId='4' Name="Record"
-                    Grid.Column="1"
-                    Style="{StaticResource NavigationButtonStyle}"
-                                        >
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="Assets/schedule-icon.png" Style="{StaticResource IconImageStyle}"/>
-                    <TextBlock Text="Record" Foreground="White"/>
-                </StackPanel>
-            </Button>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-            <Button x:ConnectionId='5' Name="Search"
-                    Grid.Column="2"
-                    Style="{StaticResource NavigationButtonStyle}"
-                                        >
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="Assets/schedule-icon.png" Style="{StaticResource IconImageStyle}"/>
-                    <TextBlock Text="Search" Foreground="White"/>
-                </StackPanel>
-            </Button>
+            <TextBlock Text="这里是显示和修改按钮等" Grid.Row="0"/>
+            <TextBlock Text="这里是提醒和显示最大额度的按钮" Grid.Row="1"/>
 
-            <Button x:ConnectionId='6' Name="Remind"
-                    Grid.Column="3"
-                    Style="{StaticResource NavigationButtonStyle}"
-                                        >
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="Assets/schedule-icon.png" Style="{StaticResource IconImageStyle}"/>
-                    <TextBlock Text="Remind" Foreground="White"/>
-                </StackPanel>
-            </Button>
-        </Grid>
-
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-
-            <Frame x:ConnectionId='2' Grid.Column="0" Name="MyFrame"/>
-            <Image Grid.Column="1" Source="Assets/Image2.jpg" Stretch="Fill" />
         </Grid>
     </Grid>
+    
 </Page>
 
