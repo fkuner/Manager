@@ -43,6 +43,9 @@
     <AppxPackagedFile Include="C:\Users\tangyijun\.nuget\packages\newtonsoft.json\12.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\tangyijun\.nuget\packages\observablecollectionex\1.4.57\lib\netstandard2.0\ObservableCollectionEx.dll">
+      <PackagePath>ObservableCollectionEx.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\tangyijun\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.3\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
     </AppxPackagedFile>
@@ -153,6 +156,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Manager\Manager\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Manager\Manager\bin\x86\Debug\Pages\MemoDetail.xbf">
+      <PackagePath>Pages\MemoDetail.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Manager\Manager\bin\x86\Debug\Record.xbf">
       <PackagePath>Record.xbf</PackagePath>

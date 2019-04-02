@@ -255,6 +255,15 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "ObservableCollectionEx/1.4.57": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ObservableCollectionEx.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ObservableCollectionEx.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.1": {
         "type": "package",
         "dependencies": {
@@ -598,6 +607,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "ObservableCollectionEx/1.4.57": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ObservableCollectionEx.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ObservableCollectionEx.dll": {}
         }
       },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.1": {
@@ -1119,6 +1137,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "ObservableCollectionEx/1.4.57": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ObservableCollectionEx.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ObservableCollectionEx.dll": {}
         }
       },
       "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.3": {
@@ -1643,6 +1670,15 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "ObservableCollectionEx/1.4.57": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ObservableCollectionEx.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ObservableCollectionEx.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.1": {
         "type": "package",
         "dependencies": {
@@ -2165,6 +2201,15 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "ObservableCollectionEx/1.4.57": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ObservableCollectionEx.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ObservableCollectionEx.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.1": {
         "type": "package",
         "dependencies": {
@@ -2684,6 +2729,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "ObservableCollectionEx/1.4.57": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ObservableCollectionEx.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ObservableCollectionEx.dll": {}
         }
       },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.1": {
@@ -3208,6 +3262,15 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "ObservableCollectionEx/1.4.57": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ObservableCollectionEx.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ObservableCollectionEx.dll": {}
+        }
+      },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.1": {
         "type": "package",
         "dependencies": {
@@ -3727,6 +3790,15 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "ObservableCollectionEx/1.4.57": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/ObservableCollectionEx.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ObservableCollectionEx.dll": {}
         }
       },
       "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.1": {
@@ -4668,6 +4740,22 @@
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "newtonsoft.json.12.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec"
+      ]
+    },
+    "ObservableCollectionEx/1.4.57": {
+      "sha512": "GJIHneUZQDBE1JPwYyEJn+wGZhQp2avNRMbYRceK7X3qP3ekrbN9n481fsYhmu9rzK2VtySmN2TeTOM0cfCE5A==",
+      "type": "package",
+      "path": "observablecollectionex/1.4.57",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/ObservableCollectionEx.dll",
+        "lib/net40/ObservableCollectionEx.dll",
+        "lib/net47/ObservableCollectionEx.dll",
+        "lib/netstandard1.0/ObservableCollectionEx.dll",
+        "lib/netstandard2.0/ObservableCollectionEx.dll",
+        "observablecollectionex.1.4.57.nupkg.sha512",
+        "observablecollectionex.nuspec"
       ]
     },
     "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.3": {
@@ -8579,7 +8667,8 @@
     "UAP,Version=v10.0.17763": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.3",
       "MvvmLightLibs >= 5.4.1.1",
-      "Newtonsoft.Json >= 12.0.1"
+      "Newtonsoft.Json >= 12.0.1",
+      "ObservableCollectionEx >= 1.4.57"
     ]
   },
   "packageFolders": {
@@ -8630,6 +8719,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.1, )"
+          },
+          "ObservableCollectionEx": {
+            "target": "Package",
+            "version": "[1.4.57, )"
           }
         },
         "imports": [
@@ -8662,5 +8755,13 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "读取缓存文件 F:\\Manager\\Manager\\obj\\Manager.csproj.nuget.cache 时遇到问题: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

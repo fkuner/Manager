@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Manager.Models;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -23,58 +24,63 @@ namespace Manager
     /// </summary>
     public sealed partial class BlankPage3 : Page
     {
+        private ObservableCollection<Money> Events;
         
         public BlankPage3()
         {
             this.InitializeComponent();
-            this.ViewModel = new RecordingViewModel();
-            ObservableCollection<string> listItems = new ObservableCollection<string>();
-            listItems.Add("Item1");
-            listItems.Add("Item2");
-            listItems.Add("Item3");
-            listItems.Add("Item4");
-            listItems.Add("Item5");
-            EventListView.ItemsSource = listItems;
-        }
-        public RecordingViewModel ViewModel
-        {
-            get;
-            set;
-        }
-    }
-
-    public class Recording
-    {
-        public string ArtisName { get; set; }
-        public string CompositionName { get; set; }
-        public DateTime ReleaseDateTime { get; set; }
-
-        public Recording()
-        {
-            this.ArtisName = "Wolfgang";
-            this.CompositionName = "Andante in C for Piano";
-            this.ReleaseDateTime = new DateTime(1761, 1, 1);
+            Events = MoneyManager.GetEvents();
         }
 
-        public string OnlineSummary
+        private void Add_Click(object sender, RoutedEventArgs e)
         {
-            get
+
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void SearchOpition_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.RemovedItems.Count > 0)
             {
-                return $"{this.CompositionName} by {this.ArtisName},released:"
-                    + this.ReleaseDateTime.ToString("d");
+                if (SearchOpition.SelectedItem.ToString() != SearchOpition.Items[2].ToString())
+                {
+                    SearchBox1.Visibility = Visibility.Collapsed;
+                    SearchBox2.Visibility = Visibility.Collapsed;
+                    SearchBox3.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    SearchBox1.Visibility = Visibility.Visible;
+                    SearchBox2.Visibility = Visibility.Visible;
+                    SearchBox3.Visibility = Visibility.Collapsed;
+                }
             }
         }
-    }
-    
-    public class RecordingViewModel
-    {
-        private Recording defaultRecording = new Recording();
-        public Recording DefaultRecording
+
+        private void Search_Click(object sender, RoutedEventArgs e)
         {
-            get
-            {
-                return this.defaultRecording;
-            }
+
+        }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            var money = (Money)e.ClickedItem;
+            ShowDate.Date = money.ConsumeTime;
+            ShowMoney.Text = money.Amount.ToString();
+            ShowEvent.Text = money.Event;
         }
     }
 }

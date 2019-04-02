@@ -248,6 +248,7 @@ C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\GalaSoft.MvvmLight.pd
 C:\Users\Lenovo\source\repos\Manager\Manager\obj\x86\Debug\GalaSoft.MvvmLight.Platform.pri.xml
 C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Newtonsoft.Json.dll
 C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Newtonsoft.Json.pdb
+<<<<<<< HEAD
 F:\Manager\Manager\bin\x86\Debug\CommonServiceLocator.dll
 F:\Manager\Manager\bin\x86\Debug\GalaSoft.MvvmLight.Extras.dll
 F:\Manager\Manager\bin\x86\Debug\GalaSoft.MvvmLight.Extras.pdb
@@ -258,3 +259,17 @@ F:\Manager\Manager\bin\x86\Debug\GalaSoft.MvvmLight.pdb
 F:\Manager\Manager\bin\x86\Debug\Newtonsoft.Json.dll
 F:\Manager\Manager\bin\x86\Debug\Newtonsoft.Json.pdb
 F:\Manager\Manager\obj\x86\Debug\GalaSoft.MvvmLight.Platform.pri.xml
+=======
+C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\ObservableCollectionEx.dll
+C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Pages\MemoDetail.xbf
+C:\Users\Lenovo\source\repos\Manager\Manager\obj\x86\Debug\Pages\MemoDetail.g.i.cs
+C:\Users\Lenovo\source\repos\Manager\Manager\obj\x86\Debug\Pages\MemoDetail.g.cs
+C:\Users\Lenovo\source\repos\Manager\Manager\obj\x86\Debug\Pages\MemoDetail.xaml
+C:\Users\Lenovo\source\repos\Manager\Manager\obj\x86\Debug\Pages\MemoDetail.xbf
+>>>>>>> 2a427155488767f56111305ff4aeb81d36ae7657
+F:\Manager\Manager\bin\x86\Debug\Pages\MemoDetail.xbf
+F:\Manager\Manager\bin\x86\Debug\ObservableCollectionEx.dll
+F:\Manager\Manager\obj\x86\Debug\Pages\MemoDetail.g.i.cs
+F:\Manager\Manager\obj\x86\Debug\Pages\MemoDetail.g.cs
+F:\Manager\Manager\obj\x86\Debug\Pages\MemoDetail.xaml
+F:\Manager\Manager\obj\x86\Debug\Pages\MemoDetail.xbf

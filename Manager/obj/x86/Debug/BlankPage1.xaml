@@ -1,38 +1,61 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="Manager.BlankPage1"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Manager"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
+    xmlns:telerikInput="using:Telerik.UI.Xaml.Controls.Input"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <DataTemplate x:Key="ListViewItemTemplate1">
+            <Grid Height="50"
+                  Width="1000"
+                  Margin="8">
+                <AppBarButton Icon="Add"
+                              Label="Add"/>
+                <Border Margin="0"
+                        Padding="0"
+                        BorderThickness="0"
+                        Background="LightYellow"
+                        BorderBrush="Red"
+                        >
+                    <TextBlock Name="memoItem"
+                               Text="placeholder"
+                               HorizontalAlignment="Center"
+                               Style="{StaticResource SubheaderTextBlockStyle}"/>
+                </Border>
+                
+            </Grid>
+        </DataTemplate>
+        <ItemsPanelTemplate x:Key="ListViewItemsPanel1">
+            <ItemsStackPanel Orientation="Vertical"
+                             HorizontalAlignment="Center"/>
+        </ItemsPanelTemplate>
+    </Page.Resources>
 
     <Grid>
-        <RelativePanel Margin="20" HorizontalAlignment="Stretch">
-            <RelativePanel.Resources>
-                <Style TargetType="AppBarButton">
-                    <Setter Property="IsCompact" Value="True"/>
-                </Style>
-            </RelativePanel.Resources>
-            <AppBarButton x:ConnectionId='2' x:Name="openFileButton" Icon="OpenFile"
-                                           ToolTipService.ToolTip="Open file"/>
-            <AppBarButton x:ConnectionId='3' Icon="Save"                         
-                  ToolTipService.ToolTip="Save file"
-                  RelativePanel.RightOf="openFileButton" Margin="8,0,0,0"/>
-
-            <AppBarButton x:ConnectionId='4' Icon="Bold"                          ToolTipService.ToolTip="Bold"
-                  RelativePanel.LeftOf="italicButton" Margin="0,0,8,0"/>
-            <AppBarButton x:ConnectionId='5' x:Name="italicButton" Icon="Italic"                           
-                  ToolTipService.ToolTip="Italic" RelativePanel.LeftOf="underlineButton" Margin="0,0,8,0"/>
-            <AppBarButton x:ConnectionId='6' x:Name="underlineButton" Icon="Underline"                              
-                  ToolTipService.ToolTip="Underline" RelativePanel.AlignRightWithPanel="True"/>
-
-            <RichEditBox x:ConnectionId='7' x:Name="editor" Height="200" RelativePanel.Below="openFileButton"
-                 RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True"/>
+        <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <TextBlock x:ConnectionId='3' x:Name="TitleTextBlock"
+               Text="Collection"
+               Margin="24,0,0,24"
+               Style="{StaticResource TitleTextBlockStyle}"/>
+            <ListView x:ConnectionId='4' ItemsPanel="{StaticResource ListViewItemsPanel1}" 
+                      ItemTemplate="{StaticResource ListViewItemTemplate1}" 
+                      x:Name="MemoListView"
+                      Margin="0,0,0,0"
+                                                        
+                      IsItemClickEnabled="True"
+                      
+                      
+                      RelativePanel.AlignLeftWithPanel="True"
+                      RelativePanel.AlignRightWithPanel="True"
+                      RelativePanel.Below="TitleTextBlock"
+                                                           
+                      />
         </RelativePanel>
-        
-        
     </Grid>
     
 </Page>
