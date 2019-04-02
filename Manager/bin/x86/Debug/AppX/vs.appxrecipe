@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-01T06:20:37.030</Modified>
+      <Modified>2019-04-02T10:33:26.025</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Manager.exe">
       <PackagePath>entrypoint\Manager.exe</PackagePath>
-      <Modified>2019-04-01T06:20:36.387</Modified>
+      <Modified>2019-04-02T10:33:23.999</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\commonservicelocator\2.0.2\lib\netstandard2.0\CommonServiceLocator.dll">
       <PackagePath>CommonServiceLocator.dll</PackagePath>
@@ -57,6 +57,10 @@
     <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\newtonsoft.json\12.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2018-11-27T10:07:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\observablecollectionex\1.4.57\lib\netstandard2.0\ObservableCollectionEx.dll">
+      <PackagePath>ObservableCollectionEx.dll</PackagePath>
+      <Modified>2017-09-09T02:50:54.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.3\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -178,43 +182,47 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Manager.xr.xml">
       <PackagePath>Manager.xr.xml</PackagePath>
-      <Modified>2019-04-01T06:16:32.816</Modified>
+      <Modified>2019-04-02T10:33:23.720</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-04-01T06:20:36.141</Modified>
+      <Modified>2019-04-02T10:33:23.756</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\BlankPage1.xbf">
       <PackagePath>BlankPage1.xbf</PackagePath>
-      <Modified>2019-04-01T06:20:36.142</Modified>
+      <Modified>2019-04-02T10:33:23.756</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\BlankPage2.xbf">
       <PackagePath>BlankPage2.xbf</PackagePath>
-      <Modified>2019-04-01T06:20:36.142</Modified>
+      <Modified>2019-04-02T10:33:23.756</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\BlankPage3.xbf">
       <PackagePath>BlankPage3.xbf</PackagePath>
-      <Modified>2019-04-01T06:20:36.142</Modified>
+      <Modified>2019-04-02T10:33:23.756</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Calendar.xbf">
       <PackagePath>Calendar.xbf</PackagePath>
-      <Modified>2019-04-01T06:20:36.143</Modified>
+      <Modified>2019-04-02T10:33:23.757</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-04-01T06:20:36.143</Modified>
+      <Modified>2019-04-02T10:33:23.757</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Pages\MemoDetail.xbf">
+      <PackagePath>Pages\MemoDetail.xbf</PackagePath>
+      <Modified>2019-04-02T10:33:23.757</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Record.xbf">
       <PackagePath>Record.xbf</PackagePath>
-      <Modified>2019-04-01T06:20:36.143</Modified>
+      <Modified>2019-04-02T10:33:23.757</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Remind.xbf">
       <PackagePath>Remind.xbf</PackagePath>
-      <Modified>2019-04-01T06:20:36.143</Modified>
+      <Modified>2019-04-02T10:33:23.757</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Search.xbf">
       <PackagePath>Search.xbf</PackagePath>
-      <Modified>2019-04-01T06:20:36.143</Modified>
+      <Modified>2019-04-02T10:33:23.758</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -222,11 +230,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-03-29T11:51:56.004</Modified>
+      <Modified>2019-04-02T10:33:24.811</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Core\Manager.exe">
       <PackagePath>Manager.exe</PackagePath>
-      <Modified>2019-04-01T06:20:37.022</Modified>
+      <Modified>2019-04-02T10:33:25.999</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

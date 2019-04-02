@@ -134,7 +134,12 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\MemoItem.cs" />
+    <Compile Include="Models\Money.cs" />
     <Compile Include="Models\TodoItem.cs" />
+    <Compile Include="Pages\MemoDetail.xaml.cs">
+      <DependentUpon>MemoDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Record.xaml.cs">
       <DependentUpon>Record.xaml</DependentUpon>
@@ -142,11 +147,11 @@
     <Compile Include="Remind.xaml.cs">
       <DependentUpon>Remind.xaml</DependentUpon>
     </Compile>
-    <Compile Include="rootFrame\PointerPressed.cs" />
     <Compile Include="Search.xaml.cs">
       <DependentUpon>Search.xaml</DependentUpon>
     </Compile>
     <Compile Include="Services\TodoItemService.cs" />
+    <Compile Include="ViewModels\BlankPage1ViewModel.cs" />
     <Compile Include="ViewModels\BlankPage2ViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -208,6 +213,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Pages\MemoDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Record.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -230,6 +239,9 @@
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="ObservableCollectionEx">
+      <Version>1.4.57</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup />

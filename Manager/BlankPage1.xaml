@@ -5,34 +5,57 @@
     xmlns:local="using:Manager"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
+    xmlns:telerikInput="using:Telerik.UI.Xaml.Controls.Input"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <DataTemplate x:Key="ListViewItemTemplate1">
+            <Grid Height="50"
+                  Width="1000"
+                  Margin="8">
+                <AppBarButton Icon="Add"
+                              Label="Add"/>
+                <Border Margin="0"
+                        Padding="0"
+                        BorderThickness="0"
+                        Background="LightYellow"
+                        BorderBrush="Red"
+                        >
+                    <TextBlock Name="memoItem"
+                               Text="placeholder"
+                               HorizontalAlignment="Center"
+                               Style="{StaticResource SubheaderTextBlockStyle}"/>
+                </Border>
+                
+            </Grid>
+        </DataTemplate>
+        <ItemsPanelTemplate x:Key="ListViewItemsPanel1">
+            <ItemsStackPanel Orientation="Vertical"
+                             HorizontalAlignment="Center"/>
+        </ItemsPanelTemplate>
+    </Page.Resources>
 
     <Grid>
-        <RelativePanel Margin="20" HorizontalAlignment="Stretch">
-            <RelativePanel.Resources>
-                <Style TargetType="AppBarButton">
-                    <Setter Property="IsCompact" Value="True"/>
-                </Style>
-            </RelativePanel.Resources>
-            <AppBarButton x:Name="openFileButton" Icon="OpenFile"
-                  Click="OpenButton_Click" ToolTipService.ToolTip="Open file"/>
-            <AppBarButton Icon="Save" Click="SaveButton_Click"
-                  ToolTipService.ToolTip="Save file"
-                  RelativePanel.RightOf="openFileButton" Margin="8,0,0,0"/>
-
-            <AppBarButton Icon="Bold" Click="BoldButton_Click" ToolTipService.ToolTip="Bold"
-                  RelativePanel.LeftOf="italicButton" Margin="0,0,8,0"/>
-            <AppBarButton x:Name="italicButton" Icon="Italic" Click="ItalicButton_Click"
-                  ToolTipService.ToolTip="Italic" RelativePanel.LeftOf="underlineButton" Margin="0,0,8,0"/>
-            <AppBarButton x:Name="underlineButton" Icon="Underline" Click="UnderlineButton_Click"
-                  ToolTipService.ToolTip="Underline" RelativePanel.AlignRightWithPanel="True"/>
-
-            <RichEditBox x:Name="editor" Height="200" RelativePanel.Below="openFileButton"
-                 RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True"/>
+        <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <TextBlock x:Name="TitleTextBlock"
+               Text="Collection"
+               Margin="24,0,0,24"
+               Style="{StaticResource TitleTextBlockStyle}"/>
+            <ListView ItemsPanel="{StaticResource ListViewItemsPanel1}" 
+                      ItemTemplate="{StaticResource ListViewItemTemplate1}" 
+                      Name="MemoListView"
+                      Margin="0,0,0,0"
+                      ItemClick="MemoListView_ItemClick"
+                      IsItemClickEnabled="True"
+                      
+                      
+                      RelativePanel.AlignLeftWithPanel="True"
+                      RelativePanel.AlignRightWithPanel="True"
+                      RelativePanel.Below="TitleTextBlock"
+                      ItemsSource="{x:Bind memoItems}"
+                      />
         </RelativePanel>
-        
-        
     </Grid>
     
 </Page>

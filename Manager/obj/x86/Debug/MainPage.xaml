@@ -6,12 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    NavigationCacheMode="Enabled">
 
     <Grid>
     
         <NavigationView x:ConnectionId='2' x:Name="nvSample"
-                        Header="NavigationViewTest"
+                        
                                                                     >
             <NavigationView.MenuItems>
                 <NavigationViewItem Icon="Memo"  Content="Memo" Tag="BlankPage1"  />
