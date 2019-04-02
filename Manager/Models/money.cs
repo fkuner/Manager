@@ -8,5 +8,6 @@ namespace Manager.Models
 {
     class Money
     {
+
     }
 }
