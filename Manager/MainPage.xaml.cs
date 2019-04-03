@@ -61,5 +61,52 @@ namespace Manager
                 }
             }
         }
+
+        private void NvSample_Loaded(object sender, RoutedEventArgs e)
+        {
+            var goBack = new KeyboardAccelerator { Key = VirtualKey.GoBack };
+            goBack.Invoked += BackInvoked;
+            this.KeyboardAccelerators.Add(goBack);
+
+            // ALT routes here
+            var altLeft = new KeyboardAccelerator
+            {
+                Key = VirtualKey.Left,
+                Modifiers = VirtualKeyModifiers.Menu
+            };
+            altLeft.Invoked += BackInvoked;
+            this.KeyboardAccelerators.Add(altLeft);
+
+            nvSample.IsBackEnabled = this.Frame.CanGoBack;
+        }
+
+        private void NvSample_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)
+        {
+            On_BackRequested();
+        }
+
+        private void BackInvoked(KeyboardAccelerator sender,
+                         KeyboardAcceleratorInvokedEventArgs args)
+        {
+            On_BackRequested();
+            args.Handled = true;
+        }
+
+        private bool On_BackRequested()
+        {
+
+            if (this.Frame.CanGoBack)
+            {
+                this.Frame.GoBack();
+                return true;
+            }
+            return false;
+        }
+
+        private void On_Navigated(object sender, NavigationEventArgs e)
+        {
+            //BackButton.IsEnabled = this.Frame.CanGoBack;
+        }
+
     }
 }

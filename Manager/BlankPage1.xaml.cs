@@ -99,5 +99,19 @@ namespace Manager
             }
         }
         */
+
+        private async void StartConnectedAnimationForBackNavigation()
+        {
+            // Run the connected animation for navigation back to the main page from the detail page.
+            if (memoItem != null)
+            {
+                MemoListView.ScrollIntoView(memoItem);
+                ConnectedAnimation animation = ConnectedAnimationService.GetForCurrentView().GetAnimation("backAnimation");
+                if (animation != null)
+                {
+                    await MemoListView.TryStartConnectedAnimationAsync(animation, memoItem, "memoItem");
+                }
+            }
+        }
     }
 }

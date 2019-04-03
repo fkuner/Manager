@@ -6,29 +6,40 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    >
 
     <Grid>
-        <RelativePanel Margin="20" HorizontalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:ConnectionId='2' VerticalAlignment="Top" HorizontalAlignment="Left" 
+            Style="{StaticResource NavigationBackButtonNormalStyle}"
+                                    />
+        <RelativePanel Margin="20" 
+                       HorizontalAlignment="Stretch"
+                       Grid.Row="1">
             <RelativePanel.Resources>
                 <Style TargetType="AppBarButton">
                     <Setter Property="IsCompact" Value="True"/>
                 </Style>
             </RelativePanel.Resources>
-            <AppBarButton x:ConnectionId='2' x:Name="openFileButton" Icon="OpenFile"
+            <AppBarButton x:ConnectionId='3' x:Name="openFileButton" Icon="OpenFile"
                                            ToolTipService.ToolTip="Open file"/>
-            <AppBarButton x:ConnectionId='3' Icon="Save"                         
+            <AppBarButton x:ConnectionId='4' Icon="Save"                         
                   ToolTipService.ToolTip="Save file"
                   RelativePanel.RightOf="openFileButton" Margin="8,0,0,0"/>
 
-            <AppBarButton x:ConnectionId='4' Icon="Bold"                          ToolTipService.ToolTip="Bold"
+            <AppBarButton x:ConnectionId='5' Icon="Bold"                          ToolTipService.ToolTip="Bold"
                   RelativePanel.LeftOf="italicButton" Margin="0,0,8,0"/>
-            <AppBarButton x:ConnectionId='5' x:Name="italicButton" Icon="Italic"                           
+            <AppBarButton x:ConnectionId='6' x:Name="italicButton" Icon="Italic"                           
                   ToolTipService.ToolTip="Italic" RelativePanel.LeftOf="underlineButton" Margin="0,0,8,0"/>
-            <AppBarButton x:ConnectionId='6' x:Name="underlineButton" Icon="Underline"                              
+            <AppBarButton x:ConnectionId='7' x:Name="underlineButton" Icon="Underline"                              
                   ToolTipService.ToolTip="Underline" RelativePanel.AlignRightWithPanel="True"/>
 
-            <RichEditBox x:ConnectionId='7' x:Name="editor" Height="200" RelativePanel.Below="openFileButton"
+            <RichEditBox x:ConnectionId='8' x:Name="editor" Height="200" RelativePanel.Below="openFileButton"
                  RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True"/>
         </RelativePanel>
     </Grid>

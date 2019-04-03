@@ -105,6 +105,7 @@
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="ItemContainerTransitions" />
       <RootEvent Name="ItemClick" />
+      <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
     <RootType FullName="Manager.BlankPage1" />
@@ -164,6 +165,8 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Frame">
       <RootProperty Name="Name" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="IsTabStop" />
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Manager.BlankPage3" />
@@ -172,15 +175,24 @@
     </RootType>
     <RootType FullName="Manager.Calendar" />
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationView">
+      <RootProperty Name="IsBackButtonVisible" />
+      <RootProperty Name="IsBackEnabled" />
       <RootProperty Name="MenuItems" />
       <RootProperty Name="Content" />
       <RootProperty Name="AutoSuggestBox" />
+      <RootEvent Name="Loaded" />
+      <RootEvent Name="BackRequested" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationViewItem">
       <RootProperty Name="Icon" />
       <RootProperty Name="Content" />
       <RootProperty Name="Tag" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalScrollBarVisibility" />
+      <RootProperty Name="VerticalScrollBarVisibility" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AutoSuggestBox">
       <RootProperty Name="QueryIcon" />
@@ -200,11 +212,6 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Manager.Pages.MemoDetail" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
-      <RootProperty Name="HorizontalScrollBarVisibility" />
-      <RootProperty Name="VerticalScrollBarVisibility" />
-      <RootProperty Name="Content" />
-    </RootType>
     <RootType FullName="Manager.Record" />
     <RootType FullName="Windows.UI.Xaml.Controls.Flyout">
       <RootProperty Name="Content" />

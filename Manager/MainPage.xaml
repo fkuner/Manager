@@ -12,6 +12,10 @@
     <Grid>
     
         <NavigationView x:Name="nvSample"
+                        IsBackButtonVisible="Auto"
+                        IsBackEnabled="True"
+                        Loaded="NvSample_Loaded"
+                        BackRequested="NvSample_BackRequested"
                         
                         SelectionChanged="NvSample_SelectionChanged">
             <NavigationView.MenuItems>
@@ -27,12 +31,14 @@
             <NavigationView.AutoSuggestBox>
                 <AutoSuggestBox QueryIcon="Find" />
             </NavigationView.AutoSuggestBox>
-            
+
             <!--
-                <NavigationView.Content>
-                <Frame Name="PageFrame"/>
-            </NavigationView.Content>
+                <ScrollViewer>
+                <Frame x:Name="ContentFrame" Padding="12,0,12,24" IsTabStop="True"
+                   NavigationFailed="ContentFrame_NavigationFailed"/>
+            </ScrollViewer>
             -->
+  
             
         </NavigationView>
 
