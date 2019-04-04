@@ -2,45 +2,36 @@
     x:Class="Manager.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Manager"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    
+    xmlns:local="using:Manager"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-    NavigationCacheMode="Enabled">
+    >
 
     <Grid>
-    
-        <NavigationView x:Name="nvSample"
-                        IsBackButtonVisible="Auto"
-                        IsBackEnabled="True"
-                        Loaded="NvSample_Loaded"
-                        BackRequested="NvSample_BackRequested"
-                        
-                        SelectionChanged="NvSample_SelectionChanged">
+        <NavigationView x:Name="NavView"
+                        IsBackButtonVisible="Collapsed"
+                        SelectionChanged="NavView_SelectionChanged"
+                        Loaded="NavView_Loaded"
+                        ItemInvoked="NavView_ItemInvoked"
+                        BackRequested="NavView_BackRequested">
             <NavigationView.MenuItems>
                 <NavigationViewItem Icon="Memo"  Content="Memo" Tag="BlankPage1"  />
                 <NavigationViewItem Icon="Accept"  Content="Todo" Tag="BlankPage2" />
                 <NavigationViewItem Icon="Account"  Content="Money" Tag="BlankPage3" />
             </NavigationView.MenuItems>
-            
-                <Frame x:Name="PageFrame"
-                   Content="Content"/>
-           
-        
+
+            <ScrollViewer>
+                <Frame x:Name="PageFrame" 
+                       Content="Content"
+                       IsTabStop="True"/>
+            </ScrollViewer>
+
             <NavigationView.AutoSuggestBox>
                 <AutoSuggestBox QueryIcon="Find" />
             </NavigationView.AutoSuggestBox>
-
-            <!--
-                <ScrollViewer>
-                <Frame x:Name="ContentFrame" Padding="12,0,12,24" IsTabStop="True"
-                   NavigationFailed="ContentFrame_NavigationFailed"/>
-            </ScrollViewer>
-            -->
-  
-            
         </NavigationView>
-
     </Grid>
 </Page>

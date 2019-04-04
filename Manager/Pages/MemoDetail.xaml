@@ -14,10 +14,14 @@
             <RowDefinition Height="50" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-
+        
+        
         <Button VerticalAlignment="Top" HorizontalAlignment="Left" 
             Style="{StaticResource NavigationBackButtonNormalStyle}"
                 Click="Button_Click"/>
+        
+        
+        
         <RelativePanel Margin="20" 
                        HorizontalAlignment="Stretch"
                        Grid.Row="1">

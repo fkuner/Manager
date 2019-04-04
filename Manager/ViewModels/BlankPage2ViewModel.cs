@@ -16,8 +16,6 @@ namespace Manager.ViewModels
     class BlankPage2ViewModel : ViewModelBase
     {
         private TodoItemService todoItemService=new TodoItemService(); 
-        
-       
 
         /// <summary>
         /// 第一个TodoItem。
@@ -75,6 +73,7 @@ namespace Manager.ViewModels
             _addCommand ?? (_addCommand = new RelayCommand(async () => {
                 await todoItemService.AddAsync(_addTodoItem);
             }));
+
 
         private TodoItem _addTodoItem=new TodoItem();
         public TodoItem AddTodoItem

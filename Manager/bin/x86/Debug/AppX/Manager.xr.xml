@@ -4,32 +4,31 @@
     <RootType FullName="Windows.UI.Xaml.Application">
       <RootProperty Name="Resources" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Image">
-      <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Stretch" />
-      <RootProperty Name="Source" />
-      <RootProperty Name="Name" />
-      <RootProperty Name="HorizontalAlignment" />
+    <RootType FullName="Windows.UI.Xaml.ResourceDictionary">
+      <RootProperty Name="MergedDictionaries" />
+      <RootProperty Name="ThemeDictionaries" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.FrameworkElement">
-      <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
+    <RootType FullName="Windows.UI.Xaml.Media.AcrylicBrush">
+      <RootProperty Name="BackgroundSource" />
+      <RootProperty Name="TintColor" />
+      <RootProperty Name="TintOpacity" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Setter">
-      <RootProperty Name="Property" />
-      <RootProperty Name="Value" />
+    <RootType FullName="Windows.UI.Xaml.Media.LinearGradientBrush">
+      <RootProperty Name="StartPoint" />
+      <RootProperty Name="EndPoint" />
+      <RootProperty Name="GradientStops" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.GradientStop">
+      <RootProperty Name="Color" />
+      <RootProperty Name="Offset" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
       <RootProperty Name="Resources" />
       <RootProperty Name="Content" />
       <RootProperty Name="NavigationCacheMode" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
@@ -101,7 +100,6 @@
       <RootMethod Name="SetLeftOf" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
-      <RootProperty Name="Name" />
       <RootProperty Name="ItemsPanel" />
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="Margin" />
@@ -112,7 +110,9 @@
       <RootEvent Name="ItemClick" />
       <RootEvent Name="Loaded" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
+      <RootProperty Name="Path" />
+    </RootType>
     <RootType FullName="Manager.BlankPage1" />
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
@@ -166,6 +166,14 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.AddDeleteThemeTransition" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Stretch" />
+      <RootProperty Name="Source" />
+      <RootProperty Name="Name" />
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.Imaging.BitmapImage">
       <RootProperty Name="UriSource" />
       <RootProperty Name="DecodePixelHeight" />
@@ -176,10 +184,25 @@
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.FrameworkElement">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Setter">
+      <RootProperty Name="Property" />
+      <RootProperty Name="Value" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
       <RootProperty Name="Name" />
-      <RootProperty Name="Padding" />
-      <RootProperty Name="IsTabStop" />
+      <RootProperty Name="Header" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="DayVisible" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Flyout">
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
@@ -220,19 +243,8 @@
       <RootProperty Name="Content" />
       <RootProperty Name="Tag" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+    <RootType FullName="Windows.UI.Xaml.Controls.Frame">
       <RootProperty Name="Content" />
-      <RootProperty Name="HorizontalScrollBarVisibility" />
-      <RootProperty Name="VerticalScrollBarVisibility" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.AutoSuggestBox">
-      <RootProperty Name="QueryIcon" />
-      <RootProperty Name="Name" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="Width" />
-      <RootEvent Name="TextChanged" />
     </RootType>
     <RootType FullName="Manager.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ToolTipService">
@@ -243,6 +255,11 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Manager.Pages.MemoDetail" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="HorizontalScrollBarVisibility" />
+      <RootProperty Name="VerticalScrollBarVisibility" />
+      <RootProperty Name="Content" />
+    </RootType>
     <RootType FullName="Manager.Record" />
     <RootType FullName="Manager.Remind" />
     <RootType FullName="Manager.Search" />

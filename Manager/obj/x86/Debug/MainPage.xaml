@@ -12,38 +12,32 @@
     <Grid>
     
         <NavigationView x:ConnectionId='2' x:Name="nvSample"
-                        IsBackButtonVisible="Auto"
+                        IsBackButtonVisible="Collapsed"
                         IsBackEnabled="True"
                                                 
                                                               
-                        
                                                                     >
             <NavigationView.MenuItems>
                 <NavigationViewItem Icon="Memo"  Content="Memo" Tag="BlankPage1"  />
                 <NavigationViewItem Icon="Accept"  Content="Todo" Tag="BlankPage2" />
                 <NavigationViewItem Icon="Account"  Content="Money" Tag="BlankPage3" />
             </NavigationView.MenuItems>
-
-            <ScrollViewer>
-                <Frame x:ConnectionId='3' x:Name="PageFrame"
-                       Padding="12,0,12,24"
-                       IsTabStop="True"
-                   Content="Content"/>
-            </ScrollViewer>    
             
+                <Frame x:ConnectionId='3' x:Name="PageFrame"
+                   Content="Content"/>
            
         
             <NavigationView.AutoSuggestBox>
                 <AutoSuggestBox QueryIcon="Find" />
             </NavigationView.AutoSuggestBox>
 
-            
-
             <!--
-                <NavigationView.Content>
-                <Frame Name="PageFrame"/>
-            </NavigationView.Content>
+                <ScrollViewer>
+                <Frame x:Name="ContentFrame" Padding="12,0,12,24" IsTabStop="True"
+                   NavigationFailed="ContentFrame_NavigationFailed"/>
+            </ScrollViewer>
             -->
+  
             
         </NavigationView>
 

@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Manager.Models
 {
-    class MemoItem
+    public class MemoItem
     {
-        
+        public int ID { get; set; }
+        public string Content { get; set; }
     }
 }
