@@ -180,3 +180,6 @@ F:\Manager\Manager\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
 F:\Manager\Manager\obj\x64\Debug\GalaSoft.MvvmLight.Platform.pri.xml
 F:\Manager\Manager\obj\x64\Debug\ProjectArchitectures.txt
 F:\Manager\Manager\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636758264200000000.json
+F:\Manager\Manager\bin\x64\Debug\Microsoft.Data.Sqlite.dll
+F:\Manager\Manager\bin\x64\Debug\sqlite3.dll
+F:\Manager\Manager\obj\x64\Debug\Microsoft.Data.Sqlite\en-US\Microsoft.Data.Sqlite.Strings.resw
