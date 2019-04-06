@@ -8,14 +8,29 @@ using System.Threading.Tasks;
 
 namespace Manager.Services
 {
-    class MemoItemService
+    public class MemoItemService : IMemoItemService
     {
+        public void AddAsync(MemoItem memoItem)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteAsync(MemoItem memoItem)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int FindMemoItem(List<MemoItem> MemoItems, MemoItem memoItem)
+        {
+            throw new NotImplementedException();
+        }
+
         //private MemoItem _memoItem;
 
 
-        public ObservableCollection<MemoItem>  ListAsync()
+        public List<MemoItem>  ListAsync()
         {
-            ObservableCollection<MemoItem> MemoItems = new ObservableCollection<MemoItem>();
+            List<MemoItem> MemoItems = new List<MemoItem>();
 
             for (int i=0;i<5;i++)
             {
@@ -24,6 +39,7 @@ namespace Manager.Services
                 MemoItems.Add(memoItem);
             }
             return MemoItems;
+            throw new NotImplementedException();
         }
     }
 }

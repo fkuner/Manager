@@ -79,3 +79,13 @@ C:\Users\Lenovo\source\repos\Manager\Manager\obj\x64\Debug\Pages\SettingsPage.g.
 C:\Users\Lenovo\source\repos\Manager\Manager\obj\x64\Debug\Pages\SettingsPage.g.cs
 C:\Users\Lenovo\source\repos\Manager\Manager\obj\x64\Debug\Pages\SettingsPage.xaml
 C:\Users\Lenovo\source\repos\Manager\Manager\obj\x64\Debug\Pages\SettingsPage.xbf
+C:\Users\Lenovo\source\repos\Manager\Manager\bin\x64\Debug\Memo.xbf
+C:\Users\Lenovo\source\repos\Manager\Manager\obj\x64\Debug\Memo.g.i.cs
+C:\Users\Lenovo\source\repos\Manager\Manager\obj\x64\Debug\Memo.g.cs
+C:\Users\Lenovo\source\repos\Manager\Manager\obj\x64\Debug\Memo.xaml
+C:\Users\Lenovo\source\repos\Manager\Manager\obj\x64\Debug\Memo.xbf
+C:\Users\Lenovo\source\repos\Manager\Manager\obj\x64\Debug\Pages\MemoDetailPage.g.i.cs
+C:\Users\Lenovo\source\repos\Manager\Manager\obj\x64\Debug\Pages\MemoDetailPage.g.cs
+C:\Users\Lenovo\source\repos\Manager\Manager\obj\x64\Debug\Pages\MemoDetailPage.xaml
+C:\Users\Lenovo\source\repos\Manager\Manager\obj\x64\Debug\Pages\MemoDetailPage.xbf
+C:\Users\Lenovo\source\repos\Manager\Manager\bin\x64\Debug\Pages\MemoDetailPage.xbf

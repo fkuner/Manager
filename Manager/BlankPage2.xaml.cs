@@ -38,9 +38,15 @@ namespace Manager
         public BlankPage2()
         {
             this.InitializeComponent();
-            DataContext = new BlankPage2ViewModel();
+            DataContext = ViewModelLocator.Instance.BlankPage2ViewModel;
         }
-        private async void MainButton_Click(object sender, RoutedEventArgs e)
+
+        /// <summary>
+        /// 发送邮件响应事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void MailButton_Click(object sender, RoutedEventArgs e)
         {
             String subject = "test";
             String messageBody = "test";
@@ -84,6 +90,13 @@ namespace Manager
             */
         }
 
+        /// <summary>
+        /// 发送邮件函数
+        /// </summary>
+        /// <param name="recipient"></param>
+        /// <param name="subject"></param>
+        /// <param name="messageBody"></param>
+        /// <returns></returns>
         private async Task ComposeEmail(Windows.ApplicationModel.Contacts.Contact recipient,
         string subject, string messageBody)
         {
@@ -101,6 +114,7 @@ namespace Manager
             await Windows.ApplicationModel.Email.EmailManager.ShowComposeNewEmailAsync(emailMessage);
         }
 
+
         private async void  AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             
@@ -115,19 +129,6 @@ namespace Manager
             //TodoItemService todoItemService = new TodoItemService();
             //await todoItemService.AddAsync(todoItem);
         }
-        private void click(object sender,RoutedEventArgs e)
-        {
-
-        }
-        private void AppBarButton_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void TestButton_Click(object sender, RoutedEventArgs e)
-        {
-            TextBlock textBlock = new TextBlock();
-        }
-
+        
     }
 }

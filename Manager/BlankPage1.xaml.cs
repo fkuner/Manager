@@ -36,7 +36,7 @@ namespace Manager
         public BlankPage1()
         {
             this.InitializeComponent();
-            DataContext = new BlankPage1ViewModel();
+            DataContext = ViewModelLocator.Instance.BlankPage1ViewModel;
             this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
         }
 

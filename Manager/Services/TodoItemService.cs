@@ -9,43 +9,37 @@ using System.Threading.Tasks;
 
 namespace Manager.Services
 {
-    class TodoItemService
+    public class TodoItemService : ITodoItemService
     {
-        /// <summary>
-        /// 列出所有Todo项目。
-        /// </summary>
-        /// <returns>所有Todo项目。</returns>
-        public async Task<List<TodoItem>> ListAsync()
+        public void AddAsync(TodoItem todoItem)
         {
-            HttpClient httpClient = new HttpClient();
-            HttpResponseMessage response =
-                await httpClient.GetAsync(
-                    "http://localhost:5000/api/todoItems");
-            string json = await response.Content.ReadAsStringAsync();
-            return JsonConvert.DeserializeObject<List<TodoItem>>(json);
+            throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// 添加Todo项目。
-        /// </summary>
-        /// <param name="todoItem">要添加的Todo项目。</param>
-        public async Task AddAsync(TodoItem todoItem)
+        public void DeleteAsync(TodoItem todoItem)
         {
-            HttpClient httpClient = new HttpClient();
-            string json = JsonConvert.SerializeObject(todoItem);
-            await httpClient.PostAsync("http://localhost:5000/api/todoItems",
-                new StringContent(json, Encoding.UTF8, "application/json"));
+            throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// 删除Todo项目。
-        /// </summary>
-        /// <param name="todoItem">要删除的Todo项目。</param>
-        public async Task DeleteAsync(TodoItem todoItem)
+        public int FindMemoItem(List<TodoItem> TodoItems, TodoItem todoItem)
         {
-            HttpClient httpClient = new HttpClient();
-            await httpClient.DeleteAsync(
-                "http://localhost:5000/api/todoItems/" + todoItem.ID);
+            throw new NotImplementedException();
+        }
+
+        //private TodoItem _TodoItem;
+
+
+        public List<TodoItem> ListAsync()
+        {
+            List<TodoItem> TodoItems = new List<TodoItem>();
+            for (int i = 0; i < 5; i++)
+            {
+                TodoItem todoItem = new TodoItem();
+                todoItem.Content = i.ToString();
+                TodoItems.Add(todoItem);
+            }
+            return TodoItems;
+            throw new NotImplementedException();
         }
     }
 }

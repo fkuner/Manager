@@ -227,6 +227,12 @@
           "build/Microsoft.UI.Xaml.props": {}
         }
       },
+      "MvvmLight/5.4.1.1": {
+        "type": "package",
+        "dependencies": {
+          "MvvmLightLibs": "5.4.1.1"
+        }
+      },
       "MvvmLightLibs/5.4.1.1": {
         "type": "package",
         "dependencies": {
@@ -591,6 +597,12 @@
         },
         "build": {
           "build/Microsoft.UI.Xaml.props": {}
+        }
+      },
+      "MvvmLight/5.4.1.1": {
+        "type": "package",
+        "dependencies": {
+          "MvvmLightLibs": "5.4.1.1"
         }
       },
       "MvvmLightLibs/5.4.1.1": {
@@ -1133,6 +1145,12 @@
         },
         "build": {
           "build/Microsoft.UI.Xaml.props": {}
+        }
+      },
+      "MvvmLight/5.4.1.1": {
+        "type": "package",
+        "dependencies": {
+          "MvvmLightLibs": "5.4.1.1"
         }
       },
       "MvvmLightLibs/5.4.1.1": {
@@ -1678,6 +1696,12 @@
           "build/Microsoft.UI.Xaml.props": {}
         }
       },
+      "MvvmLight/5.4.1.1": {
+        "type": "package",
+        "dependencies": {
+          "MvvmLightLibs": "5.4.1.1"
+        }
+      },
       "MvvmLightLibs/5.4.1.1": {
         "type": "package",
         "dependencies": {
@@ -2221,6 +2245,12 @@
           "build/Microsoft.UI.Xaml.props": {}
         }
       },
+      "MvvmLight/5.4.1.1": {
+        "type": "package",
+        "dependencies": {
+          "MvvmLightLibs": "5.4.1.1"
+        }
+      },
       "MvvmLightLibs/5.4.1.1": {
         "type": "package",
         "dependencies": {
@@ -2761,6 +2791,12 @@
         },
         "build": {
           "build/Microsoft.UI.Xaml.props": {}
+        }
+      },
+      "MvvmLight/5.4.1.1": {
+        "type": "package",
+        "dependencies": {
+          "MvvmLightLibs": "5.4.1.1"
         }
       },
       "MvvmLightLibs/5.4.1.1": {
@@ -3306,6 +3342,12 @@
           "build/Microsoft.UI.Xaml.props": {}
         }
       },
+      "MvvmLight/5.4.1.1": {
+        "type": "package",
+        "dependencies": {
+          "MvvmLightLibs": "5.4.1.1"
+        }
+      },
       "MvvmLightLibs/5.4.1.1": {
         "type": "package",
         "dependencies": {
@@ -3846,6 +3888,12 @@
         },
         "build": {
           "build/Microsoft.UI.Xaml.props": {}
+        }
+      },
+      "MvvmLight/5.4.1.1": {
+        "type": "package",
+        "dependencies": {
+          "MvvmLightLibs": "5.4.1.1"
         }
       },
       "MvvmLightLibs/5.4.1.1": {
@@ -4578,6 +4626,21 @@
         "tools/AppX/x64/Release/Microsoft.UI.Xaml.2.0.appx",
         "tools/AppX/x86/Release/Microsoft.UI.Xaml.2.0.appx",
         "tools/VisualStudioToolsManifest.xml"
+      ]
+    },
+    "MvvmLight/5.4.1.1": {
+      "sha512": "fTUDMWT//ChZGd7Q5k0IaJuIXgh+FM43pCStxup7kgh1MQXvC48CjpjWkp5Auru/YXhHOJOMgD1NdtFZgn6K2g==",
+      "type": "package",
+      "path": "mvvmlight/5.4.1.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/ViewModel/MainViewModel.cs.pp",
+        "Content/ViewModel/ViewModelLocator.cs.pp",
+        "mvvmlight.5.4.1.1.nupkg.sha512",
+        "mvvmlight.nuspec",
+        "tools/install.ps1"
       ]
     },
     "MvvmLightLibs/5.4.1.1": {
@@ -8789,6 +8852,7 @@
     "UAP,Version=v10.0.17763": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.3",
       "Microsoft.UI.Xaml >= 2.0.181018004",
+      "MvvmLight >= 5.4.1.1",
       "MvvmLightLibs >= 5.4.1.1",
       "Newtonsoft.Json >= 12.0.1",
       "ObservableCollectionEx >= 1.4.57"
@@ -8812,7 +8876,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8838,6 +8902,10 @@
           "Microsoft.UI.Xaml": {
             "target": "Package",
             "version": "[2.0.181018004, )"
+          },
+          "MvvmLight": {
+            "target": "Package",
+            "version": "[5.4.1.1, )"
           },
           "MvvmLightLibs": {
             "target": "Package",
