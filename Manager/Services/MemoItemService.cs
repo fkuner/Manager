@@ -12,6 +12,7 @@ namespace Manager.Services
     class MemoItemService
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         //缺一个初始化命令,坤哥，等会儿你试的时候一定要App.xaml.cs加载中给它初始化
         public void InitializeDatabase()
         {
@@ -82,15 +83,20 @@ namespace Manager.Services
 
 =======
 >>>>>>> parent of 908a51a... 客户端架构模式终极版
+=======
+>>>>>>> parent of 908a51a... 客户端架构模式终极版
         //private MemoItem _memoItem;
 
 
         public ObservableCollection<MemoItem>  ListAsync()
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             List<MemoItem> List = new List<MemoItem>();
             using (SqliteConnection db = new SqliteConnection("Filename=sqliteData.db"))
 =======
+=======
+>>>>>>> parent of 908a51a... 客户端架构模式终极版
             ObservableCollection<MemoItem> MemoItems = new ObservableCollection<MemoItem>();
 
             for (int i=0;i<5;i++)
@@ -110,6 +116,9 @@ namespace Manager.Services
             return List;
 =======
             return MemoItems;
+<<<<<<< HEAD
+>>>>>>> parent of 908a51a... 客户端架构模式终极版
+=======
 >>>>>>> parent of 908a51a... 客户端架构模式终极版
         }
     }

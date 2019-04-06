@@ -9205,7 +9205,11 @@
       ],
       "configFilePaths": [
 <<<<<<< HEAD
+<<<<<<< HEAD
         "C:\\Users\\tangyijun\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> parent of 908a51a... 客户端架构模式终极版
 =======
         "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
 >>>>>>> parent of 908a51a... 客户端架构模式终极版

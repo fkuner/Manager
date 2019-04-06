@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿#pragma checksum "F:\Manager\Manager\BlankPage1.xaml" "{406ea660-64cf-4c82-b6f0-42d48172a799}" "6116ECF0BE02AE8A52FAD208C41178CF"
+=======
+﻿#pragma checksum "C:\Users\Lenovo\source\repos\Manager\Manager\BlankPage1.xaml" "{406ea660-64cf-4c82-b6f0-42d48172a799}" "746B5060D8F5D162DD315A7445E3AD40"
+>>>>>>> parent of 908a51a... 客户端架构模式终极版
 =======
 ﻿#pragma checksum "C:\Users\Lenovo\source\repos\Manager\Manager\BlankPage1.xaml" "{406ea660-64cf-4c82-b6f0-42d48172a799}" "746B5060D8F5D162DD315A7445E3AD40"
 >>>>>>> parent of 908a51a... 客户端架构模式终极版
