@@ -9,37 +9,43 @@ using System.Threading.Tasks;
 
 namespace Manager.Services
 {
-    public class TodoItemService : ITodoItemService
+    class TodoItemService
     {
-        public void AddAsync(TodoItem todoItem)
+        /// <summary>
+        /// 列出所有Todo项目。
+        /// </summary>
+        /// <returns>所有Todo项目。</returns>
+        public async Task<List<TodoItem>> ListAsync()
         {
-            throw new NotImplementedException();
+            HttpClient httpClient = new HttpClient();
+            HttpResponseMessage response =
+                await httpClient.GetAsync(
+                    "http://localhost:5000/api/todoItems");
+            string json = await response.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<List<TodoItem>>(json);
         }
 
-        public void DeleteAsync(TodoItem todoItem)
+        /// <summary>
+        /// 添加Todo项目。
+        /// </summary>
+        /// <param name="todoItem">要添加的Todo项目。</param>
+        public async Task AddAsync(TodoItem todoItem)
         {
-            throw new NotImplementedException();
+            HttpClient httpClient = new HttpClient();
+            string json = JsonConvert.SerializeObject(todoItem);
+            await httpClient.PostAsync("http://localhost:5000/api/todoItems",
+                new StringContent(json, Encoding.UTF8, "application/json"));
         }
 
-        public int FindMemoItem(List<TodoItem> TodoItems, TodoItem todoItem)
+        /// <summary>
+        /// 删除Todo项目。
+        /// </summary>
+        /// <param name="todoItem">要删除的Todo项目。</param>
+        public async Task DeleteAsync(TodoItem todoItem)
         {
-            throw new NotImplementedException();
-        }
-
-        //private TodoItem _TodoItem;
-
-
-        public List<TodoItem> ListAsync()
-        {
-            List<TodoItem> TodoItems = new List<TodoItem>();
-            for (int i = 0; i < 5; i++)
-            {
-                TodoItem todoItem = new TodoItem();
-                todoItem.Content = i.ToString();
-                TodoItems.Add(todoItem);
-            }
-            return TodoItems;
-            throw new NotImplementedException();
+            HttpClient httpClient = new HttpClient();
+            await httpClient.DeleteAsync(
+                "http://localhost:5000/api/todoItems/" + todoItem.ID);
         }
     }
 }

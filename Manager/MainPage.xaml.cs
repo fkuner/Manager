@@ -166,7 +166,7 @@ namespace Manager
             ("BlankPage1", typeof(BlankPage1)),
             ("BlankPage2", typeof(BlankPage2)),
             ("BlankPage3", typeof(BlankPage3)),
-            ("Memo",typeof(Memo)),
+            
         };
 
         private void NavView_Loaded(object sender, RoutedEventArgs e)
@@ -248,8 +248,7 @@ namespace Manager
             // Only navigate if the selected page isn't currently loaded.
             if (!(_page is null) && !Type.Equals(preNavPageType, _page))
             {
-                //PageFrame.Navigate(_page, null, transitionInfo);
-                PageFrame.Navigate(_page, null);
+                PageFrame.Navigate(_page, null, transitionInfo);
             }
         }
 

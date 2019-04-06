@@ -133,33 +133,20 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Memo.xaml.cs">
-      <DependentUpon>Memo.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Item.cs" />
-    <Compile Include="Models\ItemsDataSource.cs" />
     <Compile Include="Models\MemoItem.cs" />
     <Compile Include="Models\Money.cs" />
     <Compile Include="Models\TodoItem.cs" />
     <Compile Include="Pages\MemoDetail.xaml.cs">
       <DependentUpon>MemoDetail.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\MemoDetailPage.xaml.cs">
-      <DependentUpon>MemoDetailPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\IMemoItemService.cs" />
-    <Compile Include="Services\ITodoItemService.cs" />
     <Compile Include="Services\MemoItemService.cs" />
     <Compile Include="Services\TodoItemService.cs" />
-    <Compile Include="ViewModelLocator.cs" />
     <Compile Include="ViewModels\BlankPage1ViewModel.cs" />
     <Compile Include="ViewModels\BlankPage2ViewModel.cs" />
-    <Compile Include="ViewModels\BlankPage3ViewModel.cs" />
-    <Compile Include="ViewModels\MemoItemViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -216,15 +203,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Memo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\MemoDetail.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\MemoDetailPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -242,9 +221,6 @@
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml">
       <Version>2.0.181018004</Version>
-    </PackageReference>
-    <PackageReference Include="MvvmLight">
-      <Version>5.4.1.1</Version>
     </PackageReference>
     <PackageReference Include="MvvmLightLibs">
       <Version>5.4.1.1</Version>

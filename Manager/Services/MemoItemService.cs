@@ -9,8 +9,9 @@ using Microsoft.Data.Sqlite;
 
 namespace Manager.Services
 {
-    public class MemoItemService : IMemoItemService
+    class MemoItemService
     {
+<<<<<<< HEAD
         //缺一个初始化命令,坤哥，等会儿你试的时候一定要App.xaml.cs加载中给它初始化
         public void InitializeDatabase()
         {
@@ -79,13 +80,21 @@ namespace Manager.Services
             return -1;
         }
 
+=======
+>>>>>>> parent of 908a51a... 客户端架构模式终极版
         //private MemoItem _memoItem;
 
 
-        public List<MemoItem>  ListAsync()
+        public ObservableCollection<MemoItem>  ListAsync()
         {
+<<<<<<< HEAD
             List<MemoItem> List = new List<MemoItem>();
             using (SqliteConnection db = new SqliteConnection("Filename=sqliteData.db"))
+=======
+            ObservableCollection<MemoItem> MemoItems = new ObservableCollection<MemoItem>();
+
+            for (int i=0;i<5;i++)
+>>>>>>> parent of 908a51a... 客户端架构模式终极版
             {
                 db.Open();
                 SqliteCommand selectCommand = new SqliteCommand
@@ -97,7 +106,11 @@ namespace Manager.Services
                 }
                 db.Close();
             }
+<<<<<<< HEAD
             return List;
+=======
+            return MemoItems;
+>>>>>>> parent of 908a51a... 客户端架构模式终极版
         }
     }
 }
