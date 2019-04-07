@@ -14,39 +14,73 @@
         </Style>
         -->
         
-        <ResourceDictionary>
+    <!--
+    <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
                         <ResourceDictionary x:Key="Default">
-                            <!-- The "Default" theme dictionary is used unless a specific
-                                 light, dark, or high contrast dictionary is provided. These
-                                 resources should be tested with both the light and dark themes,
-                                 and specific light or dark resources provided as needed. -->
-                            <AcrylicBrush x:Key="NavigationViewDefaultPaneBackground"
+                        
+        <AcrylicBrush x:Key="NavigationViewDefaultPaneBackground"
                                    BackgroundSource="Backdrop"
                                    TintColor="#FF0D7AE8"
                                    TintOpacity=".6"/>
-                            <AcrylicBrush x:Key="NavigationViewTopPaneBackground"
+        <AcrylicBrush x:Key="NavigationViewTopPaneBackground"
                                    BackgroundSource="Backdrop"
                                    TintColor="{ThemeResource SystemRevealChromeBlackHighColor}"
                                    TintOpacity=".6"/>
-                            <LinearGradientBrush x:Key="NavigationViewExpandedPaneBackground"
+        <LinearGradientBrush x:Key="NavigationViewExpandedPaneBackground"
                                      StartPoint="0.5,0" EndPoint="0.5,1">
-                                <GradientStop Color="#FF368FE8" Offset="0.0" />
-                                <GradientStop Color="#FF368FE8"  Offset="1.0" />
-                            </LinearGradientBrush>
-                        </ResourceDictionary>
-                        <ResourceDictionary x:Key="HighContrast">
-                            <!-- Always include a "HighContrast" dictionary when you override
-                                 theme resources. This empty dictionary ensures that the 
-                                 default high contrast resources are used when the user
-                                 turns on high contrast mode. -->
-                        </ResourceDictionary>
-                    </ResourceDictionary.ThemeDictionaries>
-                </ResourceDictionary>
-            </ResourceDictionary.MergedDictionaries>
+            <GradientStop Color="#FF368FE8" Offset="0.0" />
+            <GradientStop Color="#FF368FE8"  Offset="1.0" />
+        </LinearGradientBrush>
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="HighContrast">
+        </ResourceDictionary>
+        </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+        </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
-    
+
+    -->
+
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Dark">
+                    <Style x:Key="ListCaptionAltTextblockStyle" TargetType="TextBlock" BasedOn="{StaticResource CaptionTextBlockStyle}">
+                        <Setter Property="FontSize" Value="13"/>
+                        <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseMediumBrush}"/>
+                    </Style>
+
+                    <Style x:Key="ListBodyTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource BodyTextBlockStyle}">
+                        <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseMediumBrush}"/>
+                    </Style>
+                </ResourceDictionary>
+
+                <ResourceDictionary x:Key="Light">
+                    <Style x:Key="ListCaptionAltTextblockStyle" TargetType="TextBlock" BasedOn="{StaticResource CaptionTextBlockStyle}">
+                        <Setter Property="FontSize" Value="13"/>
+                        <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseMediumBrush}"/>
+                    </Style>
+
+                    <Style x:Key="ListBodyTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource BodyTextBlockStyle}">
+                        <Setter Property="Foreground" Value="{ThemeResource SystemControlForegroundBaseMediumBrush}"/>
+                    </Style>
+                </ResourceDictionary>
+
+                <ResourceDictionary x:Key="HighContrast">
+                    <!-- Don't set the Foreground in high contrast theme -->
+                    <Style x:Key="ListCaptionAltTextblockStyle" TargetType="TextBlock" BasedOn="{StaticResource CaptionTextBlockStyle}">
+                        <Setter Property="FontSize" Value="13"/>
+                    </Style>
+
+                    <!-- Don't set the Foreground in high contrast theme -->
+                    <Style x:Key="ListBodyTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource BodyTextBlockStyle}"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+
+        </ResourceDictionary>
+    </Application.Resources>
+
 </Application>

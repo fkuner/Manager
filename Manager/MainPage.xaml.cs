@@ -32,9 +32,9 @@ namespace Manager
 
         // MainPage.xaml.cs
 
-        //public Microsoft.UI.Xaml.Controls.NavigationView NavigationView => nvSample;
+        //public Microsoft.UI.Xaml.Controls.NavigationView NavigationView => NavView;
 
-        /*
+        
         public MainPage()
         {
             this.InitializeComponent();
@@ -49,9 +49,10 @@ namespace Manager
             ("BlankPage1", typeof(BlankPage1)),
             ("BlankPage2", typeof(BlankPage2)),
             ("BlankPage2", typeof(BlankPage3)),
+            ("Memo",typeof(Memo)),
         };
 
-        private void NvSample_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+        private void NavView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
             if (args.IsSettingsSelected)
             {
@@ -75,13 +76,15 @@ namespace Manager
                     case "BlankPage3":
                         PageFrame.Navigate(typeof(BlankPage3));
                         break;
-
-                 
+                    case "Memo":
+                        PageFrame.Navigate(typeof(Memo));
+                        Window.Current.Activate();
+                        break;
                 }
             }
         }
 
-        private void NvSample_Loaded(object sender, RoutedEventArgs e)
+        private void NavView_Loaded(object sender, RoutedEventArgs e)
         {
             var goBack = new KeyboardAccelerator { Key = VirtualKey.GoBack };
             goBack.Invoked += BackInvoked;
@@ -96,10 +99,10 @@ namespace Manager
             altLeft.Invoked += BackInvoked;
             this.KeyboardAccelerators.Add(altLeft);
 
-            nvSample.IsBackEnabled = this.Frame.CanGoBack;
+            NavView.IsBackEnabled = this.Frame.CanGoBack;
         }
 
-        private void NvSample_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)
+        private void NavView_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)
         {
             On_BackRequested();
         }
@@ -118,9 +121,9 @@ namespace Manager
                 return false;
 
             // Don't go back if the nav pane is overlayed.
-            if (nvSample.IsPaneOpen &&
-                (nvSample.DisplayMode == NavigationViewDisplayMode.Compact ||
-                 nvSample.DisplayMode == NavigationViewDisplayMode.Minimal))
+            if (NavView.IsPaneOpen &&
+                (NavView.DisplayMode == NavigationViewDisplayMode.Compact ||
+                 NavView.DisplayMode == NavigationViewDisplayMode.Minimal))
                 return false;
 
             PageFrame.GoBack();
@@ -129,25 +132,27 @@ namespace Manager
 
         private void On_Navigated(object sender, NavigationEventArgs e)
         {
-            nvSample.IsBackEnabled = PageFrame.CanGoBack;
+            NavView.IsBackEnabled = PageFrame.CanGoBack;
             if (PageFrame.SourcePageType == typeof(SettingsPage))
             {
-                // SettingsItem is not part of nvSample.MenuItems, and doesn't have a Tag.
-                nvSample.SelectedItem = (NavigationViewItem)nvSample.SettingsItem;
-                nvSample.Header = "Settings";
+                // SettingsItem is not part of NavView.MenuItems, and doesn't have a Tag.
+                NavView.SelectedItem = (NavigationViewItem)NavView.SettingsItem;
+                NavView.Header = "Settings";
             }
             else if (PageFrame.SourcePageType != null)
             {
                 var item = _pages.FirstOrDefault(p => p.Page == e.SourcePageType);
 
-                nvSample.SelectedItem = nvSample.MenuItems
+                NavView.SelectedItem = NavView.MenuItems
                     .OfType<NavigationViewItem>()
                     .First(n => n.Tag.Equals(item.Tag));
 
-                nvSample.Header =
-                    ((NavigationViewItem)nvSample.SelectedItem)?.Content?.ToString();
+                NavView.Header =
+                    ((NavigationViewItem)NavView.SelectedItem)?.Content?.ToString();
             }
-        }*/
+        }
+
+        /*
         public MainPage()
         {
             this.InitializeComponent();
@@ -181,7 +186,7 @@ namespace Manager
             // If navigation occurs on SelectionChanged, this isn't needed.
             // Because we use ItemInvoked to navigate, we need to call Navigate
             // here to load the home page.
-            NavView_Navigate("home", new EntranceNavigationTransitionInfo());
+            NavView_Navigate("Memo", new EntranceNavigationTransitionInfo());
 
             // Add keyboard accelerators for backwards navigation.
             var goBack = new KeyboardAccelerator { Key = VirtualKey.GoBack };
@@ -303,7 +308,6 @@ namespace Manager
                     ((NavigationViewItem)NavView.SelectedItem)?.Content?.ToString();
             }
         }
-        
-        
+        */
     }
 }
