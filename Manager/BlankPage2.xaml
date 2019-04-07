@@ -39,10 +39,10 @@
                     Grid.Row="1"
                     HorizontalAlignment="Stretch"
                     Margin="0,0,0,0">
-            <AppBarButton Icon="Add" Label="Add" Click="AppBarButton_Click"/>
-            <AppBarButton Icon="ReShare" Label="Share" Click="AppBarButton_Click_1"/>
+            <AppBarButton Icon="Add" Label="Add"/>
+            <AppBarButton Icon="ReShare" Label="Share"/>
             <AppBarButton Icon="Edit" Label="Edit"/>
-            <AppBarButton Icon="Mail" Label="Mail" Click="MainButton_Click"/>
+            <AppBarButton Icon="Mail" Label="Mail" Click="MailButton_Click"/>
             <AppBarButton Icon="Delete" Label="Delete"/>
         </CommandBar>
         

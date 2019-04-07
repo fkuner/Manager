@@ -1,13 +1,5 @@
 {
   "version": 1,
-<<<<<<< HEAD
-<<<<<<< HEAD
   "dgSpecHash": "wT6kNr1J90+/AcuckgD4mmoEdq5svFBfqFlnmJPcZPkEb7QipeE3ycpI1pzJavlmt6Qj7Ad90cBsgZzKFCjr3A==",
-=======
-  "dgSpecHash": "jtu+thS+eLMxA5CVr20VaSl2Xp8Eq+hDUtPhdt7HEuFo0nWMRK2f3ckKFZ0j8zXZXuZy+m8r9+lXq9j1AQ3e6Q==",
->>>>>>> parent of 908a51a... 客户端架构模式终极版
-=======
-  "dgSpecHash": "jtu+thS+eLMxA5CVr20VaSl2Xp8Eq+hDUtPhdt7HEuFo0nWMRK2f3ckKFZ0j8zXZXuZy+m8r9+lXq9j1AQ3e6Q==",
->>>>>>> parent of 908a51a... 客户端架构模式终极版
   "success": true
 }

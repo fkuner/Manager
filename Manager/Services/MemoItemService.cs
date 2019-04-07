@@ -9,12 +9,10 @@ using Microsoft.Data.Sqlite;
 
 namespace Manager.Services
 {
-    class MemoItemService
+    public class MemoItemService : IMemoItemService
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
         //缺一个初始化命令,坤哥，等会儿你试的时候一定要App.xaml.cs加载中给它初始化
-        public void InitializeDatabase()
+        public static void InitializeDatabase()
         {
             using (SqliteConnection db = new SqliteConnection("Filename=sqliteData.db"))
             {
@@ -22,7 +20,7 @@ namespace Manager.Services
 
                 String tableCommand = "CREATE TABLE IF NOT EXISTS MemoItemTable " +
                     "(ID INTEGER PRIMARY KEY NOT NULL," +
-                    "Content NVACHAR(2048) NULL)";
+                    "Content NVACHAR(2048) NULL);";
 
                 SqliteCommand createTable = new SqliteCommand(tableCommand, db);
 
@@ -81,26 +79,13 @@ namespace Manager.Services
             return -1;
         }
 
-=======
->>>>>>> parent of 908a51a... 客户端架构模式终极版
-=======
->>>>>>> parent of 908a51a... 客户端架构模式终极版
         //private MemoItem _memoItem;
 
 
-        public ObservableCollection<MemoItem>  ListAsync()
+        public List<MemoItem>  ListAsync()
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
             List<MemoItem> List = new List<MemoItem>();
             using (SqliteConnection db = new SqliteConnection("Filename=sqliteData.db"))
-=======
-=======
->>>>>>> parent of 908a51a... 客户端架构模式终极版
-            ObservableCollection<MemoItem> MemoItems = new ObservableCollection<MemoItem>();
-
-            for (int i=0;i<5;i++)
->>>>>>> parent of 908a51a... 客户端架构模式终极版
             {
                 db.Open();
                 SqliteCommand selectCommand = new SqliteCommand
@@ -108,18 +93,11 @@ namespace Manager.Services
                 SqliteDataReader query = selectCommand.ExecuteReader();
                 while (query.Read())
                 {
-                    List.Add(new MemoItem { ID=(int)query["ID"],Content=query["Content"].ToString()});
+                    List.Add(new MemoItem { ID=Convert.ToInt32(query["ID"]),Content=query["Content"].ToString()});
                 }
                 db.Close();
             }
-<<<<<<< HEAD
             return List;
-=======
-            return MemoItems;
-<<<<<<< HEAD
->>>>>>> parent of 908a51a... 客户端架构模式终极版
-=======
->>>>>>> parent of 908a51a... 客户端架构模式终极版
         }
     }
 }
