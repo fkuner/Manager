@@ -11,6 +11,20 @@
           "lib/netstandard2.0/CommonServiceLocator.dll": {}
         }
       },
+      "Microsoft.Data.Sqlite/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "SQLite": "3.13.0",
+          "System.Data.Common": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
+        }
+      },
       "Microsoft.Net.Native.Compiler/2.2.1": {
         "type": "package",
         "dependencies": {
@@ -370,6 +384,54 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "SQLite/3.13.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libsqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-x64/native/libsqlite3.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win10-arm/nativeassets/uap10.0/sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win10-arm"
+          },
+          "runtimes/win10-x64/nativeassets/uap10.0/sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win10-x64"
+          },
+          "runtimes/win10-x86/nativeassets/uap10.0/sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win10-x86"
+          },
+          "runtimes/win7-x64/native/sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win7-x64"
+          },
+          "runtimes/win7-x86/native/sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win7-x86"
+          }
+        }
+      },
+      "System.Data.Common/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard1.2/System.Data.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.2/System.Data.Common.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-arm": {
@@ -380,6 +442,20 @@
         },
         "runtime": {
           "lib/netstandard2.0/CommonServiceLocator.dll": {}
+        }
+      },
+      "Microsoft.Data.Sqlite/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "SQLite": "3.13.0",
+          "System.Data.Common": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/2.2.1": {
@@ -918,6 +994,27 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "SQLite/3.13.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "native": {
+          "runtimes/win10-arm/nativeassets/uap10.0/sqlite3.dll": {}
+        }
+      },
+      "System.Data.Common/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard1.2/System.Data.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.2/System.Data.Common.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-arm-aot": {
@@ -928,6 +1025,20 @@
         },
         "runtime": {
           "lib/netstandard2.0/CommonServiceLocator.dll": {}
+        }
+      },
+      "Microsoft.Data.Sqlite/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "SQLite": "3.13.0",
+          "System.Data.Common": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/2.2.1": {
@@ -1467,6 +1578,27 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "SQLite/3.13.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "native": {
+          "runtimes/win10-arm/nativeassets/uap10.0/sqlite3.dll": {}
+        }
+      },
+      "System.Data.Common/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard1.2/System.Data.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.2/System.Data.Common.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-arm64-aot": {
@@ -1477,6 +1609,20 @@
         },
         "runtime": {
           "lib/netstandard2.0/CommonServiceLocator.dll": {}
+        }
+      },
+      "Microsoft.Data.Sqlite/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "SQLite": "3.13.0",
+          "System.Data.Common": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/2.2.1": {
@@ -2016,6 +2162,24 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "SQLite/3.13.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        }
+      },
+      "System.Data.Common/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard1.2/System.Data.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.2/System.Data.Common.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x64": {
@@ -2026,6 +2190,20 @@
         },
         "runtime": {
           "lib/netstandard2.0/CommonServiceLocator.dll": {}
+        }
+      },
+      "Microsoft.Data.Sqlite/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "SQLite": "3.13.0",
+          "System.Data.Common": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/2.2.1": {
@@ -2564,6 +2742,27 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "SQLite/3.13.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "native": {
+          "runtimes/win10-x64/nativeassets/uap10.0/sqlite3.dll": {}
+        }
+      },
+      "System.Data.Common/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard1.2/System.Data.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.2/System.Data.Common.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x64-aot": {
@@ -2574,6 +2773,20 @@
         },
         "runtime": {
           "lib/netstandard2.0/CommonServiceLocator.dll": {}
+        }
+      },
+      "Microsoft.Data.Sqlite/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "SQLite": "3.13.0",
+          "System.Data.Common": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/2.2.1": {
@@ -3113,6 +3326,27 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "SQLite/3.13.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "native": {
+          "runtimes/win10-x64/nativeassets/uap10.0/sqlite3.dll": {}
+        }
+      },
+      "System.Data.Common/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard1.2/System.Data.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.2/System.Data.Common.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x86": {
@@ -3123,6 +3357,20 @@
         },
         "runtime": {
           "lib/netstandard2.0/CommonServiceLocator.dll": {}
+        }
+      },
+      "Microsoft.Data.Sqlite/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "SQLite": "3.13.0",
+          "System.Data.Common": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/2.2.1": {
@@ -3661,6 +3909,27 @@
         "native": {
           "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll": {}
         }
+      },
+      "SQLite/3.13.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "native": {
+          "runtimes/win10-x86/nativeassets/uap10.0/sqlite3.dll": {}
+        }
+      },
+      "System.Data.Common/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard1.2/System.Data.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.2/System.Data.Common.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.17763/win10-x86-aot": {
@@ -3671,6 +3940,20 @@
         },
         "runtime": {
           "lib/netstandard2.0/CommonServiceLocator.dll": {}
+        }
+      },
+      "Microsoft.Data.Sqlite/1.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "SQLite": "3.13.0",
+          "System.Data.Common": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.Data.Sqlite.dll": {}
         }
       },
       "Microsoft.Net.Native.Compiler/2.2.1": {
@@ -4210,6 +4493,27 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
+      },
+      "SQLite/3.13.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "native": {
+          "runtimes/win10-x86/nativeassets/uap10.0/sqlite3.dll": {}
+        }
+      },
+      "System.Data.Common/4.3.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard1.2/System.Data.Common.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.2/System.Data.Common.dll": {}
+        }
       }
     }
   },
@@ -4231,8 +4535,23 @@
         "lib/netstandard2.0/CommonServiceLocator.dll"
       ]
     },
+    "Microsoft.Data.Sqlite/1.1.1": {
+      "sha512": "EA/L0kQtkPm037kHyLtt/9dsB4ephlgmXgaQbW2qcb2jcW8R5RbfT9zh1j9amZIqFP3OwpnZ7kt7xTwC8z7M1A==",
+      "type": "package",
+      "path": "microsoft.data.sqlite/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net451/Microsoft.Data.Sqlite.dll",
+        "lib/net451/Microsoft.Data.Sqlite.xml",
+        "lib/netstandard1.3/Microsoft.Data.Sqlite.dll",
+        "lib/netstandard1.3/Microsoft.Data.Sqlite.xml",
+        "microsoft.data.sqlite.1.1.1.nupkg.sha512",
+        "microsoft.data.sqlite.nuspec"
+      ]
+    },
     "Microsoft.Net.Native.Compiler/2.2.1": {
-      "sha512": "OpTyR/jcKwV1ct8M0/VhjEUjBMHchpVC/eMRJWiVRmX/ikAwXoQ0cwEK/TAEYpV04vJZGsIcHSCIj1jnnpSwBg==",
+      "sha512": "8NeBTaUTA12OURaZnRF5uNaXl1KUmKsCr7N1TkiORCHTjhcw1eMfTfIJUKaHDZBSdMfv/EUWwzT15L5WgbLphg==",
       "type": "package",
       "path": "microsoft.net.native.compiler/2.2.1",
       "hasTools": true,
@@ -4285,7 +4604,7 @@
       ]
     },
     "Microsoft.Net.UWPCoreRuntimeSdk/2.2.3": {
-      "sha512": "kapJIh2Ck75JWgyeT2sHduHVb9BTTXAADnwNp/MGgLs/MPBEHTmlFVY66LHl6zRCTIArKgBMLqimP1tGLSSiWQ==",
+      "sha512": "xMVR7fe2m5GUS1q3TR8AzrFlTzS6yPmB/vOWUJnhwMz02WsQpuG/FMFjTUapHwd8AZvx5exR72myptVtC9RjEQ==",
       "type": "package",
       "path": "microsoft.net.uwpcoreruntimesdk/2.2.3",
       "hasTools": true,
@@ -4304,7 +4623,7 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.1.0": {
-      "sha512": "aSTPL94NloSiQVL5Len8wbjFKOnoAX/vOh3s3DF6g3c7GUUMLCDvnBhmA72M2iN2AedyA8hpr7m89kzSAKUnJQ==",
+      "sha512": "GmkKfoyerqmsHMn7OZj0AKpcBabD+GaafqphvX2Mw406IwiJRy1pKcKqdCfKJfYmkRyJ6+e+RaUylgdJoDa1jQ==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.1.0",
       "files": [
@@ -4321,7 +4640,7 @@
       ]
     },
     "Microsoft.NETCore.UniversalWindowsPlatform/6.2.3": {
-      "sha512": "1nTvK10WUDP1CvhCvqMCpQg2aSKrGObuVhtea7vYs27EmxY+QDND4LLDMJcVErPj0hrwhOibMqTeo/zkwPW9gg==",
+      "sha512": "d/xeSODBpd6Axvx1ayYbta7isk+rJAfFIP4zUAFZD6T+is5g7ALxO8+D4Mb1QvoUtuquZHKmtHITTptiKkHtKg==",
       "type": "package",
       "path": "microsoft.netcore.universalwindowsplatform/6.2.3",
       "files": [
@@ -4944,7 +5263,7 @@
       ]
     },
     "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.3": {
-      "sha512": "yd3MHby8zUeTAtWGxx0gM2vYpThYqYqUbEbVrXY6Hm1K+wrJSjsxJ1v5jeCqsJBY3mcygGl/DHZnACJ/RChK7Q==",
+      "sha512": "rzKmhRW/obtht31W7+Sqa4CemSfWVos70UjA9i0yG/kKh/i9Exr+RWGGJCQ8OV/vLtWHGZ/adbOSeoUTIqpm0g==",
       "type": "package",
       "path": "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform/6.2.3",
       "files": [
@@ -5125,7 +5444,7 @@
       ]
     },
     "runtime.win10-arm.Microsoft.Net.Native.Compiler/2.2.1": {
-      "sha512": "mq/CC9iEcABLdofhqy/g7mULxzWNTu1Evq4eBJrDFIk+s9//YJOARIbkpvu5irZGHnAzcM8ytOUsaeCm2m1kmQ==",
+      "sha512": "M9jeKRw12aGiOKMc9vwv5R3u9R9JKZsgP+SiUULdzWHBdFBmJl4cg2k3ANJoinemSuSaAHWVl784SRsayr8Bcw==",
       "type": "package",
       "path": "runtime.win10-arm.microsoft.net.native.compiler/2.2.1",
       "hasTools": true,
@@ -5424,7 +5743,7 @@
       ]
     },
     "runtime.win10-arm.Microsoft.Net.Native.SharedLibrary/2.2.1": {
-      "sha512": "NhL3X5RAoO52PYVsHMBj22K+Mq2Wnh1AU8wQbAzrSuLkRT3hDky1sufKehskO0E2fSNDW2L5BTiyBWd48LelXw==",
+      "sha512": "Vksddm/FoXZO1SLnYWcdGmGvjii1Ffh+usx9P64j5fq2sQTerlWtZwrAUeoYn+wHxXZP9OBn2PRnDHMBq/+fbw==",
       "type": "package",
       "path": "runtime.win10-arm.microsoft.net.native.sharedlibrary/2.2.1",
       "hasTools": true,
@@ -5802,7 +6121,7 @@
       ]
     },
     "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.2.3": {
-      "sha512": "C1W0fcNsNbCfIw0HzJSV9RY2XIaNweClZuNzhRXiSt7h6S/93aLpFrtaXPuMu46KSrrwbwDrtGMAQ43YuAZRDw==",
+      "sha512": "Rz7mY4SNy2R97WKB9eEVztVDR9H/UFKzyW3ILAxQx0vr6UHJl3uGCp61nsiEq5vPmfLdT4UU8V0l1+D7BCSD0Q==",
       "type": "package",
       "path": "runtime.win10-arm.microsoft.net.uwpcoreruntimesdk/2.2.3",
       "hasTools": true,
@@ -5823,7 +6142,7 @@
       ]
     },
     "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform/6.2.3": {
-      "sha512": "ARCGW2RsQJlW/D3R4W7iOG00SY1EuYyNLDW1wMtho2KEF1Yrm0gTrP5R+Pihvz3DnnbD2WttJrJTUzCbCuHUdQ==",
+      "sha512": "I9aTdtP5lgms6pxCrwFU4dbe93jGEd04GZoRmt0OYmB/z927LVSyYRRCrk2Wzd/NjtpYdzmTfWaLRDKRNJA0jw==",
       "type": "package",
       "path": "runtime.win10-arm.microsoft.netcore.universalwindowsplatform/6.2.3",
       "files": [
@@ -6003,7 +6322,7 @@
       ]
     },
     "runtime.win10-arm64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.3": {
-      "sha512": "R7Kp71uu8IVGgoi8amXz4D6uVKsIX+OFpE6A9jHv31p3SAn/JHGirLPdVDBLSrz38IZEqpWbrWCLCZWV3cJ/hg==",
+      "sha512": "fTxltLq/on6FavlX6ovIA2c3CWPq3al2rcnN2+7Bz87cN8lrK3MiNP0rRqs/TXIYhftzlLJfivmkQCbCkgIRUg==",
       "type": "package",
       "path": "runtime.win10-arm64-aot.microsoft.netcore.universalwindowsplatform/6.2.3",
       "files": [
@@ -6184,7 +6503,7 @@
       ]
     },
     "runtime.win10-arm64.Microsoft.Net.Native.Compiler/2.2.1": {
-      "sha512": "xrp0BxzfXzUSy3Q4IqDcLelOmfRPW6mkFBXdKTz2oqUuhTX04c12KVjRyNhbkPlebOX/RBnTgQxZaWPkOjOsLg==",
+      "sha512": "GmN3u6NT+m5KnfZGVOiQspG9azAevHe1cGrgFI45B9QGQZnOq416LRcIULGyww16UpkKhMi5rXFz7rlmvtDWnQ==",
       "type": "package",
       "path": "runtime.win10-arm64.microsoft.net.native.compiler/2.2.1",
       "hasTools": true,
@@ -6362,7 +6681,7 @@
       ]
     },
     "runtime.win10-arm64.Microsoft.Net.Native.SharedLibrary/2.2.1": {
-      "sha512": "tR2xDqGSPvsELNFmRNmVfMy/MIyYC0Hvws1mFleFJzIm220p2Nkauasr0NuXeIs3rR+G25XM3/lTn/NFqudk5w==",
+      "sha512": "gMvoi0PzMxynycAxJVNq7/IxRls9q/F/Rgu9BU+osgFAdV2E5Q78FputzGXF4oH31hahBUS7Pgg7VQs5OMpp5w==",
       "type": "package",
       "path": "runtime.win10-arm64.microsoft.net.native.sharedlibrary/2.2.1",
       "hasTools": true,
@@ -6742,7 +7061,7 @@
       ]
     },
     "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.3": {
-      "sha512": "lEFHTJyjHvcfiIJNcwqHB37kFsNMvlFeOE1z5KCWFZVA8/wOpmHVCPp6J4DNE8e/DqCHUWRWtg2bl7ZWQP9GPg==",
+      "sha512": "5YxWy1exUvXEWs8IrsuHXBns32EF26+NciWH+rm6xcE+yfdX7f71OyTIjSUCD7X27TPIj2KjeHZBSuRZS273Cg==",
       "type": "package",
       "path": "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform/6.2.3",
       "files": [
@@ -6923,7 +7242,7 @@
       ]
     },
     "runtime.win10-x64.Microsoft.Net.Native.Compiler/2.2.1": {
-      "sha512": "R/QKu5mrndE+JiK8UEkCKatFDg1K9YMoG8jclpC1noMk/GdupFIyLaJwbW3Gbi4BbqcPlfLPUwiIcMxFI8CajA==",
+      "sha512": "C3u2+Q6PgdmaE21rqsXTAEoZ59us8kxb+9EgL6XpHLsjoZGziNNqidpd42oKb/8ZM2eQaWcckr5gfwoFrILBJQ==",
       "type": "package",
       "path": "runtime.win10-x64.microsoft.net.native.compiler/2.2.1",
       "hasTools": true,
@@ -7216,7 +7535,7 @@
       ]
     },
     "runtime.win10-x64.Microsoft.Net.Native.SharedLibrary/2.2.1": {
-      "sha512": "q1DFrFT4Bv6xQ3ITUiqs4eTSrF51oXmw0wlcLzdaRDzDH7LCwxSmkXL/VY0Ojbzyddq7wIDBVzrQ0Z2k7DCAfg==",
+      "sha512": "hxjZtOj8s6RM+J1MWUfeXPxgOkDXsmzv/7zI+lKXh69Fp04qEKOegYPp5K/jlsUJU2gyxOlLEEeNLXMLGS1zvA==",
       "type": "package",
       "path": "runtime.win10-x64.microsoft.net.native.sharedlibrary/2.2.1",
       "hasTools": true,
@@ -7594,7 +7913,7 @@
       ]
     },
     "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.2.3": {
-      "sha512": "a4yAlswkDaJSouC8mNDvOVKUKcs6zOfOrz4XK8gU+pByuO59H3lLfnDL3zaNOyjM+GGZKTQHeQ8L7Xr93ckKng==",
+      "sha512": "kw2n86feSj+C4gw5WQYxbe9S94x05uB2yaVgGBuiwqbfepu85S/Pi+Jhv4RWoDZl3gwe3A2RW3lFoYYy57te2Q==",
       "type": "package",
       "path": "runtime.win10-x64.microsoft.net.uwpcoreruntimesdk/2.2.3",
       "hasTools": true,
@@ -7615,7 +7934,7 @@
       ]
     },
     "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform/6.2.3": {
-      "sha512": "iufkZip18UWFljbZjVpXcCqB8LBvxAoFMLRAMyANVNXkuayKYuQPl/E07muRlCYmkDTUFGyQioU5WHBawCu/gw==",
+      "sha512": "njejSRFdmE9mSpJoWvO6pHDcgysjQ5NG6lDF2P0Kq+gX7XGPHiMLlvUH1/Etm9cJDaps/uU3ZotYdobs3x2+mw==",
       "type": "package",
       "path": "runtime.win10-x64.microsoft.netcore.universalwindowsplatform/6.2.3",
       "files": [
@@ -7795,7 +8114,7 @@
       ]
     },
     "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.2.3": {
-      "sha512": "cyuG6c1fX2tuLByZ+RyIqzI22Y1qcusVA2xWma1T3q0dJY43oUu8p37hRnLLg+iKCmeWx2p6pf365xR9wl/0qQ==",
+      "sha512": "903sMr0WffmzEjGGZXgEcTa4yCJiJaQth/ud8cR1+PlOZW/TXaefCQ9C8qmN8Knvs32yJoPQbXP9GHjEtlp81A==",
       "type": "package",
       "path": "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform/6.2.3",
       "files": [
@@ -7976,7 +8295,7 @@
       ]
     },
     "runtime.win10-x86.Microsoft.Net.Native.Compiler/2.2.1": {
-      "sha512": "J438S8PHQkxeu4ikie1Cb+xbUQpa4tjzrDC6KfFXmT1E0U7hxJHE+rFSswgrNgnitHkdR6t1sTqwOiITzan0tA==",
+      "sha512": "cQ5/JZ3BoZrdUrMLOIujBlBNXHohDfqXbNYSTJ9j3H01715OzIp90wLAoHfaRTta1cb61B3yNpXGQ92LSSCKGQ==",
       "type": "package",
       "path": "runtime.win10-x86.microsoft.net.native.compiler/2.2.1",
       "hasTools": true,
@@ -8269,7 +8588,7 @@
       ]
     },
     "runtime.win10-x86.Microsoft.Net.Native.SharedLibrary/2.2.1": {
-      "sha512": "tUAiD7/t1Wv2+LCZYZzeaonEzRadtggg5UPzZZvaBBm8CQ3iwNKoyYndLLqHAdCT8DadKiG7HB3kqCg7tdyESg==",
+      "sha512": "DJtepPBbC44dft4zzNfmj+PKjaoNcs+R1yIPIvJ+h00pqs7AkueC7gqIV8w7t4chUhIqVuQciLgdD9XJCu6vLQ==",
       "type": "package",
       "path": "runtime.win10-x86.microsoft.net.native.sharedlibrary/2.2.1",
       "hasTools": true,
@@ -8647,7 +8966,7 @@
       ]
     },
     "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.2.3": {
-      "sha512": "n/sUXDON8aaBMAG3fkmkkikjWeG7aAChcipkEl2544p82slL4OL3dRP6QxYFMk0RXe11/c7Py4kpe/XXLppxxQ==",
+      "sha512": "ko5pRh+eeR11csjsdcwzrzuHmemu2ecCA+kwoEY7VlB65ladp6OBHp/ildsec/Sp3cfkJ/qqxvvulAQU3nzFkw==",
       "type": "package",
       "path": "runtime.win10-x86.microsoft.net.uwpcoreruntimesdk/2.2.3",
       "hasTools": true,
@@ -8668,7 +8987,7 @@
       ]
     },
     "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform/6.2.3": {
-      "sha512": "brlcvN8Tp9bz+jp46O2iNXhqcEbnvtpmViUENyzAJj+BNm60TxUJbG56+9D+yauA+5BT2CR3nEkfeTnWV8/ILQ==",
+      "sha512": "HHX4+acMi+KeTPzJfyRuKb7qpnLVsUWWEPUCaBY7SWrajs2rbNS4FOg2EseTGElBuUBqRAbKk0J+U8p7t1yzhg==",
       "type": "package",
       "path": "runtime.win10-x86.microsoft.netcore.universalwindowsplatform/6.2.3",
       "files": [
@@ -8846,10 +9165,83 @@
         "runtimes/win10-x86/lib/uap10.0.15138/netstandard.dll",
         "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
+    },
+    "SQLite/3.13.0": {
+      "sha512": "MJfRiz2p6aMVOxrxGMdVzhpzI0oxTgZSwC8eVuOpV8L7yYaFUu8q/OFYwv9P0/aZ/pdEu24O6gma6wZJMTun9A==",
+      "type": "package",
+      "path": "sqlite/3.13.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net45/SQLite.props",
+        "lib/netstandard1.0/_._",
+        "runtimes/linux-x64/native/libsqlite3.so",
+        "runtimes/osx-x64/native/libsqlite3.dylib",
+        "runtimes/win10-arm/nativeassets/uap10.0/sqlite3.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/sqlite3.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/sqlite3.dll",
+        "runtimes/win7-x64/native/sqlite3.dll",
+        "runtimes/win7-x86/native/sqlite3.dll",
+        "sqlite-version.txt",
+        "sqlite.3.13.0.nupkg.sha512",
+        "sqlite.nuspec"
+      ]
+    },
+    "System.Data.Common/4.3.0": {
+      "sha512": "lm6E3T5u7BOuEH0u18JpbJHxBfOJPuCyl4Kg1RH10ktYLp5uEEE1xKrHW56/We4SnZpGAuCc9N0MJpSDhTHZGQ==",
+      "type": "package",
+      "path": "system.data.common/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net451/System.Data.Common.dll",
+        "lib/netstandard1.2/System.Data.Common.dll",
+        "lib/portable-net451+win8+wp8+wpa81/System.Data.Common.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net451/System.Data.Common.dll",
+        "ref/netstandard1.2/System.Data.Common.dll",
+        "ref/netstandard1.2/System.Data.Common.xml",
+        "ref/netstandard1.2/de/System.Data.Common.xml",
+        "ref/netstandard1.2/es/System.Data.Common.xml",
+        "ref/netstandard1.2/fr/System.Data.Common.xml",
+        "ref/netstandard1.2/it/System.Data.Common.xml",
+        "ref/netstandard1.2/ja/System.Data.Common.xml",
+        "ref/netstandard1.2/ko/System.Data.Common.xml",
+        "ref/netstandard1.2/ru/System.Data.Common.xml",
+        "ref/netstandard1.2/zh-hans/System.Data.Common.xml",
+        "ref/netstandard1.2/zh-hant/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/System.Data.Common.dll",
+        "ref/portable-net451+win8+wp8+wpa81/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/de/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/es/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/fr/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/it/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/ja/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/ko/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/ru/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/zh-hans/System.Data.Common.xml",
+        "ref/portable-net451+win8+wp8+wpa81/zh-hant/System.Data.Common.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.data.common.4.3.0.nupkg.sha512",
+        "system.data.common.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.17763": [
+      "Microsoft.Data.Sqlite >= 1.1.1",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.3",
       "Microsoft.UI.Xaml >= 2.0.181018004",
       "MvvmLight >= 5.4.1.1",
@@ -8859,24 +9251,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lenovo\\.nuget\\packages\\": {},
+    "C:\\Users\\tangyijun\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\source\\repos\\Manager\\Manager\\Manager.csproj",
+      "projectUniqueName": "F:\\Manager\\Manager\\Manager.csproj",
       "projectName": "Manager",
-      "projectPath": "C:\\Users\\Lenovo\\source\\repos\\Manager\\Manager\\Manager.csproj",
-      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\source\\repos\\Manager\\Manager\\obj\\",
+      "projectPath": "F:\\Manager\\Manager\\Manager.csproj",
+      "packagesPath": "C:\\Users\\tangyijun\\.nuget\\packages\\",
+      "outputPath": "F:\\Manager\\Manager\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tangyijun\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8895,6 +9287,10 @@
     "frameworks": {
       "uap10.0.17763": {
         "dependencies": {
+          "Microsoft.Data.Sqlite": {
+            "target": "Package",
+            "version": "[1.1.1, )"
+          },
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "[6.2.3, )"

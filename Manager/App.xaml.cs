@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Core;
+using Manager.Services;
 
 namespace Manager
 {
@@ -32,6 +33,8 @@ namespace Manager
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            MemoItemService.InitializeDatabase();
         }
 
         /// <summary>
