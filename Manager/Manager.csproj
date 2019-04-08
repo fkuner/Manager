@@ -124,15 +124,17 @@
       <DependentUpon>MemoDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Services\IMemoItemService.cs" />
+    <Compile Include="Services\IMoneyItemService.cs" />
     <Compile Include="Services\MemoItemService.cs" />
+    <Compile Include="Services\MoneyItemService.cs" />
     <Compile Include="ToolsPage.xaml.cs">
       <DependentUpon>ToolsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BlankPage2.xaml.cs">
-      <DependentUpon>BlankPage2.xaml</DependentUpon>
+    <Compile Include="TodoPage.xaml.cs">
+      <DependentUpon>TodoPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BlankPage3.xaml.cs">
-      <DependentUpon>BlankPage3.xaml</DependentUpon>
+    <Compile Include="MoneyPage.xaml.cs">
+      <DependentUpon>MoneyPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helper\NavigationHelper.cs" />
     <Compile Include="Helper\SuspensionManager.cs" />
@@ -143,7 +145,7 @@
       <DependentUpon>MemoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\ToolItem.cs" />
-    <Compile Include="Models\Money.cs" />
+    <Compile Include="Models\MoneyItem.cs" />
     <Compile Include="Models\TodoItem.cs" />
     <Compile Include="Pages\ToolsDetailPage.xaml.cs">
       <DependentUpon>ToolsDetailPage.xaml</DependentUpon>
@@ -159,8 +161,8 @@
     <Compile Include="ViewModelLocator.cs" />
     <Compile Include="ViewModels\MemoPageViewModel.cs" />
     <Compile Include="ViewModels\ToolsPageViewModel.cs" />
-    <Compile Include="ViewModels\BlankPage2ViewModel.cs" />
-    <Compile Include="ViewModels\BlankPage3ViewModel.cs" />
+    <Compile Include="ViewModels\TodoPageViewModel.cs" />
+    <Compile Include="ViewModels\MoneyPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -209,11 +211,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BlankPage2.xaml">
+    <Page Include="TodoPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BlankPage3.xaml">
+    <Page Include="MoneyPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

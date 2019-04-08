@@ -22,14 +22,13 @@ namespace Manager
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class BlankPage3 : Page
+    public sealed partial class MoneyPage : Page
     {
-        private ObservableCollection<Money> Events;
-        
-        public BlankPage3()
+
+        public MoneyPage()
         {
             this.InitializeComponent();
-            Events = MoneyManager.GetEvents();
+            DataContext = ViewModelLocator.Instance.MoneyPageViewModel;
         }
 
         private void Add_Click(object sender, RoutedEventArgs e)
@@ -77,7 +76,7 @@ namespace Manager
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var money = (Money)e.ClickedItem;
+            var money = (MoneyItem)e.ClickedItem;
             ShowDate.Date = money.ConsumeTime;
             ShowMoney.Text = money.Amount.ToString();
             ShowEvent.Text = money.Event;

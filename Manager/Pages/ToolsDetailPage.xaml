@@ -16,12 +16,10 @@
         </Grid.RowDefinitions>
         
         
-        <Button VerticalAlignment="Top" HorizontalAlignment="Left" 
+        <!--<Button VerticalAlignment="Top" HorizontalAlignment="Left" 
             Style="{StaticResource NavigationBackButtonNormalStyle}"
                 Click="Button_Click"/>
-        
-        
-        
+
         <RelativePanel Margin="20" 
                        HorizontalAlignment="Stretch"
                        Grid.Row="1">
@@ -45,6 +43,9 @@
 
             <RichEditBox x:Name="editor" Height="200" RelativePanel.Below="openFileButton"
                  RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True"/>
-        </RelativePanel>
+        </RelativePanel>-->
+
+        <TextBlock Name="TextBlock"
+                   FontSize="48"/>
     </Grid>
 </Page>

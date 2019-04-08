@@ -25,13 +25,13 @@ Assets\UWP-ji-0.jpg
 Assets\white-logo.png
 Assets\Wide310x150Logo.scale-200.png
 App.xbf
-BlankPage2.xbf
-BlankPage3.xbf
 MainPage.xbf
 Manager.xr.xml
 MemoPage.xbf
+MoneyPage.xbf
 Pages\MemoDetailPage.xbf
 Pages\SettingsPage.xbf
 Pages\ToolsDetailPage.xbf
+TodoPage.xbf
 ToolsPage.xbf
 Properties\Default.rd.xml

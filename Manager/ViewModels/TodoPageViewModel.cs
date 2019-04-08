@@ -12,9 +12,9 @@ using System.Threading.Tasks;
 namespace Manager.ViewModels
 {
     /// <summary>
-    /// BlankPage2的ViewModel
+    /// TodoPage的ViewModel
     /// </summary>
-    public class BlankPage2ViewModel : ViewModelBase
+    public class TodoPageViewModel : ViewModelBase
     {
         private ITodoItemService _todoItemService;
 
@@ -80,7 +80,7 @@ namespace Manager.ViewModels
         /// 构造函数
         /// </summary>
         /// <param name="todoItemService"></param>
-        public BlankPage2ViewModel(ITodoItemService todoItemService)
+        public TodoPageViewModel(ITodoItemService todoItemService)
         {
             TodoItems = new ObservableCollection<TodoItem>();
             TodoItems.Clear();

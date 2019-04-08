@@ -54,8 +54,7 @@ namespace Manager.Pages
 
             // Parameter is item ID
 
-//            string json = e.Parameter.ToString();
-//            Item = JsonConvert.DeserializeObject<MemoItem>(json);
+            var Item= e.Parameter as MemoItem;
 
             var backStack = Frame.BackStack;
             var backStackCount = backStack.Count;

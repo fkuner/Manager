@@ -30,13 +30,13 @@
     <AppXManifest Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-08T08:55:20.407</Modified>
+      <Modified>2019-04-08T11:52:53.443</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Manager.exe">
       <PackagePath>entrypoint\Manager.exe</PackagePath>
-      <Modified>2019-04-08T08:55:18.049</Modified>
+      <Modified>2019-04-08T11:52:52.548</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\commonservicelocator\2.0.2\lib\netstandard2.0\CommonServiceLocator.dll">
       <PackagePath>CommonServiceLocator.dll</PackagePath>
@@ -190,43 +190,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Manager.xr.xml">
       <PackagePath>Manager.xr.xml</PackagePath>
-      <Modified>2019-04-08T08:55:17.425</Modified>
+      <Modified>2019-04-08T11:48:44.247</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-04-08T08:55:17.520</Modified>
+      <Modified>2019-04-08T11:52:52.275</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Pages\MemoDetailPage.xbf">
       <PackagePath>Pages\MemoDetailPage.xbf</PackagePath>
-      <Modified>2019-04-08T08:55:17.520</Modified>
+      <Modified>2019-04-08T11:52:52.275</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\ToolsPage.xbf">
       <PackagePath>ToolsPage.xbf</PackagePath>
-      <Modified>2019-04-08T08:55:17.520</Modified>
+      <Modified>2019-04-08T11:52:52.276</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\BlankPage2.xbf">
-      <PackagePath>BlankPage2.xbf</PackagePath>
-      <Modified>2019-04-08T08:55:17.520</Modified>
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\TodoPage.xbf">
+      <PackagePath>TodoPage.xbf</PackagePath>
+      <Modified>2019-04-08T11:52:52.276</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\BlankPage3.xbf">
-      <PackagePath>BlankPage3.xbf</PackagePath>
-      <Modified>2019-04-08T08:55:17.488</Modified>
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\MoneyPage.xbf">
+      <PackagePath>MoneyPage.xbf</PackagePath>
+      <Modified>2019-04-08T11:52:52.259</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-04-08T08:55:17.521</Modified>
+      <Modified>2019-04-08T11:52:52.276</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\MemoPage.xbf">
       <PackagePath>MemoPage.xbf</PackagePath>
-      <Modified>2019-04-08T08:55:17.521</Modified>
+      <Modified>2019-04-08T11:52:52.276</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Pages\ToolsDetailPage.xbf">
       <PackagePath>Pages\ToolsDetailPage.xbf</PackagePath>
-      <Modified>2019-04-08T08:55:17.521</Modified>
+      <Modified>2019-04-08T11:52:52.277</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Pages\SettingsPage.xbf">
       <PackagePath>Pages\SettingsPage.xbf</PackagePath>
-      <Modified>2019-04-08T08:55:17.521</Modified>
+      <Modified>2019-04-08T11:52:52.277</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.17763.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -242,11 +242,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-04-08T08:55:19.074</Modified>
+      <Modified>2019-04-08T11:34:04.894</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Core\Manager.exe">
       <PackagePath>Manager.exe</PackagePath>
-      <Modified>2019-04-08T08:55:20.390</Modified>
+      <Modified>2019-04-08T11:52:53.433</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

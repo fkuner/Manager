@@ -87,7 +87,7 @@ namespace Manager
             if (AdaptiveStates.CurrentState == NarrowState)
             {
                 // Use "drill in" transition for navigating from master list to detail view
-                Frame.Navigate(typeof(MemoDetailPage), e.ClickedItem, new DrillInNavigationTransitionInfo());
+                Frame.Navigate(typeof(MemoDetailPage), e.ClickedItem as MemoItem, new DrillInNavigationTransitionInfo());
             }
             else
             {

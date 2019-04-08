@@ -30,15 +30,15 @@ namespace Manager
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class BlankPage2 : Page
+    public sealed partial class TodoPage : Page
     {
 
         private List<TodoItem> todoItems;
 
-        public BlankPage2()
+        public TodoPage()
         {
             this.InitializeComponent();
-            DataContext = ViewModelLocator.Instance.BlankPage2ViewModel;
+            DataContext = ViewModelLocator.Instance.ToolsPageViewModel;
         }
 
         /// <summary>

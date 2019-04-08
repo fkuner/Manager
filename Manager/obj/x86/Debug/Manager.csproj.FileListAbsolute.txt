@@ -367,3 +367,13 @@ E:\source\repos\Manager\Manager\obj\x86\Debug\MultipleQualifiersPerDimensionFoun
 E:\source\repos\Manager\Manager\obj\x86\Debug\GalaSoft.MvvmLight.Platform.pri.xml
 E:\source\repos\Manager\Manager\obj\x86\Debug\ProjectArchitectures.txt
 E:\source\repos\Manager\Manager\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636758264200000000.json
+E:\source\repos\Manager\Manager\obj\x86\Debug\TodoPage.g.i.cs
+E:\source\repos\Manager\Manager\obj\x86\Debug\TodoPage.g.cs
+E:\source\repos\Manager\Manager\obj\x86\Debug\MoneyPage.g.i.cs
+E:\source\repos\Manager\Manager\obj\x86\Debug\MoneyPage.g.cs
+E:\source\repos\Manager\Manager\obj\x86\Debug\TodoPage.xaml
+E:\source\repos\Manager\Manager\obj\x86\Debug\MoneyPage.xaml
+E:\source\repos\Manager\Manager\obj\x86\Debug\TodoPage.xbf
+E:\source\repos\Manager\Manager\obj\x86\Debug\MoneyPage.xbf
+E:\source\repos\Manager\Manager\bin\x86\Debug\TodoPage.xbf
+E:\source\repos\Manager\Manager\bin\x86\Debug\MoneyPage.xbf

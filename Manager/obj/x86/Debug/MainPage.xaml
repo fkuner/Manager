@@ -17,8 +17,8 @@
                                                              >
             <NavigationView.MenuItems>
                 <NavigationViewItem Icon="Memo"  Content="Memo" Tag="MemoPage"/>
-                <NavigationViewItem Icon="Accept"  Content="Todo" Tag="BlankPage2" />
-                <NavigationViewItem Icon="Account"  Content="Money" Tag="BlankPage3" />
+                <NavigationViewItem Icon="Accept"  Content="Todo" Tag="TodoPage" />
+                <NavigationViewItem Icon="Account"  Content="Money" Tag="MoneyPage" />
                 <NavigationViewItem Icon="Repair"  Content="Tools" Tag="ToolsPage" />
             </NavigationView.MenuItems>
 

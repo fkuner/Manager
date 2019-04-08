@@ -47,8 +47,8 @@ namespace Manager
         private readonly List<(string Tag, Type Page)> _pages = new List<(string Tag, Type Page)>
         {
             ("ToolsPage", typeof(ToolsPage)),
-            ("BlankPage2", typeof(BlankPage2)),
-            ("BlankPage2", typeof(BlankPage3)),
+            ("TodoPage", typeof(TodoPage)),
+            ("MoneyPage", typeof(MoneyPage)),
             ("MemoPage",typeof(MemoPage)),
             ("SettingsPage",typeof(SettingsPage))
         };
@@ -70,12 +70,12 @@ namespace Manager
                         PageFrame.Navigate(typeof(ToolsPage));
                         break;
 
-                    case "BlankPage2":
-                        PageFrame.Navigate(typeof(BlankPage2));
+                    case "TodoPage":
+                        PageFrame.Navigate(typeof(TodoPage));
                         break;
 
-                    case "BlankPage3":
-                        PageFrame.Navigate(typeof(BlankPage3));
+                    case "MoneyPage":
+                        PageFrame.Navigate(typeof(MoneyPage));
                         break;
                     case "MemoPage":
                         PageFrame.Navigate(typeof(MemoPage));

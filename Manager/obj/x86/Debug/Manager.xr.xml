@@ -3,6 +3,7 @@
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Content" />
     <RootPropertyPathName Name="ToolItems" />
+    <RootPropertyPathName Name="MoneyItems" />
     <RootPropertyPathName Name="MemoItems" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -102,7 +103,6 @@
       <RootProperty Name="Icon" />
       <RootProperty Name="Label" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="IsCompact" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Border">
@@ -129,20 +129,12 @@
       <RootEvent Name="ItemClick" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Resources" />
-      <RootProperty Name="Children" />
       <RootMethod Name="GetAlignLeftWithPanel" />
       <RootMethod Name="SetAlignLeftWithPanel" />
       <RootMethod Name="GetAlignRightWithPanel" />
       <RootMethod Name="SetAlignRightWithPanel" />
       <RootMethod Name="GetBelow" />
       <RootMethod Name="SetBelow" />
-      <RootMethod Name="GetRightOf" />
-      <RootMethod Name="SetRightOf" />
-      <RootMethod Name="GetLeftOf" />
-      <RootMethod Name="SetLeftOf" />
     </RootType>
     <RootType FullName="Manager.ToolsPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
@@ -184,7 +176,7 @@
       <RootProperty Name="UriSource" />
       <RootProperty Name="DecodePixelHeight" />
     </RootType>
-    <RootType FullName="Manager.BlankPage2" />
+    <RootType FullName="Manager.TodoPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
       <RootProperty Name="Background" />
       <RootProperty Name="BorderBrush" />
@@ -227,7 +219,7 @@
       <RootProperty Name="PlaceholderText" />
     </RootType>
     <RootType FullName="System.String" />
-    <RootType FullName="Manager.BlankPage3" />
+    <RootType FullName="Manager.MoneyPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationView">
       <RootProperty Name="IsBackButtonVisible" />
       <RootProperty Name="MenuItems" />
@@ -272,13 +264,6 @@
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.NullExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListViewItem" />
     <RootType FullName="Manager.MemoPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ToolTipService">
-      <RootMethod Name="GetToolTip" />
-      <RootMethod Name="SetToolTip" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.RichEditBox">
-      <RootProperty Name="Height" />
-    </RootType>
     <RootType FullName="Manager.Pages.ToolsDetailPage" />
     <RootType FullName="Manager.Pages.SettingsPage" />
   </Roots.RootTypes>

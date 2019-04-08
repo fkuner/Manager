@@ -154,11 +154,11 @@
     <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\ToolsPage.xbf">
       <PackagePath>ToolsPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\BlankPage2.xbf">
-      <PackagePath>BlankPage2.xbf</PackagePath>
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\TodoPage.xbf">
+      <PackagePath>TodoPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\BlankPage3.xbf">
-      <PackagePath>BlankPage3.xbf</PackagePath>
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\MoneyPage.xbf">
+      <PackagePath>MoneyPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
