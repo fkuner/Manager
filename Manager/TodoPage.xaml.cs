@@ -19,9 +19,12 @@ using Windows.UI.Xaml.Navigation;
 using Windows.ApplicationModel.Contacts;
 using Windows.ApplicationModel.Email;
 using System.Threading.Tasks;
+using Manager.Services;
 using Manager.Models;
 using Manager.ViewModels;
 using Manager.Services;
+using Windows.ApplicationModel.DataTransfer;
+using System.Collections.ObjectModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -33,12 +36,13 @@ namespace Manager
     public sealed partial class TodoPage : Page
     {
 
-        private List<TodoItem> todoItems;
-
+        //private List<TodoItem> todoItems;
+        
         public TodoPage()
         {
             this.InitializeComponent();
-            DataContext = ViewModelLocator.Instance.ToolsPageViewModel;
+            
+            DataContext = ViewModelLocator.Instance.TodoPageViewModel;
         }
 
         /// <summary>
@@ -46,7 +50,7 @@ namespace Manager
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private async void MailButton_Click(object sender, RoutedEventArgs e)
+        private async void MainButton_Click(object sender, RoutedEventArgs e)
         {
             String subject = "test";
             String messageBody = "test";
@@ -117,18 +121,59 @@ namespace Manager
 
         private async void  AppBarButton_Click(object sender, RoutedEventArgs e)
         {
-            
+
+
             TextBox textbox = new TextBox();
             //testTextBlock.Text = textbox.Text;
-          
+
             TodoItem todoItem = new TodoItem();
             textbox.Name = "test";
-            todoItem.Content = "test";
-            stackPanel1.Children.Add(textbox);
+            todoItem.Content = "添加任务";
+            todoItem.ID = 1;
+            //stackPanel1.Children.Add(textbox);
+           // todoItems.Add(todoItem);
 
             //TodoItemService todoItemService = new TodoItemService();
             //await todoItemService.AddAsync(todoItem);
         }
-        
+        private void click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void AppBarButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            DataTransferManager.ShowShareUI();
+        }
+
+        private void TestButton_Click(object sender, RoutedEventArgs e)
+        {
+            TextBlock textBlock = new TextBlock();
+        }
+
+
+        private void SSvae_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CheckBox_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
+        }
+        /// <summary>
+        /// Share
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void ShareRequested(DataTransferManager sender, DataRequestedEventArgs args)
+        {
+            var deferral = args.Request.GetDeferral();
+            DataRequest request = args.Request;
+            request.Data.Properties.Title = "ShareUISample";
+            request.Data.SetText("Description：" + "This is a line from ShareUISample. Welcome to learn UWP.");
+            //flash.jpg是示例代码中Asssets文件夹中的图片，可以将其改为你自己的图片
+            request.Data.SetBitmap(RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/UWP-ji-0.jpg")));
+            deferral.Complete();
+        }
     }
 }

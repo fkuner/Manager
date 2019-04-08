@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>LAPTOP-TLCHLAO5</Machine>
-    <WindowsUser>Lenovo</WindowsUser>
+    <Machine>DESKTOP-GM6OEE0</Machine>
+    <WindowsUser>26838</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,166 +10,166 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>aebf8c9e-6e81-4157-90f3-5107610e58a9</PackageIdentityName>
     <PackageIdentityPublisher>CN=Lenovo</PackageIdentityPublisher>
-    <IntermediateOutputPath>E:\source\repos\Manager\Manager\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>F:\大三下\481\Manager\Manager\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>E:\source\repos\Manager\Manager\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>F:\大三下\481\Manager\Manager\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="F:\大三下\481\Manager\Manager\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Manager.exe">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\bin\x86\Debug\Manager.exe">
       <PackagePath>entrypoint\Manager.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\commonservicelocator\2.0.2\lib\netstandard2.0\CommonServiceLocator.dll">
+    <AppxPackagedFile Include="C:\Users\26838\.nuget\packages\commonservicelocator\2.0.2\lib\netstandard2.0\CommonServiceLocator.dll">
       <PackagePath>CommonServiceLocator.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\microsoft.data.sqlite\1.1.1\lib\netstandard1.3\Microsoft.Data.Sqlite.dll">
+    <AppxPackagedFile Include="C:\Users\26838\.nuget\packages\microsoft.data.sqlite\1.1.1\lib\netstandard1.3\Microsoft.Data.Sqlite.dll">
       <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\mvvmlightlibs\5.4.1.1\lib\uap10.0\GalaSoft.MvvmLight.Extras.dll">
+    <AppxPackagedFile Include="C:\Users\26838\.nuget\packages\mvvmlightlibs\5.4.1.1\lib\uap10.0\GalaSoft.MvvmLight.Extras.dll">
       <PackagePath>GalaSoft.MvvmLight.Extras.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\mvvmlightlibs\5.4.1.1\lib\uap10.0\GalaSoft.MvvmLight.Platform.dll">
+    <AppxPackagedFile Include="C:\Users\26838\.nuget\packages\mvvmlightlibs\5.4.1.1\lib\uap10.0\GalaSoft.MvvmLight.Platform.dll">
       <PackagePath>GalaSoft.MvvmLight.Platform.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\mvvmlightlibs\5.4.1.1\lib\uap10.0\GalaSoft.MvvmLight.dll">
+    <AppxPackagedFile Include="C:\Users\26838\.nuget\packages\mvvmlightlibs\5.4.1.1\lib\uap10.0\GalaSoft.MvvmLight.dll">
       <PackagePath>GalaSoft.MvvmLight.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\newtonsoft.json\12.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\26838\.nuget\packages\newtonsoft.json\12.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\observablecollectionex\1.4.57\lib\netstandard2.0\ObservableCollectionEx.dll">
+    <AppxPackagedFile Include="C:\Users\26838\.nuget\packages\observablecollectionex\1.4.57\lib\netstandard2.0\ObservableCollectionEx.dll">
       <PackagePath>ObservableCollectionEx.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.3\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\26838\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.3\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\sqlite\3.13.0\runtimes\win10-x86\nativeassets\uap10.0\sqlite3.dll">
+    <AppxPackagedFile Include="C:\Users\26838\.nuget\packages\sqlite\3.13.0\runtimes\win10-x86\nativeassets\uap10.0\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\background.jpg">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\background.jpg">
       <PackagePath>Assets\background.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\image.jpg">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\image.jpg">
       <PackagePath>Assets\image.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\Image2.jpg">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\Image2.jpg">
       <PackagePath>Assets\Image2.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\Money.jpg">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\Money.jpg">
       <PackagePath>Assets\Money.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\ticket.jpg">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\ticket.jpg">
       <PackagePath>Assets\ticket.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\UWP-ji-0.jpg">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\UWP-ji-0.jpg">
       <PackagePath>Assets\UWP-ji-0.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\CM.png">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\CM.png">
       <PackagePath>Assets\CM.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\coffee-icon.png">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\coffee-icon.png">
       <PackagePath>Assets\coffee-icon.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\color-logo.png">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\color-logo.png">
       <PackagePath>Assets\color-logo.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\complete-icon.png">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\complete-icon.png">
       <PackagePath>Assets\complete-icon.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\donut-icon.png">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\donut-icon.png">
       <PackagePath>Assets\donut-icon.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\schedule-icon.png">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\schedule-icon.png">
       <PackagePath>Assets\schedule-icon.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\SeaM.png">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\SeaM.png">
       <PackagePath>Assets\SeaM.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\UWP-031-A.png">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\UWP-031-A.png">
       <PackagePath>Assets\UWP-031-A.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\UWP-031-B.png">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\UWP-031-B.png">
       <PackagePath>Assets\UWP-031-B.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\UWP-031-C.png">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\UWP-031-C.png">
       <PackagePath>Assets\UWP-031-C.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\UWP-031-D.png">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\UWP-031-D.png">
       <PackagePath>Assets\UWP-031-D.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\white-logo.png">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\white-logo.png">
       <PackagePath>Assets\white-logo.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Manager.xr.xml">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\bin\x86\Debug\Manager.xr.xml">
       <PackagePath>Manager.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Pages\MemoDetailPage.xbf">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\bin\x86\Debug\Pages\MemoDetailPage.xbf">
       <PackagePath>Pages\MemoDetailPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\ToolsPage.xbf">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\bin\x86\Debug\ToolsPage.xbf">
       <PackagePath>ToolsPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\TodoPage.xbf">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\bin\x86\Debug\TodoPage.xbf">
       <PackagePath>TodoPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\MoneyPage.xbf">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\bin\x86\Debug\MoneyPage.xbf">
       <PackagePath>MoneyPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\MemoPage.xbf">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\bin\x86\Debug\MemoPage.xbf">
       <PackagePath>MemoPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Pages\ToolsDetailPage.xbf">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\bin\x86\Debug\Pages\ToolsDetailPage.xbf">
       <PackagePath>Pages\ToolsDetailPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Pages\SettingsPage.xbf">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\bin\x86\Debug\Pages\SettingsPage.xbf">
       <PackagePath>Pages\SettingsPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.17763.0\\redist\Debug\x86\ucrtbased.dll">
@@ -178,71 +178,71 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\microsoft.ui.xaml\2.0.181018004\build\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
+    <AppxPackagedFile Include="C:\Users\26838\.nuget\packages\microsoft.ui.xaml\2.0.181018004\build\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Core\Manager.exe">
+    <AppxPackagedFile Include="F:\大三下\481\Manager\Manager\bin\x86\Debug\Core\Manager.exe">
       <PackagePath>Manager.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
-    <ResolvedSDKReference Include="C:\Users\Lenovo\.nuget\packages\microsoft.ui.xaml\2.0.181018004\build\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.0.appx">
+    <ResolvedSDKReference Include="C:\Users\26838\.nuget\packages\microsoft.ui.xaml\2.0.181018004\build\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.0.appx">
       <Name>Microsoft.UI.Xaml.2.0</Name>
       <Version>2.1810.18003.0</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.0, MinVersion = 2.1810.18003.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\Lenovo\.nuget\packages\microsoft.ui.xaml\2.0.181018004\build\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.0.appx</AppxLocation>
+      <AppxLocation>C:\Users\26838\.nuget\packages\microsoft.ui.xaml\2.0.181018004\build\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.0.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\26838\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.26926.4</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.26926.4, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\26838\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\26838\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.26926.4</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.26926.4, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\26838\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\26838\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.26926.4</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.26926.4, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\26838\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\26838\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.27129.1</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.27129.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\26838\.nuget\packages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\26838\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.27129.1</Version>
       <Architecture>x64</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.27129.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\26838\.nuget\packages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
-    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+    <ResolvedSDKReference Include="C:\Users\26838\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
       <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
       <Version>2.2.27129.1</Version>
       <Architecture>arm</Architecture>
       <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.27129.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <AppxLocation>C:\Users\26838\.nuget\packages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">

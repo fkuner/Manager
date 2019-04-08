@@ -29,17 +29,19 @@ namespace Manager.Services
         //private TodoItem _TodoItem;
 
 
-        public List<TodoItem> ListAsync()
+        public  List<TodoItem> ListAsync()
         {
-            List<TodoItem> TodoItems = new List<TodoItem>();
-            for (int i = 0; i < 5; i++)
-            {
-                TodoItem todoItem = new TodoItem();
-                todoItem.Content = i.ToString();
-                TodoItems.Add(todoItem);
-            }
-            return TodoItems;
-            throw new NotImplementedException();
+              List<TodoItem> todos = new List<TodoItem>();
+            todos.Add(new TodoItem { ID = 1, Content = "龙仕大傻逼" });
+            todos.Add(new TodoItem { ID = 1, Content = "龙仕大傻逼" });
+            todos.Add(new TodoItem { ID = 1, Content = "龙仕大傻逼" });
+            todos.Add(new TodoItem { ID = 1, Content = "龙仕大傻逼" });
+            todos.Add(new TodoItem { ID = 1, Content = "龙仕大傻逼" });
+            todos.Add(new TodoItem { ID = 1, Content = "龙仕大傻逼" });
+            todos.Add(new TodoItem { ID = 1, Content = "龙仕大傻逼" });
+            todos.Add(new TodoItem { ID = 1, Content = "龙仕大傻逼" });
+            return todos;
+
         }
     }
 }
