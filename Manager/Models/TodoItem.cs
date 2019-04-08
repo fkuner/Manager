@@ -12,14 +12,9 @@ namespace Manager.Models
         /// 待办事项类
         /// </summary>
 
-        //property
-        //private String item;
-        //private Date date;
-        //int level;  //事件的优先级
-
         public int ID { get; set; }
         public string Content { get; set; }
-
+        public DateTime DateCreated { get; set; }
     }
 
 }
