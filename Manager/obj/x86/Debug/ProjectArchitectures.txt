@@ -1,1 +1,1 @@
-C:\Users\Lenovo\source\repos\Manager\Manager\Manager.csproj;x86
+E:\source\repos\Manager\Manager\Manager.csproj;x86

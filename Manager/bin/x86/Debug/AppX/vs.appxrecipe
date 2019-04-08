@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>aebf8c9e-6e81-4157-90f3-5107610e58a9</PackageIdentityName>
     <PackageIdentityPublisher>CN=Lenovo</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Lenovo\source\repos\Manager\Manager\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>E:\source\repos\Manager\Manager\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>8BF736EC3FD8B65DAB57A20E6BB90E15EB0222B81C01E9405A1DA95C38D93BEA</RegisteredManifestChecksum>
+    <LayoutDir>E:\source\repos\Manager\Manager\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>2FD805DFE42F5F7E6F0C10A237563E5135D43B46DDE3F1A3386DEA0F99E038E6</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>aebf8c9e-6e81-4157-90f3-5107610e58a9_1.0.0.0_x86__pthpn8nb9xcaa</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>aebf8c9e-6e81-4157-90f3-5107610e58a9_pthpn8nb9xcaa!App</RegisteredUserModeAppID>
     <RegisteredPackageID>aebf8c9e-6e81-4157-90f3-5107610e58a9</RegisteredPackageID>
@@ -27,20 +27,24 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-03T08:05:04.915</Modified>
+      <Modified>2019-04-08T08:55:20.407</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Manager.exe">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Manager.exe">
       <PackagePath>entrypoint\Manager.exe</PackagePath>
-      <Modified>2019-04-03T08:05:04.372</Modified>
+      <Modified>2019-04-08T08:55:18.049</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\commonservicelocator\2.0.2\lib\netstandard2.0\CommonServiceLocator.dll">
       <PackagePath>CommonServiceLocator.dll</PackagePath>
       <Modified>2018-01-03T04:27:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\microsoft.data.sqlite\1.1.1\lib\netstandard1.3\Microsoft.Data.Sqlite.dll">
+      <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
+      <Modified>2017-04-27T10:53:26.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\mvvmlightlibs\5.4.1.1\lib\uap10.0\GalaSoft.MvvmLight.Extras.dll">
       <PackagePath>GalaSoft.MvvmLight.Extras.dll</PackagePath>
@@ -66,178 +70,195 @@
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2018-11-29T02:27:16.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\sqlite\3.13.0\runtimes\win10-x86\nativeassets\uap10.0\sqlite3.dll">
+      <PackagePath>sqlite3.dll</PackagePath>
+      <Modified>2016-10-18T13:37:00.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2018-10-22T17:33:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\background.jpg">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\background.jpg">
       <PackagePath>Assets\background.jpg</PackagePath>
-      <Modified>2019-03-24T01:30:45.438</Modified>
+      <Modified>2019-04-07T07:34:59.214</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\image.jpg">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\image.jpg">
       <PackagePath>Assets\image.jpg</PackagePath>
-      <Modified>2019-03-24T01:30:45.454</Modified>
+      <Modified>2019-04-07T07:34:59.217</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\Image2.jpg">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\Image2.jpg">
       <PackagePath>Assets\Image2.jpg</PackagePath>
-      <Modified>2019-03-24T01:30:45.371</Modified>
+      <Modified>2019-04-07T07:34:59.180</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\Money.jpg">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\Money.jpg">
       <PackagePath>Assets\Money.jpg</PackagePath>
-      <Modified>2019-03-24T01:30:45.373</Modified>
+      <Modified>2019-04-07T07:34:59.181</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\ticket.jpg">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\ticket.jpg">
       <PackagePath>Assets\ticket.jpg</PackagePath>
-      <Modified>2019-03-24T01:30:45.478</Modified>
+      <Modified>2019-04-07T07:34:59.226</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\UWP-ji-0.jpg">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\UWP-ji-0.jpg">
       <PackagePath>Assets\UWP-ji-0.jpg</PackagePath>
-      <Modified>2019-03-29T11:16:10.674</Modified>
+      <Modified>2019-04-07T07:34:59.211</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\CM.png">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\CM.png">
       <PackagePath>Assets\CM.png</PackagePath>
-      <Modified>2019-03-24T01:30:45.366</Modified>
+      <Modified>2019-04-07T07:34:59.179</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\coffee-icon.png">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\coffee-icon.png">
       <PackagePath>Assets\coffee-icon.png</PackagePath>
-      <Modified>2019-03-24T01:30:45.442</Modified>
+      <Modified>2019-04-07T07:34:59.215</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\color-logo.png">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\color-logo.png">
       <PackagePath>Assets\color-logo.png</PackagePath>
-      <Modified>2019-03-24T01:30:45.446</Modified>
+      <Modified>2019-04-07T07:34:59.216</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\complete-icon.png">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\complete-icon.png">
       <PackagePath>Assets\complete-icon.png</PackagePath>
-      <Modified>2019-03-24T01:30:45.449</Modified>
+      <Modified>2019-04-07T07:34:59.216</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\donut-icon.png">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\donut-icon.png">
       <PackagePath>Assets\donut-icon.png</PackagePath>
-      <Modified>2019-03-24T01:30:45.452</Modified>
+      <Modified>2019-04-07T07:34:59.217</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\schedule-icon.png">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\schedule-icon.png">
       <PackagePath>Assets\schedule-icon.png</PackagePath>
-      <Modified>2019-03-24T01:30:45.459</Modified>
+      <Modified>2019-04-07T07:34:59.218</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\SeaM.png">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\SeaM.png">
       <PackagePath>Assets\SeaM.png</PackagePath>
-      <Modified>2019-03-24T01:30:45.377</Modified>
+      <Modified>2019-04-07T07:34:59.182</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\UWP-031-A.png">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\UWP-031-A.png">
       <PackagePath>Assets\UWP-031-A.png</PackagePath>
-      <Modified>2019-03-24T01:30:45.389</Modified>
+      <Modified>2019-04-07T07:34:59.191</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\UWP-031-B.png">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\UWP-031-B.png">
       <PackagePath>Assets\UWP-031-B.png</PackagePath>
-      <Modified>2019-03-24T01:30:45.401</Modified>
+      <Modified>2019-04-07T07:34:59.196</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\UWP-031-C.png">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\UWP-031-C.png">
       <PackagePath>Assets\UWP-031-C.png</PackagePath>
-      <Modified>2019-03-24T01:30:45.415</Modified>
+      <Modified>2019-04-07T07:34:59.201</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\UWP-031-D.png">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\UWP-031-D.png">
       <PackagePath>Assets\UWP-031-D.png</PackagePath>
-      <Modified>2019-03-24T01:30:45.430</Modified>
+      <Modified>2019-04-07T07:34:59.210</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\white-logo.png">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\white-logo.png">
       <PackagePath>Assets\white-logo.png</PackagePath>
-      <Modified>2019-03-24T01:30:45.482</Modified>
+      <Modified>2019-04-07T07:34:59.227</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2019-03-04T11:25:02.540</Modified>
+      <Modified>2019-04-07T07:34:59.181</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T11:25:02.540</Modified>
+      <Modified>2019-04-07T07:34:59.183</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T11:25:02.540</Modified>
+      <Modified>2019-04-07T07:34:59.183</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T11:25:02.540</Modified>
+      <Modified>2019-04-07T07:34:59.184</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T11:25:02.540</Modified>
+      <Modified>2019-04-07T07:34:59.184</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T11:25:02.540</Modified>
+      <Modified>2019-04-07T07:34:59.185</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T11:25:02.540</Modified>
+      <Modified>2019-04-07T07:34:59.211</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2019-03-17T15:08:44.962</Modified>
+      <Modified>2019-04-07T07:34:59.244</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Manager.xr.xml">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Manager.xr.xml">
       <PackagePath>Manager.xr.xml</PackagePath>
-      <Modified>2019-04-03T08:04:34.780</Modified>
+      <Modified>2019-04-08T08:55:17.425</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-04-03T08:05:04.139</Modified>
+      <Modified>2019-04-08T08:55:17.520</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\BlankPage1.xbf">
-      <PackagePath>BlankPage1.xbf</PackagePath>
-      <Modified>2019-04-03T08:05:04.139</Modified>
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Pages\MemoDetailPage.xbf">
+      <PackagePath>Pages\MemoDetailPage.xbf</PackagePath>
+      <Modified>2019-04-08T08:55:17.520</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\BlankPage2.xbf">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\ToolsPage.xbf">
+      <PackagePath>ToolsPage.xbf</PackagePath>
+      <Modified>2019-04-08T08:55:17.520</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\BlankPage2.xbf">
       <PackagePath>BlankPage2.xbf</PackagePath>
-      <Modified>2019-04-03T08:05:04.139</Modified>
+      <Modified>2019-04-08T08:55:17.520</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\BlankPage3.xbf">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\BlankPage3.xbf">
       <PackagePath>BlankPage3.xbf</PackagePath>
-      <Modified>2019-04-03T08:05:04.123</Modified>
+      <Modified>2019-04-08T08:55:17.488</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Calendar.xbf">
-      <PackagePath>Calendar.xbf</PackagePath>
-      <Modified>2019-04-03T08:05:04.139</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-04-03T08:05:04.140</Modified>
+      <Modified>2019-04-08T08:55:17.521</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Pages\MemoDetail.xbf">
-      <PackagePath>Pages\MemoDetail.xbf</PackagePath>
-      <Modified>2019-04-03T08:05:04.140</Modified>
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\MemoPage.xbf">
+      <PackagePath>MemoPage.xbf</PackagePath>
+      <Modified>2019-04-08T08:55:17.521</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Record.xbf">
-      <PackagePath>Record.xbf</PackagePath>
-      <Modified>2019-04-03T08:05:04.140</Modified>
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Pages\ToolsDetailPage.xbf">
+      <PackagePath>Pages\ToolsDetailPage.xbf</PackagePath>
+      <Modified>2019-04-08T08:55:17.521</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Remind.xbf">
-      <PackagePath>Remind.xbf</PackagePath>
-      <Modified>2019-04-03T08:05:04.140</Modified>
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Pages\SettingsPage.xbf">
+      <PackagePath>Pages\SettingsPage.xbf</PackagePath>
+      <Modified>2019-04-08T08:55:17.521</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Search.xbf">
-      <PackagePath>Search.xbf</PackagePath>
-      <Modified>2019-04-03T08:05:04.140</Modified>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.17763.0\\redist\Debug\x86\ucrtbased.dll">
+      <PackagePath>ucrtbased.dll</PackagePath>
+      <Modified>2018-10-22T17:41:14.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2018-10-22T16:44:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\resources.pri">
-      <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-04-03T07:31:19.340</Modified>
+    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\microsoft.ui.xaml\2.0.181018004\build\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
+      <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
+      <Modified>2018-12-18T14:06:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\source\repos\Manager\Manager\bin\x86\Debug\Core\Manager.exe">
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2019-04-08T08:55:19.074</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Core\Manager.exe">
       <PackagePath>Manager.exe</PackagePath>
-      <Modified>2019-04-03T08:05:04.907</Modified>
+      <Modified>2019-04-08T08:55:20.390</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
+    <ResolvedSDKReference Include="C:\Users\Lenovo\.nuget\packages\microsoft.ui.xaml\2.0.181018004\build\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.0.appx">
+      <Name>Microsoft.UI.Xaml.2.0</Name>
+      <Version>2.1810.18003.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.0, MinVersion = 2.1810.18003.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\Lenovo\.nuget\packages\microsoft.ui.xaml\2.0.181018004\build\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.0.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.3\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
       <Name>Microsoft.NET.CoreRuntime.2.2</Name>
       <Version>2.2.26926.4</Version>

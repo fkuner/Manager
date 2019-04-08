@@ -39,10 +39,10 @@
                     Grid.Row="1"
                     HorizontalAlignment="Stretch"
                     Margin="0,0,0,0">
-            <AppBarButton x:ConnectionId='4' Icon="Add" Label="Add"                           />
-            <AppBarButton x:ConnectionId='5' Icon="ReShare" Label="Share"                             />
+            <AppBarButton Icon="Add" Label="Add"/>
+            <AppBarButton Icon="ReShare" Label="Share"/>
             <AppBarButton Icon="Edit" Label="Edit"/>
-            <AppBarButton x:ConnectionId='6' Icon="Mail" Label="Mail"                         />
+            <AppBarButton x:ConnectionId='4' Icon="Mail" Label="Mail"                         />
             <AppBarButton Icon="Delete" Label="Delete"/>
         </CommandBar>
         
