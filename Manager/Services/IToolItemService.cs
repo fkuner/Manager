@@ -7,10 +7,10 @@ using Manager.Models;
 
 namespace Manager.Services
 {
-    public interface IMemoItemService
+    public interface IToolItemService
     {
-        List<MemoItem> ListAsync();
-        void AddAsync(MemoItem memoItem);
-        void DeleteAsync(MemoItem memoItem);
+        List<ToolItem> ListAsync();
+        void AddAsync(ToolItem toolItem);
+        void DeleteAsync(ToolItem toolItem);
     }
 }

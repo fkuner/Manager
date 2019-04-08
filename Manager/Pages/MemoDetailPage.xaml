@@ -6,9 +6,6 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    NavigationCacheMode="Enabled"
-    Loaded="PageRoot_Loaded"
-    Unloaded="PageRoot_Unloaded"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.Transitions>
@@ -32,6 +29,8 @@
             Style="{ThemeResource BodyTextBlockStyle}"
             Text="{x:Bind Item.Text, Mode=OneWay}"
             EntranceNavigationTransitionInfo.IsTargetElement="True" />
+
+        <Button Name="Button"
+                Content="haha"/>
     </StackPanel>
-    
 </Page>

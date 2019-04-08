@@ -39,24 +39,25 @@ namespace Manager
         {
             this.InitializeComponent();
             
-            PageFrame.Navigate(typeof(BlankPage1));
+            PageFrame.Navigate(typeof(MemoPage));
             
         }
         public object BlankPage1 { get; set; }
 
         private readonly List<(string Tag, Type Page)> _pages = new List<(string Tag, Type Page)>
         {
-            ("BlankPage1", typeof(BlankPage1)),
+            ("ToolsPage", typeof(ToolsPage)),
             ("BlankPage2", typeof(BlankPage2)),
             ("BlankPage2", typeof(BlankPage3)),
-            ("Memo",typeof(Memo)),
+            ("MemoPage",typeof(MemoPage)),
+            ("SettingsPage",typeof(SettingsPage))
         };
 
         private void NavView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
             if (args.IsSettingsSelected)
             {
-                PageFrame.Navigate(typeof(BlankPage1));
+                PageFrame.Navigate(typeof(SettingsPage));
             }
             else
             {
@@ -65,8 +66,8 @@ namespace Manager
 
                 switch (item.Tag)
                 {
-                    case "BlankPage1":
-                        PageFrame.Navigate(typeof(BlankPage1));
+                    case "ToolsPage":
+                        PageFrame.Navigate(typeof(ToolsPage));
                         break;
 
                     case "BlankPage2":
@@ -76,9 +77,8 @@ namespace Manager
                     case "BlankPage3":
                         PageFrame.Navigate(typeof(BlankPage3));
                         break;
-                    case "Memo":
-                        PageFrame.Navigate(typeof(Memo));
-                        Window.Current.Activate();
+                    case "MemoPage":
+                        PageFrame.Navigate(typeof(MemoPage));
                         break;
                 }
             }

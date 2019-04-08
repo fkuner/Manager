@@ -4,18 +4,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Manager">
 
-    <Application.Resources>
-        <!--
-            <Style TargetType="Image" x:Key="LogoStyle">
+
+        <!--<Style TargetType="Image" x:Key="LogoStyle">
             <Setter Property="Width" Value="150"/>
             <Setter Property="Height" Value="150"/>
             <Setter Property="Margin" Value="20,20,20,0"/>
             <Setter Property="HorizontalAlignment" Value="Left"/>
-        </Style>
-        -->
+        </Style>-->
         
-    <!--
-    <ResourceDictionary>
+    
+    <!--<ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary>
                     <ResourceDictionary.ThemeDictionaries>
@@ -40,12 +38,14 @@
         </ResourceDictionary.ThemeDictionaries>
         </ResourceDictionary>
         </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Application.Resources>
 
-    -->
+        </ResourceDictionary>-->
 
-        <ResourceDictionary>
+
+
+    <Application.Resources>
+
+    <ResourceDictionary>
             <ResourceDictionary.ThemeDictionaries>
                 <ResourceDictionary x:Key="Dark">
                     <Style x:Key="ListCaptionAltTextblockStyle" TargetType="TextBlock" BasedOn="{StaticResource CaptionTextBlockStyle}">

@@ -28,15 +28,15 @@ namespace Manager
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class BlankPage1 : Page
+    public sealed partial class ToolsPage : Page
     {
 
         //public event PropertyChangedEventHandler PropertyChanged;
 
-        public BlankPage1()
+        public ToolsPage()
         {
             this.InitializeComponent();
-            DataContext = ViewModelLocator.Instance.BlankPage1ViewModel;
+            DataContext = ViewModelLocator.Instance.ToolsPageViewModel;
             this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
         }
 
@@ -57,13 +57,13 @@ namespace Manager
 
         
         
-        private void MemoListView_ItemClick(object sender, ItemClickEventArgs e)
+        private void ToolListView_ItemClick(object sender, ItemClickEventArgs e)
         {
             // Prepare the connected animation for navigation to the detail page.
-            //memoItem = e.ClickedItem as string;
-            //MemoListView.PrepareConnectedAnimation("itemAnimation", e.ClickedItem, "memoItem");
+            //toolItem = e.ClickedItem as string;
+            //ToolListView.PrepareConnectedAnimation("itemAnimation", e.ClickedItem, "toolItem");
 
-            this.Frame.Navigate(typeof(MemoDetail), e.ClickedItem);
+            this.Frame.Navigate(typeof(ToolsDetailPage), e.ClickedItem);
         }
         
         // Called by the Loaded event of the ImageGridView.

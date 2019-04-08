@@ -24,41 +24,30 @@ namespace Manager
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Memo : Page
+    public sealed partial class MemoPage : Page
     {
-        private MemoItemViewModel _lastSelectedItem;
+        
+        //private MemoItemViewModel _lastSelectedItem;
 
-        public Memo()
+        private MemoItem _lastSelectedItem;
+
+        public MemoPage()
         {
             this.InitializeComponent();
-            DataContext = new MemoItemViewModel();
+            DataContext = ViewModelLocator.Instance.MemoPageViewModel;
+            this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-
-            var items = MasterListView.ItemsSource as List<MemoItemViewModel>;
-
-            if (items == null)
-            {
-                items = new List<MemoItemViewModel>();
-
-                foreach (var item in ItemsDataSource.GetAllItems())
-                {
-                    items.Add(MemoItemViewModel.FromItem(item));
-                }
-
-                MasterListView.ItemsSource = items;
-            }
-
-            if (e.Parameter != null)
-            {
-                // Parameter is item ID
-                var id = (int)e.Parameter;
-                _lastSelectedItem =
-                    items.Where((item) => item.ItemId == id).FirstOrDefault();
-            }
+//            if (e.Parameter != null)
+//            {
+//                // Parameter is item ID
+//                var id = (int)e.Parameter;
+//                _lastSelectedItem =
+//                    MemoItems.Where((item) => item.ItemId == id).FirstOrDefault();
+//            }
 
             UpdateForVisualState(AdaptiveStates.CurrentState);
 
@@ -80,7 +69,7 @@ namespace Manager
             if (isNarrow && oldState == DefaultState && _lastSelectedItem != null)
             {
                 // Resize down to the detail item. Don't play a transition.
-                Frame.Navigate(typeof(MemoDetailPage), _lastSelectedItem.ItemId, new SuppressNavigationTransitionInfo());
+                Frame.Navigate(typeof(MemoDetailPage), _lastSelectedItem.Id, new SuppressNavigationTransitionInfo());
             }
 
             EntranceNavigationTransitionInfo.SetIsTargetElement(MasterListView, isNarrow);
@@ -92,13 +81,13 @@ namespace Manager
 
         private void MasterListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var clickedItem = (MemoItemViewModel)e.ClickedItem;
+            var clickedItem = (MemoItem)e.ClickedItem;
             _lastSelectedItem = clickedItem;
 
             if (AdaptiveStates.CurrentState == NarrowState)
             {
                 // Use "drill in" transition for navigating from master list to detail view
-                Frame.Navigate(typeof(MemoDetailPage), clickedItem.ItemId, new DrillInNavigationTransitionInfo());
+                Frame.Navigate(typeof(MemoDetailPage), e.ClickedItem, new DrillInNavigationTransitionInfo());
             }
             else
             {

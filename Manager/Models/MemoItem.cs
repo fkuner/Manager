@@ -8,7 +8,9 @@ namespace Manager.Models
 {
     public class MemoItem
     {
-        public int ID { get; set; }
-        public string Content { get; set; }
+        public int Id { get; set; }
+        public DateTime DateCreated { get; set; }
+        public string Title { get; set; }
+        public string Text { get; set; }
     }
 }

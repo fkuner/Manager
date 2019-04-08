@@ -9257,11 +9257,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lenovo\\source\\repos\\Manager\\Manager\\Manager.csproj",
+      "projectUniqueName": "E:\\source\\repos\\Manager\\Manager\\Manager.csproj",
       "projectName": "Manager",
-      "projectPath": "C:\\Users\\Lenovo\\source\\repos\\Manager\\Manager\\Manager.csproj",
+      "projectPath": "E:\\source\\repos\\Manager\\Manager\\Manager.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lenovo\\source\\repos\\Manager\\Manager\\obj\\",
+      "outputPath": "E:\\source\\repos\\Manager\\Manager\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

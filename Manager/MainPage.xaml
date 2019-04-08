@@ -16,10 +16,10 @@
                         Loaded="NavView_Loaded"
                         BackRequested="NavView_BackRequested">
             <NavigationView.MenuItems>
-                <NavigationViewItem Icon="Contact"  Content="Contact" Tag="Memo"/>
+                <NavigationViewItem Icon="Memo"  Content="Memo" Tag="MemoPage"/>
                 <NavigationViewItem Icon="Accept"  Content="Todo" Tag="BlankPage2" />
                 <NavigationViewItem Icon="Account"  Content="Money" Tag="BlankPage3" />
-                <NavigationViewItem Icon="Memo"  Content="Memo" Tag="BlankPage1" />
+                <NavigationViewItem Icon="Repair"  Content="Tools" Tag="ToolsPage" />
             </NavigationView.MenuItems>
 
             

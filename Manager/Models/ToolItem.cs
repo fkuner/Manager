@@ -6,20 +6,9 @@ using System.Threading.Tasks;
 
 namespace Manager.Models
 {
-    public class TodoItem
+    public class ToolItem
     {
-        /// <summary>
-        /// 待办事项类
-        /// </summary>
-
-        //property
-        //private String item;
-        //private Date date;
-        //int level;  //事件的优先级
-
         public int ID { get; set; }
         public string Content { get; set; }
-
     }
-
 }

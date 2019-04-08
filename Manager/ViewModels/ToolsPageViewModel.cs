@@ -16,16 +16,16 @@ using Windows.UI.Xaml.Navigation;
 namespace Manager.ViewModels
 {
     /// <summary>
-    /// BlankPage1 ViewModel
+    /// ToolsPage的 ViewModel
     /// </summary>
-    public class BlankPage1ViewModel: ViewModelBase
+    public class ToolsPageViewModel: ViewModelBase
     {
-        private IMemoItemService _memoItemService;
+        private IToolItemService _toolItemService;
 
         /// <summary>
         /// 所有MemoItem。
         /// </summary>
-        private ObservableCollection<MemoItem> _memoItems;
+        private ObservableCollection<ToolItem> _toolItems;
 
         /// <summary>
         /// 刷新备忘录命令。
@@ -40,24 +40,24 @@ namespace Manager.ViewModels
         /// <summary>
         /// 要添加的备忘录
         /// </summary>
-        private MemoItem _addMemoItem;
+        private ToolItem _addToolItem;
 
         /// <summary>
         /// 所有MemoItem。
         /// </summary>
-        public ObservableCollection<MemoItem> MemoItems
+        public ObservableCollection<ToolItem> ToolItems
         {
-            get => _memoItems;
-            set => Set(nameof(MemoItems), ref _memoItems, value);
+            get => _toolItems;
+            set => Set(nameof(ToolItems), ref _toolItems, value);
         }
 
         /// <summary>
         /// 要添加的备忘录
         /// </summary>
-        public MemoItem AddMemoItem
+        public ToolItem AddToolItem
         {
-            get => _addMemoItem;
-            set => Set(nameof(AddMemoItem), ref _addMemoItem, value);
+            get => _addToolItem;
+            set => Set(nameof(AddToolItem), ref _addToolItem, value);
         }
         
         /// <summary>
@@ -65,10 +65,10 @@ namespace Manager.ViewModels
         /// </summary>
         public RelayCommand RefreshCommand =>
             _refreshCommand ?? (_refreshCommand = new RelayCommand(async () => {
-                MemoItems.Clear();
-                foreach (MemoItem memoitem in _memoItemService.ListAsync())
+                ToolItems.Clear();
+                foreach (ToolItem memoitem in _toolItemService.ListAsync())
                 {
-                    MemoItems.Add(memoitem);
+                    ToolItems.Add(memoitem);
                 }
             }));
 
@@ -77,20 +77,17 @@ namespace Manager.ViewModels
         /// </summary>
         public RelayCommand AddCommand =>
             _addCommand ?? (_addCommand = new RelayCommand(async () => {
-                _memoItemService.AddAsync(_addMemoItem);
+                _toolItemService.AddAsync(_addToolItem);
             }));
 
-       /// <summary>
-       /// 构造函数
-       /// </summary>
-       /// <param name="memoItemService"></param>
-        public BlankPage1ViewModel(IMemoItemService memoItemService)
+
+        public ToolsPageViewModel ( IToolItemService toolItemService)
         {
-            MemoItems = new ObservableCollection<MemoItem>();
-            MemoItems.Clear();
-            foreach (MemoItem memoitem in memoItemService.ListAsync())
+            ToolItems = new ObservableCollection<ToolItem>();
+            ToolItems.Clear();
+            foreach (ToolItem toolitem in toolItemService.ListAsync())
             {
-                MemoItems.Add(memoitem);
+                ToolItems.Add(toolitem);
             }
         }
     }

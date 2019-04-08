@@ -1,6 +1,4 @@
-﻿using Manager.Models;
-using Manager.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -16,6 +14,10 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
+using Manager.Models;
+using Manager.ViewModels;
+using Newtonsoft.Json;
+
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,12 +29,18 @@ namespace Manager.Pages
     public sealed partial class MemoDetailPage : Page
     {
 
-        public static DependencyProperty ItemProperty { get; } = DependencyProperty.Register("Item", typeof(MemoItemViewModel), typeof(MemoDetailPage), new PropertyMetadata(null));
+        private static DependencyProperty s_itemProperty
+            = DependencyProperty.Register("Item", typeof(MemoItem), typeof(MemoDetailPage), new PropertyMetadata(null));
 
-        public MemoItemViewModel Item
+        public static DependencyProperty ItemProperty
         {
-            get { return (MemoItemViewModel)GetValue(ItemProperty); }
-            set { SetValue(ItemProperty, value); }
+            get { return s_itemProperty; }
+        }
+
+        public MemoItem Item
+        {
+            get { return (MemoItem)GetValue(s_itemProperty); }
+            set { SetValue(s_itemProperty, value); }
         }
 
         public MemoDetailPage()
@@ -45,7 +53,9 @@ namespace Manager.Pages
             base.OnNavigatedTo(e);
 
             // Parameter is item ID
-            Item = MemoItemViewModel.FromItem(ItemsDataSource.GetItemById((int)e.Parameter));
+
+//            string json = e.Parameter.ToString();
+//            Item = JsonConvert.DeserializeObject<MemoItem>(json);
 
             var backStack = Frame.BackStack;
             var backStackCount = backStack.Count;
@@ -59,7 +69,7 @@ namespace Manager.Pages
                 // will show the correct item in the side-by-side view.
                 var modifiedEntry = new PageStackEntry(
                     masterPageEntry.SourcePageType,
-                    Item.ItemId,
+                    Item.Id,
                     masterPageEntry.NavigationTransitionInfo
                     );
                 backStack.Add(modifiedEntry);

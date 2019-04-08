@@ -33,8 +33,7 @@ namespace Manager
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-
-            MemoItemService.InitializeDatabase();
+            ToolItemService.InitializeDatabase();
         }
 
         /// <summary>
