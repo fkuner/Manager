@@ -9,6 +9,7 @@ namespace Manager.Models
 {
     public class MoneyItem
     {
+        public int ID { get; set; }
         public DateTime ConsumeTime { get; set; }
         public string Event { get; set; }
         public double Amount { get; set; }
