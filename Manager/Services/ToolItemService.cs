@@ -84,6 +84,7 @@ namespace Manager.Services
                 db.Open();
 
                 SqliteCommand deleteCommand = new SqliteCommand("DELETE FROM ToolItemTable WHERE ID = @id;");
+                deleteCommand.Connection = db;
                 deleteCommand.Parameters.AddWithValue("@id", toolItem.ID);
 
                 deleteCommand.ExecuteReader();

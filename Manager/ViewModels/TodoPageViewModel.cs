@@ -34,9 +34,19 @@ namespace Manager.ViewModels
         private RelayCommand _addCommand;
 
         /// <summary>
+        /// 删除提醒事项条目命令
+        /// </summary>
+        private RelayCommand _deleteCommand;
+
+        /// <summary>
         /// 要添加的提醒事项
         /// </summary>
         private TodoItem _addTodoItem;
+
+        /// <summary>
+        /// 要删除的提醒事项
+        /// </summary>
+        private TodoItem _deleteTodoItem;
 
         /// <summary>
         /// 所有TodoItem。
@@ -57,6 +67,14 @@ namespace Manager.ViewModels
         }
 
         /// <summary>
+        /// 要删除的提醒事项
+        /// </summary>
+        public TodoItem DeleteTodoItem
+        {
+            get => _deleteTodoItem;
+            set => Set(nameof(DeleteTodoItem), ref _deleteTodoItem, value);
+        }
+        /// <summary>
         /// 刷新提醒事项命令。
         /// </summary>
         public RelayCommand RefreshCommand =>
@@ -74,6 +92,15 @@ namespace Manager.ViewModels
         public RelayCommand AddCommand =>
             _addCommand ?? (_addCommand = new RelayCommand(async () => {
                 _todoItemService.AddAsync(_addTodoItem);
+            }));
+
+        /// <summary>
+        /// 删除提醒事项命令。
+        /// </summary>
+        public RelayCommand DeleteCommand =>
+            _deleteCommand ?? (_deleteCommand = new RelayCommand(async () =>
+            {
+                _todoItemService.DeleteAsync(_deleteTodoItem);
             }));
 
         /// <summary>

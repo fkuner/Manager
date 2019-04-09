@@ -38,6 +38,8 @@ namespace Manager
             this.InitializeComponent();
             DataContext = ViewModelLocator.Instance.ToolsPageViewModel;
             this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
+            var viewModel = (ToolsPageViewModel)this.DataContext;
+            ToolListView.SelectedItem = viewModel.ToolItems[0];
         }
 
         /*
@@ -96,5 +98,31 @@ namespace Manager
             }
         }
         */
+        private void Add_OnClick(object sender, RoutedEventArgs e)
+        {
+            ToolItem toolItem = new ToolItem();
+            toolItem.ID = 200;
+            toolItem.Content = "请输入你要添加的内容";
+            var viewModel = (ToolsPageViewModel)this.DataContext;
+            viewModel.ToolItems.Add(toolItem);
+        }
+
+        private void Delete_OnClick(object sender, RoutedEventArgs e)
+        {
+            var viewModel = (ToolsPageViewModel)this.DataContext;
+            var Item = ToolListView.SelectedItem as ToolItem;
+            viewModel.DeleteToolItem = Item;
+            viewModel.DeleteCommand.Execute(null);
+        }
+
+        private void Save_OnClick(object sender, RoutedEventArgs e)
+        {
+            var viewModel = (ToolsPageViewModel)this.DataContext;
+            var Item = ToolListView.SelectedItem as ToolItem;
+            Item.ID = ToolListView.SelectedIndex+10;
+            Item.Content = "haha";
+            viewModel.AddToolItem = Item;
+            viewModel.AddCommand.Execute(null);
+        }
     }
 }

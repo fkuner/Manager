@@ -20,30 +20,39 @@ namespace Manager.ViewModels
     /// </summary>
     public class ToolsPageViewModel: ViewModelBase
     {
-        private IToolItemService _toolItemService;
+        private ToolItemService _toolItemService;
 
         /// <summary>
-        /// 所有MemoItem。
+        /// 所有ToolItem。
         /// </summary>
         private ObservableCollection<ToolItem> _toolItems;
 
         /// <summary>
-        /// 刷新备忘录命令。
+        /// 刷新工具命令。
         /// </summary>
         private RelayCommand _refreshCommand;
 
         /// <summary>
-        /// 增加备忘录条目命令
+        /// 增加工具条目命令
         /// </summary>
         private RelayCommand _addCommand;
 
         /// <summary>
-        /// 要添加的备忘录
+        /// 删除工具条目命令
         /// </summary>
-        private ToolItem _addToolItem;
+        private RelayCommand _deleteCommand;
+        /// <summary>
+        /// 要添加的工具
+        /// </summary>
+        private ToolItem _addToolItem=new ToolItem();
 
         /// <summary>
-        /// 所有MemoItem。
+        /// 要删除的工具
+        /// </summary>
+        private ToolItem _deleteToolItem=new ToolItem();
+
+        /// <summary>
+        /// 所有ToolItem。
         /// </summary>
         public ObservableCollection<ToolItem> ToolItems
         {
@@ -52,16 +61,25 @@ namespace Manager.ViewModels
         }
 
         /// <summary>
-        /// 要添加的备忘录
+        /// 要添加的工具
         /// </summary>
         public ToolItem AddToolItem
         {
             get => _addToolItem;
             set => Set(nameof(AddToolItem), ref _addToolItem, value);
         }
-        
+
         /// <summary>
-        /// 刷新备忘录命令。
+        /// 要删除的工具
+        /// </summary>
+        public ToolItem DeleteToolItem
+        {
+            get => _deleteToolItem;
+            set => Set(nameof(DeleteToolItem), ref _deleteToolItem, value);
+        }
+
+        /// <summary>
+        /// 刷新工具命令。
         /// </summary>
         public RelayCommand RefreshCommand =>
             _refreshCommand ?? (_refreshCommand = new RelayCommand(async () => {
@@ -73,16 +91,25 @@ namespace Manager.ViewModels
             }));
 
         /// <summary>
-        /// 添加备忘录命令。
+        /// 添加工具命令。
         /// </summary>
         public RelayCommand AddCommand =>
-            _addCommand ?? (_addCommand = new RelayCommand(async () => {
+            _addCommand ?? (_addCommand = new RelayCommand(async () =>
+            {
                 _toolItemService.AddAsync(_addToolItem);
+                
             }));
 
+        public RelayCommand DeleteCommand =>
+            _deleteCommand ?? (_deleteCommand = new RelayCommand(async () =>
+            {
+                _toolItemService.DeleteAsync(_deleteToolItem);
+
+            }));
 
         public ToolsPageViewModel ( IToolItemService toolItemService)
         {
+            _toolItemService=new ToolItemService();
             ToolItems = new ObservableCollection<ToolItem>();
             ToolItems.Clear();
             foreach (ToolItem toolitem in toolItemService.ListAsync())
