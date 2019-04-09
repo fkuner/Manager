@@ -51,10 +51,7 @@ namespace Manager.Services
             }
         }
 
-        public void ChangeAsync(int id, MemoItem memoItem)
-        {
-            throw new NotImplementedException();
-        }
+      
 
         public void DeleteAsync(MemoItem memoItem)
         {

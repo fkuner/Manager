@@ -36,6 +36,7 @@ namespace Manager
             ToolItemService.InitializeDatabase();
             MoneyItemService.InitializeDatabase();
             MemoItemService.InitializeDatabase();
+            TodoItemService.InitializeDatabase();
         }
 
         /// <summary>
