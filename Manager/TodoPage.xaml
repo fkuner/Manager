@@ -5,133 +5,115 @@
     xmlns:local="using:Manager"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Models="using:Manager.Models"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     NavigationCacheMode="Enabled">
+
+    <Page.Resources>
+        <DataTemplate x:Key="ListViewItemTemplate1"
+                      x:DataType="Models:TodoItem">
+
+            <Border BorderThickness="0,0.5,0,0.5"  BorderBrush="Gray"  HorizontalAlignment="Stretch"
+                        Margin="0" Background="#FFFFFFFF">
+
+
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="AUTO"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20" ></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <CheckBox Grid.Column="0"
+                              Tapped="CheckBox_Tapped"
+                              Width="10"
+                              
+                             />
+
+                    <TextBox 
+                            Name="textbox"
+                            Height="50"  
+                            HorizontalAlignment="Left"  
+                            Grid.Column="2"
+                            Width="1280"
+                            Text="{x:Bind Content}" BorderThickness="0"                     
+                            AutomationProperties.Name="customized TextBox" 
+                            FontFamily="Arial"
+                            FontSize="32" 
+                            FontStyle="Italic"
+                            CharacterSpacing="200" 
+                            Foreground="CornflowerBlue" >
+                    </TextBox>
+
+                </Grid>
+
+            </Border>
+
+        </DataTemplate>
+        <DataTemplate x:Key="imageGridView_DefaultitemTemplate"
+                     >
+            <!-- Create image grid -->
+            <Grid Height="{Binding ItemSize, ElementName=page}"
+                     Width="{Binding ItemSize, ElementName=page}">
+
+                <!-- Place image in grid, stretching it to fill the pane-->
+                <Image x:Name="ItemImage"
+               Source="/Assets/UWP-ji-0.jpg"
+               Stretch="UniformToFill">
+                </Image>
+
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
 
 
 
     <Grid >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="200" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal"
-                    Grid.ColumnSpan="2">
-            <Image Height="200"  Width="1500" Stretch="UniformToFill"  Grid.ColumnSpan="2">
-                <Image.Source>
-                    <BitmapImage UriSource="/Assets/UWP-ji-0.jpg"
-                                 DecodePixelHeight="100" />
-                </Image.Source>
-            </Image>
+        <FlipView ItemTemplate="{StaticResource imageGridView_DefaultitemTemplate}"  Grid.Row="0"
+                   
+                  >
+            <Image Height="200"  Width="1500" Stretch="UniformToFill" Source="/Assets/UWP-ji-0.jpg" AutomationProperties.Name="Cliff"/>
+            <Image Height="200"  Width="1500" Stretch="UniformToFill" Source="/Assets/UWP-ji-0.jpg" AutomationProperties.Name="Grapes"/>
+            <Image Height="200"  Width="1500" Stretch="UniformToFill" Source="/Assets/UWP-ji-0.jpg" AutomationProperties.Name="Rainier"/>
+            <Image Height="200"  Width="1500" Stretch="UniformToFill" Source="/Assets/UWP-ji-0.jpg" AutomationProperties.Name="Sunset"/>
+            <Image Height="200"  Width="1500" Stretch="UniformToFill" Source="/Assets/UWP-ji-0.jpg" AutomationProperties.Name="Valley"/>
+        </FlipView>
 
-        </StackPanel>
         <CommandBar Background="Transparent" 
                     IsOpen="False" 
                     DefaultLabelPosition="Right"
-                    Grid.Column="1"
                     Grid.Row="1"
                     HorizontalAlignment="Stretch"
                     Margin="0,0,0,0">
-            <AppBarButton Icon="Add" Label="Add"/>
-            <AppBarButton Icon="ReShare" Label="Share"/>
+            <AppBarButton Icon="Add" Label="Add" Click="AppBarButton_Click"/>
+            <AppBarButton Icon="Save" Label="Save" ></AppBarButton>
+            <AppBarButton Icon="ReShare" Label="Share" Click="AppBarButton_Click_1"/>
             <AppBarButton Icon="Edit" Label="Edit"/>
-            <AppBarButton Icon="Mail" Label="Mail" Click="MailButton_Click"/>
+            <AppBarButton Icon="Mail" Label="Mail" Click="MainButton_Click"/>
             <AppBarButton Icon="Delete" Label="Delete"/>
         </CommandBar>
-        
-        
-        <StackPanel Name="stackPanel2"
-                    Grid.Row="2">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="9*" />
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition Height="0*"/>
-                    <RowDefinition/>
-
-                </Grid.RowDefinitions>
-                
-                <Button
-                        VerticalAlignment="Stretch"
-                        Content="add"
-                        HorizontalAlignment="Center" 
-                        Grid.Row="0" 
-                        Grid.Column="0"
-                        />
-                <ListView>
-                    <ListView.ItemContainerTransitions>
-                        <TransitionCollection>
-                            <AddDeleteThemeTransition />
-                        </TransitionCollection>
-                    </ListView.ItemContainerTransitions>
-                </ListView>
-            </Grid>
-            
-            <!--
-            <Line Stroke="Red" X2="1960" Margin="0,50,0,0"/>
-            <Line Stroke="Red" X2="1960" Margin="0,50,0,0"/>
-            <Line Stroke="Red" X2="1960" Margin="0,50,0,0"/>
-            <Line Stroke="Red" X2="1960" Margin="0,50,0,0"/>
-            
-            <Button Content="Query"
-                Name="QueryButton"
-                Command="{Binding RefreshCommand}" />
-            <TextBlock Name="ContentTextBlock"
-                   Text="{Binding FirstTodoItem.Content}" />
-            <ListView ItemsSource="{Binding TodoItems}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding Content}" />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <TextBox BorderThickness="1"
-                     Name="testTextBox"
-                     Text="{Binding AddTodoItem.Content,Mode=TwoWay}" />
-            <TextBlock Name="testTextBlock"
-                       Text="{Binding AddTodoItem.Content}"/>
-            <Button Content="click me to add"
-                    Command="{Binding AddCommand}"/>
-            -->
-        </StackPanel>
-
-       
-        <StackPanel Name="stackPanel1"
-                    Grid.Row="3" Grid.ColumnSpan="2">
 
 
-            <Border BorderThickness="1" BorderBrush="#FF00008B" Background="#FFFFFFFF">
-                <TextBox Text="Text inside a border" FontSize="18" Foreground="Black" />
-            </Border>
-            <Border BorderThickness="1" BorderBrush="#FF00008B" Background="#FFFFFFFF">
-                <TextBox Text="Text inside a border" FontSize="18" Foreground="Black" />
-            </Border>
-            <Border BorderThickness="1" BorderBrush="#FF00008B" Background="#FFFFFFFF">
-                <TextBox Text="Text inside a border" FontSize="18" Foreground="Black" />
-            </Border>
-            <Border BorderThickness="1" BorderBrush="#FF00008B" Background="#FFFFFFFF">
-                <TextBox Text="Text inside a border" FontSize="18" Foreground="Black" />
-            </Border>
-            <Border BorderThickness="1" BorderBrush="#FF00008B" Background="#FFFFFFFF">
-                <TextBox Text="Text inside a border" FontSize="18" Foreground="Black" />
-            </Border>
-            <Border BorderThickness="1" BorderBrush="#FF00008B" Background="#FFFFFFFF">
-                <TextBox Text="Text inside a border" FontSize="18" Foreground="Black" />
-            </Border>
 
-            <Line Stroke="Red"   X2="400"></Line>
-       
-        </StackPanel>
+        <!-- Add the GridView here. -->
+        <ListView   x:Name="ListView"
+            Grid.Row="2" 
+            ItemTemplate="{StaticResource ListViewItemTemplate1}"
+            ItemsSource="{Binding TodoItems}"
+       ></ListView>
+
 
     </Grid>
 </Page>
