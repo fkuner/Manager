@@ -91,5 +91,10 @@ namespace Manager.Services
                 db.Close();
             }
         }
+
+        public void ChangeAsync(int id, ToolItem toolItem)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

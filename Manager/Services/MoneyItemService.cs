@@ -87,5 +87,10 @@ namespace Manager.Services
                 db.Close();
             }
         }
+
+        public void ChangeAsync(int id, MoneyItem moneyItem)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

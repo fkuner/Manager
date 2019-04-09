@@ -123,9 +123,42 @@ namespace Manager
             var viewModel = (ToolsPageViewModel)this.DataContext;
             var Item = ToolListView.SelectedItem as ToolItem;
             Item.ID = ToolListView.SelectedIndex;
+            // Getting the currently selected ListBoxItem
+            // Note that the ListBox must have
+            // IsSynchronizedWithCurrentItem set to True for this to work
+            /*ListBoxItem myListBoxItem =
+                (ListBoxItem)(ToolListView.ItemContainerGenerator.ContainerFromItem(ToolListView.Items.CurrentItem));
+
+            // Getting the ContentPresenter of myListBoxItem
+            ContentPresenter myContentPresenter = FindVisualChild<ContentPresenter>(myListBoxItem);
+
+            // Finding textBlock from the DataTemplate that is set on that ContentPresenter
+            DataTemplate myDataTemplate = myContentPresenter.ContentTemplate;
+            TextBlock myTextBlock = (TextBlock)myDataTemplate.FindName("textBlock", myContentPresenter);
+             
+            // Do something to the DataTemplate-generated TextBlock
+            MessageBox.Show("The text of the TextBlock of the selected list item: "
+                            + myTextBlock.Text);*/
             Item.Content = "haha";
             viewModel.AddToolItem = Item;
             viewModel.AddCommand.Execute(null);
+        }
+        private childItem FindVisualChild<childItem>(DependencyObject obj)
+            where childItem : DependencyObject
+        {
+            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(obj); i++)
+            {
+                DependencyObject child = VisualTreeHelper.GetChild(obj, i);
+                if (child != null && child is childItem)
+                    return (childItem)child;
+                else
+                {
+                    childItem childOfChild = FindVisualChild<childItem>(child);
+                    if (childOfChild != null)
+                        return childOfChild;
+                }
+            }
+            return null;
         }
     }
 }

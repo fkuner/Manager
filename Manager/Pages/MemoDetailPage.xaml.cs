@@ -54,7 +54,8 @@ namespace Manager.Pages
 
             // Parameter is item ID
 
-            var Item= e.Parameter as MemoItem;
+
+            Item= e.Parameter as MemoItem;
 
             var backStack = Frame.BackStack;
             var backStackCount = backStack.Count;
@@ -68,7 +69,7 @@ namespace Manager.Pages
                 // will show the correct item in the side-by-side view.
                 var modifiedEntry = new PageStackEntry(
                     masterPageEntry.SourcePageType,
-                    Item.Id,
+                    Item,
                     masterPageEntry.NavigationTransitionInfo
                     );
                 backStack.Add(modifiedEntry);

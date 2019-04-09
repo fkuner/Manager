@@ -16,6 +16,11 @@ namespace Manager.Services
             throw new NotImplementedException();
         }
 
+        public void ChangeAsync(int id, TodoItem todoItem)
+        {
+            throw new NotImplementedException();
+        }
+
         public void DeleteAsync(TodoItem todoItem)
         {
             throw new NotImplementedException();

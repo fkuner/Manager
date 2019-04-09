@@ -84,16 +84,16 @@ namespace Manager
             var clickedItem = (MemoItem)e.ClickedItem;
             _lastSelectedItem = clickedItem;
 
-            if (AdaptiveStates.CurrentState == NarrowState)
-            {
+            //if (AdaptiveStates.CurrentState == NarrowState)
+            //{
                 // Use "drill in" transition for navigating from master list to detail view
                 Frame.Navigate(typeof(MemoDetailPage), e.ClickedItem as MemoItem, new DrillInNavigationTransitionInfo());
-            }
-            else
-            {
+            //}
+            //else
+            //{
                 // Play a refresh animation when the user switches detail items.
-                EnableContentTransitions();
-            }
+            //    EnableContentTransitions();
+            //}
         }
 
         private void LayoutRoot_Loaded(object sender, RoutedEventArgs e)

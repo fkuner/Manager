@@ -31,9 +31,7 @@
                     <CheckBox Grid.Column="0"
                               Tapped="CheckBox_Tapped"
                               Width="10"
-                              
                              />
-
                     <TextBox 
                             Name="textbox"
                             Height="50"  
@@ -98,6 +96,7 @@
                     HorizontalAlignment="Stretch"
                     Margin="0,0,0,0">
             <AppBarButton Icon="Add" Label="Add" Click="AppBarButton_Click"/>
+            <AppBarButton Icon="Clock" Label="Clock" Click="Clock_OnClick" />
             <AppBarButton Icon="Save" Label="Save" ></AppBarButton>
             <AppBarButton Icon="ReShare" Label="Share" Click="AppBarButton_Click_1"/>
             <AppBarButton Icon="Edit" Label="Edit"/>

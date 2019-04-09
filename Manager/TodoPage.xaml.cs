@@ -25,6 +25,8 @@ using Manager.ViewModels;
 using Manager.Services;
 using Windows.ApplicationModel.DataTransfer;
 using System.Collections.ObjectModel;
+using Windows.Data.Xml.Dom;
+using Windows.UI.Notifications;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -174,6 +176,45 @@ namespace Manager
             //flash.jpg是示例代码中Asssets文件夹中的图片，可以将其改为你自己的图片
             request.Data.SetBitmap(RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/UWP-ji-0.jpg")));
             deferral.Complete();
+        }
+
+        /// <summary>
+        /// 通知栏
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Clock_OnClick(object sender, RoutedEventArgs e)
+        {
+            var type = ToastTemplateType.ToastText02;
+            var content = ToastNotificationManager.GetTemplateContent(type);
+            //生成XML
+            XmlNodeList toastxml = content.GetElementsByTagName("text");
+            toastxml[0].AppendChild(content.CreateTextNode("标题"));
+            toastxml[1].AppendChild(content.CreateTextNode("内容"));
+            //设置时间、次数等参数
+            //DateTime due = DateTime.Parse("2019-04-08 21:21:00");
+            DateTime due = DateTime.Now.AddMinutes(1);
+            TimeSpan span = TimeSpan.FromMinutes(1);
+            UInt32 time = 3;
+            ScheduledToastNotification toast = new ScheduledToastNotification(content, due, span, time);
+            //设置Toast的id
+            toast.Id = "toast1";
+            //if (state == 0)
+            //{
+            //    var node = content.SelectSingleNode("/toast");
+            //    var audio = content.CreateElement("audio");
+            //    audio.SetAttribute("silent", "true");
+            //    node.AppendChild(audio);
+            //}
+            //else
+            //{
+            var node = content.SelectSingleNode("/toast");
+            var audio = content.CreateElement("audio");
+            audio.SetAttribute("src", "ms-winsoundevent:Notification.IM");
+            audio.SetAttribute("loop", "false");
+            node.AppendChild(audio);
+            ToastNotificationManager.CreateToastNotifier().AddToSchedule(toast);
+
         }
     }
 }
