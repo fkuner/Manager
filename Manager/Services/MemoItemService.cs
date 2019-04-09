@@ -58,9 +58,11 @@ namespace Manager.Services
             {
                 db.Open();
 
-                SqliteCommand deleteCommand = new SqliteCommand("DELETE FROM MemoItemTable WHERE Id = @id;");
+                SqliteCommand deleteCommand = new SqliteCommand("DELETE FROM MemoItemTable WHERE Id = @id AND DateCreated = @date AND Title = @title AND Text = @text;");
                 deleteCommand.Parameters.AddWithValue("@id", memoItem.Id);
-
+                deleteCommand.Parameters.AddWithValue("@date", memoItem.DateCreated);
+                deleteCommand.Parameters.AddWithValue("@title", memoItem.Title);
+                deleteCommand.Parameters.AddWithValue("@text", memoItem.Text);
                 deleteCommand.ExecuteReader();
                 db.Close();
             }
