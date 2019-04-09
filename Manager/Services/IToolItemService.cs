@@ -12,5 +12,6 @@ namespace Manager.Services
         List<ToolItem> ListAsync();
         void AddAsync(ToolItem toolItem);
         void DeleteAsync(ToolItem toolItem);
+        void ChangeAsync(int id, ToolItem toolItem);
     }
 }

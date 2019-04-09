@@ -4,6 +4,8 @@
     <RootPropertyPathName Name="Content" />
     <RootPropertyPathName Name="ToolItems" />
     <RootPropertyPathName Name="RefreshCommand" />
+    <RootPropertyPathName Name="ItemSize" />
+    <RootPropertyPathName Name="TodoItems" />
     <RootPropertyPathName Name="MoneyItems" />
     <RootPropertyPathName Name="MemoItems" />
   </Roots.PropertyPathNames>
@@ -49,9 +51,8 @@
     <RootType FullName="Windows.UI.Xaml.Media.Animation.NavigationThemeTransition" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />
-      <RootProperty Name="Orientation" />
-      <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Orientation" />
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.Animation.EntranceNavigationTransitionInfo">
@@ -61,10 +62,10 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Name" />
       <RootProperty Name="Content" />
-      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Flyout" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="Style" />
@@ -94,8 +95,6 @@
       <RootProperty Name="ColumnDefinitions" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
-      <RootMethod Name="GetColumnSpan" />
-      <RootMethod Name="SetColumnSpan" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRowSpan" />
@@ -109,21 +108,28 @@
       <RootProperty Name="Background" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="Child" />
+      <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Name" />
       <RootProperty Name="Text" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="FontFamily" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="FontStyle" />
+      <RootProperty Name="CharacterSpacing" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="TextWrapping" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
+      <RootProperty Name="ElementName" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
       <RootProperty Name="Height" />
@@ -154,8 +160,8 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="IsItemClickEnabled" />
       <RootProperty Name="ItemsSource" />
-      <RootProperty Name="ItemContainerTransitions" />
       <RootProperty Name="SelectionMode" />
+      <RootProperty Name="ItemContainerTransitions" />
       <RootProperty Name="ItemContainerStyle" />
       <RootEvent Name="ItemClick" />
     </RootType>
@@ -167,25 +173,28 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Manager.ToolsPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
-      <RootProperty Name="Width" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Shapes.Line">
-      <RootProperty Name="Stroke" />
-      <RootProperty Name="X2" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Media.Animation.AddDeleteThemeTransition" />
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="Source" />
+      <RootProperty Name="Stretch" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Stretch" />
-      <RootProperty Name="Source" />
       <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Media.Imaging.BitmapImage">
-      <RootProperty Name="UriSource" />
-      <RootProperty Name="DecodePixelHeight" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
+      <RootProperty Name="Width" />
+      <RootEvent Name="Tapped" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Automation.AutomationProperties">
+      <RootMethod Name="GetName" />
+      <RootMethod Name="SetName" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.FlipView">
+      <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="Items" />
     </RootType>
     <RootType FullName="Manager.TodoPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.Control">

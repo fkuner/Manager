@@ -38,27 +38,30 @@ namespace Manager
             this.InitializeComponent();
             DataContext = ViewModelLocator.Instance.ToolsPageViewModel;
             this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
-            var viewModel = (ToolsPageViewModel)this.DataContext;
-            ToolListView.SelectedItem = viewModel.ToolItems[0];
+            
         }
 
-        /*
+        
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             SystemNavigationManager.GetForCurrentView().AppViewBackButtonVisibility =
                 AppViewBackButtonVisibility.Collapsed;
 
-            if (memoItems.Count == 0)
+            var viewModel = (ToolsPageViewModel)this.DataContext;
+
+            if (viewModel.ToolItems.Count == 0)
             {
-                GetItemsAsync();
+                ToolItem toolItem = new ToolItem();
+                toolItem.ID = 0;
+                toolItem.Content = "请输入你要添加的内容";
+                viewModel.AddToolItem = toolItem;
+                viewModel.AddCommand.Execute(null);
             }
+            //ToolListView.SelectedItem = viewModel.ToolItems[0];
 
             base.OnNavigatedTo(e);
         }
-        */
 
-        
-        
         private void ToolListView_ItemClick(object sender, ItemClickEventArgs e)
         {
             // Prepare the connected animation for navigation to the detail page.
@@ -119,7 +122,7 @@ namespace Manager
         {
             var viewModel = (ToolsPageViewModel)this.DataContext;
             var Item = ToolListView.SelectedItem as ToolItem;
-            Item.ID = ToolListView.SelectedIndex+10;
+            Item.ID = ToolListView.SelectedIndex;
             Item.Content = "haha";
             viewModel.AddToolItem = Item;
             viewModel.AddCommand.Execute(null);

@@ -13,5 +13,6 @@ namespace Manager.Services
         void AddAsync(TodoItem todoItem);
         void DeleteAsync(TodoItem todoItem);
         int FindMemoItem(List<TodoItem> TodoItems, TodoItem todoItem);
+        void ChangeAsync(int id, TodoItem todoItem);
     }
 }

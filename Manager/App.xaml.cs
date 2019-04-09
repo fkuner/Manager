@@ -34,6 +34,8 @@ namespace Manager
             this.InitializeComponent();
             this.Suspending += OnSuspending;
             ToolItemService.InitializeDatabase();
+            MoneyItemService.InitializeDatabase();
+            MemoItemService.InitializeDatabase();
         }
 
         /// <summary>
