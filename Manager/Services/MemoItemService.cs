@@ -91,5 +91,22 @@ namespace Manager.Services
             }
             return List;
         }
+
+        public void ChangeAsync(int id, MemoItem memoItem)
+        {
+            using (SqliteConnection db = new SqliteConnection("Filename=sqliteData.db"))
+            {
+                db.Open();
+
+                SqliteCommand updateCommand = new SqliteCommand("UPDATE MemoItemTable SET Id = @SetId , DateCreated = @date , Title = @title , Text = @text WHERE Id = @id;");
+                updateCommand.Parameters.AddWithValue("@SetId", memoItem.Id);
+                updateCommand.Parameters.AddWithValue("@date", memoItem.DateCreated);
+                updateCommand.Parameters.AddWithValue("@title", memoItem.Title);
+                updateCommand.Parameters.AddWithValue("@text", memoItem.Text);
+                updateCommand.Parameters.AddWithValue("@id", memoItem);
+                updateCommand.ExecuteReader();
+                db.Close();
+            }
+        }
     }
 }
