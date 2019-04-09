@@ -18,7 +18,7 @@ namespace Manager.Services
                 db.Open();
 
                 String tableCommand = "CREATE TABLE IF NOT EXISTS ToolItemTable " +
-                                      "(ID INTEGER PRIMARY KEY NOT NULL," +
+                                      "(ID INTEGER PRIMARY KEY AUTOINCREMENT," +
                                       "Content NVACHAR(2048) NULL);";
 
                 SqliteCommand createTable = new SqliteCommand(tableCommand, db);
@@ -62,8 +62,7 @@ namespace Manager.Services
                 SqliteCommand insertCommand = new SqliteCommand();
                 insertCommand.Connection = db;
 
-                insertCommand.CommandText = "INSERT INTO ToolItemTable VALUES (@id,@content);";
-                insertCommand.Parameters.AddWithValue("@id", toolItem.ID);
+                insertCommand.CommandText = "INSERT INTO ToolItemTable (Content) VALUES (@content);";
                 insertCommand.Parameters.AddWithValue("@content", toolItem.Content);
 
                 insertCommand.ExecuteReader();

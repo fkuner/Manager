@@ -122,7 +122,7 @@ namespace Manager
         {
             var viewModel = (ToolsPageViewModel)this.DataContext;
             var Item = ToolListView.SelectedItem as ToolItem;
-            Item.ID = ToolListView.SelectedIndex;
+            
             // Getting the currently selected ListBoxItem
             // Note that the ListBox must have
             // IsSynchronizedWithCurrentItem set to True for this to work

@@ -1,4 +1,3 @@
-WinMetadata\Windows.winmd
 Assets\background.jpg
 Assets\CM.png
 Assets\coffee-icon.png
@@ -35,3 +34,4 @@ Pages\ToolsDetailPage.xbf
 TodoPage.xbf
 ToolsPage.xbf
 Properties\Default.rd.xml
+WinMetadata\Windows.winmd
