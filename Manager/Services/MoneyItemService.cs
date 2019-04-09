@@ -21,9 +21,10 @@ namespace Manager.Services
 
                 String tableCommand = "CREATE TABLE IF NOT EXISTS MoneyItemTable " +
                     "(Id INTEGER PRIMARY KEY NOT NULL," +
-                    "DateCreated DATE," +
-                    "Title NVACHAR(2048) NULL," +
-                    "Text NVACHAR(2048) NULL);";
+                    "ConsumeTime DATE," +
+                    "Event NVACHAR(2048) NULL," +
+                    "Amount DOUBLE," +
+                    "CoverImage NVACHAR(2048) NULL);";
 
                 SqliteCommand createTable = new SqliteCommand(tableCommand, db);
 
@@ -34,18 +35,19 @@ namespace Manager.Services
         public List<MoneyItem> ListAsync()
         {
             //throw new NotImplementedException();
-            List<MoneyItem> List=new List<MoneyItem>();
-            List.Add(new MoneyItem { ConsumeTime = DateTime.Now, Event = "购买苹果电脑", Amount = 10000.0, CoverImage = "Assets/image.jpg" });
-            List.Add(new MoneyItem { ConsumeTime = DateTime.Now, Event = "购买苹果手机", Amount = 5000.0, CoverImage = "Assets/image.jpg" });
-            List.Add(new MoneyItem { ConsumeTime = DateTime.Now, Event = "购买苹果耳机", Amount = 5000.0, CoverImage = "Assets/image.jpg" });
-            List.Add(new MoneyItem { ConsumeTime = DateTime.Now, Event = "购买苹果Pad", Amount = 5000.0, CoverImage = "Assets/image.jpg" });
-            List.Add(new MoneyItem { ConsumeTime = DateTime.Now, Event = "购买联想电脑", Amount = 10000, CoverImage = "Assets/image.jpg" });
-            List.Add(new MoneyItem { ConsumeTime = DateTime.Now, Event = "购买联想手机", Amount = 5000.0, CoverImage = "Assets/image.jpg" });
-            List.Add(new MoneyItem { ConsumeTime = DateTime.Now, Event = "购买联想耳机", Amount = 5000.0, CoverImage = "Assets/image.jpg" });
-            List.Add(new MoneyItem { ConsumeTime = DateTime.Now, Event = "购买联想Pad", Amount = 5000.0, CoverImage = "Assets/image.jpg" });
-            List.Add(new MoneyItem { ConsumeTime = DateTime.Now, Event = "购买万达广场", Amount = 5000.0, CoverImage = "Assets/image.jpg" });
-            List.Add(new MoneyItem { ConsumeTime = DateTime.Now, Event = "购买东北大学", Amount = 5000.0, CoverImage = "Assets/image.jpg" });
-
+            List<MoneyItem> List = new List<MoneyItem>();
+            using (SqliteConnection db = new SqliteConnection("Filename=sqliteData.db"))
+            {
+                db.Open();
+                SqliteCommand selectCommand = new SqliteCommand
+            ("SELECT * from MoneyItemTable", db);
+                SqliteDataReader query = selectCommand.ExecuteReader();
+                while (query.Read())
+                {
+                    List.Add(new MoneyItem { Id = Convert.ToInt32(query["Id"]), DateCreated = Convert.ToDateTime(query["DateCreated"].ToString()), Title = query["Title"].ToString(), Text = query["Text"].ToString() });
+                }
+                db.Close();
+            }
             return List;
         }
 
