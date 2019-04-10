@@ -82,7 +82,7 @@ namespace Manager.Services
 
         public int FindMemoItem(List<TodoItem> TodoItems, TodoItem todoItem)
         {
-            //throw new NotImplementedException();
+            throw new NotImplementedException();
 
         }
 
