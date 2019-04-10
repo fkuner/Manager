@@ -41,8 +41,7 @@ namespace Manager.Services
                 SqliteCommand insertCommand = new SqliteCommand();
                 insertCommand.Connection = db;
 
-                insertCommand.CommandText = "INSERT INTO TodoItemTable VALUES (@id, @content, @date);";
-                insertCommand.Parameters.AddWithValue("@id", todoItem.ID);
+                insertCommand.CommandText = "INSERT INTO TodoItemTable (Content, DateCreated) VALUES (@content, @date);";
                 insertCommand.Parameters.AddWithValue("@content", todoItem.Content);
                 insertCommand.Parameters.AddWithValue("@date", todoItem.DateCreated);
                 insertCommand.ExecuteReader();
