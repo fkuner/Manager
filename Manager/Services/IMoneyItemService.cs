@@ -33,5 +33,12 @@ namespace Manager.Services
         /// <param name="id"></param>
         /// <param name="moneyItem"></param>
         void ChangeAsync(int id, MoneyItem moneyItem);
+
+        /// <summary>
+        /// 根据时间（年，月)查找消费额
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
+        double SearchAsync(DateTime date);
     }
 }

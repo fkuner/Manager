@@ -59,21 +59,13 @@
             </Grid.RowDefinitions>
 
             <!--这里是上面的搜索框，有三种搜索模式，思源，以后搜索框我看标准一般是AutoSuggestBox, 当然TextBox也行-->
-            <StackPanel Orientation="Horizontal">
-                <ComboBox Name="SearchOpition" SelectionChanged="SearchOpition_OnSelectionChanged"  Width="100" Height="40" SelectedIndex="0">
-                    <x:String>date</x:String>
-                    <x:String>affair</x:String>
-                    <x:String>money</x:String>
-                </ComboBox>
-                <AutoSuggestBox Name="SearchBox1" VerticalAlignment="Top" Margin="25,0,0,0" Width="64" Height="40" Visibility="Collapsed"/>
-                <AutoSuggestBox Name="SearchBox2" VerticalAlignment="Top" Margin="25,0,0,0" Width="64" Height="40" Visibility="Collapsed"/>
-                <AutoSuggestBox Name="SearchBox3" VerticalAlignment="Top" Margin="25,0,0,0" Width="150" Height="40" Visibility="Visible"/>
-                <AppBarButton Icon="Find" Click="AppBarButton_Click" Margin="0,0,0,0" Label="Search"/>
-                <TextBlock Text="Financial Management" Margin="200,0,0,0" FontSize="23" FontWeight="Bold" FontStyle="Italic" Foreground="CornflowerBlue"/>
+            <StackPanel>
+                <TextBlock Text="Financial Management" HorizontalAlignment="Center" FontSize="23" FontWeight="Bold" FontStyle="Italic" Foreground="CornflowerBlue"/>
             </StackPanel>
-            
+
             <!--这里是我写的ListView的部分，微软大法好，Bob的笑容由我来守护-->
-            <ListView Grid.Row="1"
+            <ListView Name="MoneyListView"
+                      Grid.Row="1"
                       ItemsSource="{Binding MoneyItems}"
                       ItemClick="ListView_ItemClick"
                       IsItemClickEnabled="True"
@@ -81,7 +73,7 @@
                       SelectionMode="Single">
             </ListView>
         </Grid>
-        
+
         <!--这下面是右半部分的，止观，忠心劝告，布局一定不要多用绝对布局-->
         <Grid Grid.Column="1">
             <StackPanel Orientation="Vertical" Margin="10,0,50,0">
@@ -134,15 +126,17 @@
                         Margin="0,0,0,5"
                         DayVisible="False"
                         />
-                <Button Content="显示统计结果" HorizontalAlignment="Left" Margin="0,0,0,30">
+                <Button Name="Result" Content="显示统计结果" HorizontalAlignment="Left" Margin="0,0,0,30" Click="Result_Click">
                     <Button.Flyout>
                         <Flyout x:Name="MyFlyout1">
                             <TextBlock Name="ShowMonthMoney"
-                                   Text="未选择年月"
+                                   Text="{Binding MonthMoney}"
                                    />
                         </Flyout>
                     </Button.Flyout>
                 </Button>
+
+                <TextBlock Name="MonthConsume" Text="{Binding ThisMonthMoney}" Margin="0,0,0,10" Height="38" DataContextChanged="MonthConsume_DataContextChanged"/>
 
                 <Button Content="设置最高消费额"
                         HorizontalAlignment="Left" 
@@ -153,20 +147,23 @@
                             <StackPanel>
                                 <TextBlock 
                             Text="设置月消费限额:"
-                            FontSize="20"/>
+                            FontSize="15"/>
                                 <TextBox
                             PlaceholderText="这里填写当月最大消费额"/>
+                                <TextBlock
+                             Text="设置提醒消费额差:"
+                             FontSize="15"/>
+                                <TextBox
+                             PlaceholderText="这里填写提醒时的消费额差"/>
                                 <StackPanel Orientation="Horizontal">
-                                    <Button Content="确定"/>
-                                    <Button Content="退出" Margin="20,0,0,0"/>
+                                    <Button Content="确定" Name="Sure" Click="Sure_Click"/>
                                 </StackPanel>
                             </StackPanel>
                         </Flyout>
                     </Button.Flyout>
                 </Button>
             </StackPanel>
-
         </Grid>
     </Grid>
-    
+
 </Page>

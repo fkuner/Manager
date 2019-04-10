@@ -20,7 +20,7 @@ namespace Manager.Services
                 db.Open();
 
                 String tableCommand = "CREATE TABLE IF NOT EXISTS MoneyItemTable " +
-                    "(Id INTEGER PRIMARY KEY NOT NULL," +
+                    "(Id INTEGER PRIMARY KEY," +
                     "ConsumeTime DATE," +
                     "Event NVACHAR(2048) NULL," +
                     "Amount DOUBLE," +
@@ -44,7 +44,7 @@ namespace Manager.Services
                 SqliteDataReader query = selectCommand.ExecuteReader();
                 while (query.Read())
                 {
-                    List.Add(new MoneyItem { Id = Convert.ToInt32(query["Id"]), ConsumeTime = Convert.ToDateTime(query["ConsumeTime"].ToString()), Event = query["Event"].ToString(), Amount = Convert.ToDouble(query["Amount"]) , CoverImage = query["CoverImage"].ToString() });
+                    List.Add(new MoneyItem { Id = Convert.ToInt32(query["Id"]), ConsumeTime = Convert.ToDateTime(query["ConsumeTime"].ToString()), Event = query["Event"].ToString(), Amount = Convert.ToDouble(query["Amount"]), CoverImage = query["CoverImage"].ToString() });
                 }
                 db.Close();
             }
@@ -60,8 +60,7 @@ namespace Manager.Services
                 SqliteCommand insertCommand = new SqliteCommand();
                 insertCommand.Connection = db;
 
-                insertCommand.CommandText = "INSERT INTO MoneyItemTable VALUES (@id,@time,@event,@amount,@cover);";
-                insertCommand.Parameters.AddWithValue("@id", moneyItem.Id);
+                insertCommand.CommandText = "INSERT INTO MoneyItemTable VALUES (NULL,@time,@event,@amount,@cover);";
                 insertCommand.Parameters.AddWithValue("@time", moneyItem.ConsumeTime);
                 insertCommand.Parameters.AddWithValue("@event", moneyItem.Event);
                 insertCommand.Parameters.AddWithValue("@amount", moneyItem.Amount);
@@ -77,7 +76,7 @@ namespace Manager.Services
             {
                 db.Open();
 
-                SqliteCommand deleteCommand = new SqliteCommand("DELETE FROM MoneyItemTable WHERE Id = @id AND ConsumeTime = @time AND Event = @event AND Amount = @amount AND CoverImage = @cover;");
+                SqliteCommand deleteCommand = new SqliteCommand("DELETE FROM MoneyItemTable WHERE Id = @id AND ConsumeTime = @time AND Event = @event AND Amount = @amount AND CoverImage = @cover;", db);
                 deleteCommand.Parameters.AddWithValue("@id", moneyItem.Id);
                 deleteCommand.Parameters.AddWithValue("@time", moneyItem.ConsumeTime);
                 deleteCommand.Parameters.AddWithValue("@event", moneyItem.Event);
@@ -91,6 +90,29 @@ namespace Manager.Services
         public void ChangeAsync(int id, MoneyItem moneyItem)
         {
             throw new NotImplementedException();
+            //这里实现更新操作
+        }
+
+        public double SearchAsync(DateTime date)
+        {
+            //throw new NotImplementedException();
+            double sum = 0;
+            using (SqliteConnection db = new SqliteConnection("Filename=sqliteData.db"))
+            {
+                db.Open();
+
+                SqliteCommand selectCommand = new SqliteCommand("SELECT * FROM MoneyItemTable WHERE strftime('%Y/%m',ConsumeTime) = @time;", db);
+                Console.WriteLine(date.ToString("yyyy/MM"));
+                selectCommand.Parameters.AddWithValue("@time", date.ToString("yyyy/MM"));
+                SqliteDataReader query = selectCommand.ExecuteReader();
+                while (query.Read())
+                {
+                    sum += Convert.ToDouble(query["Amount"]);
+                    Console.WriteLine(sum);
+                }
+                db.Close();
+            }
+            return sum;
         }
     }
 }
