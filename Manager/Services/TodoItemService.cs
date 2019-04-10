@@ -51,7 +51,18 @@ namespace Manager.Services
 
         public void ChangeAsync(int id, TodoItem todoItem)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            using (SqliteConnection db = new SqliteConnection("Filename=sqliteData.db"))
+            {
+                db.Open();
+
+                SqliteCommand updateCommand = new SqliteCommand("UPDATE TodoItemTable SET Content = @content , DateCreated = @date WHERE Id = @id;");
+                updateCommand.Parameters.AddWithValue("@content", todoItem.Content);
+                updateCommand.Parameters.AddWithValue("@date", todoItem.DateCreated);
+                updateCommand.Parameters.AddWithValue("@id", id);
+                updateCommand.ExecuteReader();
+                db.Close();
+            }
         }
 
         public void DeleteAsync(TodoItem todoItem)
@@ -71,7 +82,8 @@ namespace Manager.Services
 
         public int FindMemoItem(List<TodoItem> TodoItems, TodoItem todoItem)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
         }
 
         //private TodoItem _TodoItem;
