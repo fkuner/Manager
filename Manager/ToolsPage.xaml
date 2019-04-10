@@ -21,6 +21,7 @@
                         BorderBrush="Red"
                         Name="border">
                     <TextBox Name="toolItem"
+                             AllowFocusWhenDisabled="True"
                                Text="{Binding Content,Mode=TwoWay}"
                                HorizontalAlignment="Center"/>
                 </Border>
@@ -57,24 +58,12 @@
                         HorizontalAlignment="Stretch"
                         Margin="0,0,0,0"
                         RelativePanel.RightOf="TitleTextBlock" FontFamily="Arial Black">
-            <AppBarButton Icon="Add" Label="Add" Click="Add_OnClick">
-                <!--<Button.Flyout>
-                    <Flyout>
-                        <StackPanel>
-                            <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="请填写你要添加的内容" Margin="0,0,0,12" />
-                            <StackPanel></StackPanel>
-                            <TextBox Name="TextBox1"   InputScope="Number" Text="{Binding AddToolItem.ID,Mode=TwoWay}"/>
-                            <TextBox Name="TextBox2" Text="{Binding AddToolItem.Content,Mode=TwoWay}"/>
-                            <Button Name="Button" Content="click me to add" Command="{Binding AddCommand}"/>
-                        </StackPanel>
-                    </Flyout>
-                </Button.Flyout>-->
-            </AppBarButton>
+            <AppBarButton Icon="Add" Label="Add" Click="Add_OnClick"/>
             <AppBarButton Icon="Refresh" Label="Refresh" Command="{Binding RefreshCommand}"/>
-                <AppBarButton Icon="Delete" Label="Delete" Click="Delete_OnClick"/>
-                <AppBarButton Icon="Save" Label="Save" Click="Save_OnClick"/>
-
+            <AppBarButton Icon="Delete" Label="Delete" Click="Delete_OnClick"/>
+            <AppBarButton Icon="Save" Label="Save" Click="Save_OnClick"/>
         </CommandBar>
+        <Button Content="Save" Click="Save_OnClick" Grid.Row="1"/>
         <ListView ItemsPanel="{StaticResource ListViewItemsPanel1}" 
                       ItemTemplate="{StaticResource ListViewItemTemplate1}"
                       Grid.Row="2"

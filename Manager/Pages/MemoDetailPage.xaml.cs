@@ -29,38 +29,24 @@ namespace Manager.Pages
     public sealed partial class MemoDetailPage : Page
     {
 
-        private static DependencyProperty s_itemProperty
-            = DependencyProperty.Register("Item", typeof(MemoItem), typeof(MemoDetailPage), new PropertyMetadata(null));
-
-        public static DependencyProperty ItemProperty
-        {
-            get { return s_itemProperty; }
-        }
-
-        public MemoItem Item
-        {
-            get { return (MemoItem)GetValue(s_itemProperty); }
-            set { SetValue(s_itemProperty, value); }
-        }
-
         public MemoDetailPage()
         {
             this.InitializeComponent();
+            DataContext = ViewModelLocator.Instance.MemoDetailPageViewModel;
+            this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
 
-            // Parameter is item ID
-
-
-            Item= e.Parameter as MemoItem;
+            var viewModel = (MemoDetailPageViewModel) this.DataContext;
+            viewModel.MemoItem=e.Parameter as MemoItem;
 
             var backStack = Frame.BackStack;
             var backStackCount = backStack.Count;
 
-            if (backStackCount > 0)
+            if (backStackCount > 0 && Frame.ActualWidth <720)
             {
                 var masterPageEntry = backStack[backStackCount - 1];
                 backStack.RemoveAt(backStackCount - 1);
@@ -69,16 +55,26 @@ namespace Manager.Pages
                 // will show the correct item in the side-by-side view.
                 var modifiedEntry = new PageStackEntry(
                     masterPageEntry.SourcePageType,
-                    Item,
+                    viewModel.MemoItem,
                     masterPageEntry.NavigationTransitionInfo
                     );
                 backStack.Add(modifiedEntry);
             }
 
             // Register for hardware and software back request from the system
-            SystemNavigationManager systemNavigationManager = SystemNavigationManager.GetForCurrentView();
-            systemNavigationManager.BackRequested += DetailPage_BackRequested;
-            systemNavigationManager.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+            if (Frame.ActualWidth > 720)
+            {
+                SystemNavigationManager systemNavigationManager = SystemNavigationManager.GetForCurrentView();
+                systemNavigationManager.BackRequested += DetailPage_BackRequested;
+                systemNavigationManager.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
+            }
+            else
+            {
+                SystemNavigationManager systemNavigationManager = SystemNavigationManager.GetForCurrentView();
+                systemNavigationManager.BackRequested += DetailPage_BackRequested;
+                systemNavigationManager.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+            }
+            
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -125,6 +121,7 @@ namespace Manager.Pages
                 // We shouldn't see this page since we are in "wide master-detail" mode.
                 // Play a transition as we are navigating from a separate page.
                 NavigateBackForWideState(useTransition: true);
+                
             }
             else
             {
@@ -156,7 +153,6 @@ namespace Manager.Pages
         {
             // Mark event as handled so we don't get bounced out of the app.
             e.Handled = true;
-
             OnBackRequested();
         }
     }

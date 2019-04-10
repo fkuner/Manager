@@ -16,7 +16,9 @@ namespace Manager
         public TodoPageViewModel TodoPageViewModel => SimpleIoc.Default.GetInstance<TodoPageViewModel>();
         public MoneyPageViewModel MoneyPageViewModel => SimpleIoc.Default.GetInstance<MoneyPageViewModel>();
         public ToolsPageViewModel ToolsPageViewModel => SimpleIoc.Default.GetInstance<ToolsPageViewModel>();
-        
+
+        public MemoDetailPageViewModel MemoDetailPageViewModel =>
+            SimpleIoc.Default.GetInstance<MemoDetailPageViewModel>();
 
         public ViewModelLocator()
         {
@@ -24,6 +26,8 @@ namespace Manager
             SimpleIoc.Default.Register<ToolsPageViewModel>();
             SimpleIoc.Default.Register<TodoPageViewModel>();
             SimpleIoc.Default.Register<MoneyPageViewModel>();
+            SimpleIoc.Default.Register<MemoDetailPageViewModel>();
+            SimpleIoc.Default.Register<INavigationService,NavigationService>();
             SimpleIoc.Default.Register<IMemoItemService,MemoItemService>();
             SimpleIoc.Default.Register<IToolItemService,ToolItemService>();
             SimpleIoc.Default.Register<ITodoItemService,TodoItemService>();
