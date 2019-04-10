@@ -61,7 +61,7 @@
             <AppBarButton Icon="Add" Label="Add" Click="Add_OnClick"/>
             <AppBarButton Icon="Refresh" Label="Refresh" Command="{Binding RefreshCommand}"/>
             <AppBarButton Icon="Delete" Label="Delete" Click="Delete_OnClick"/>
-            <AppBarButton Icon="Save" Label="Save" Click="Save_OnClick"/>
+            
         </CommandBar>
         <Button Content="Save" Click="Save_OnClick" Grid.Row="1"/>
         <ListView ItemsPanel="{StaticResource ListViewItemsPanel1}" 
