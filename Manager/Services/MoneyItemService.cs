@@ -89,8 +89,21 @@ namespace Manager.Services
 
         public void ChangeAsync(int id, MoneyItem moneyItem)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
             //这里实现更新操作
+            using (SqliteConnection db = new SqliteConnection("Filename=sqliteData.db"))
+            {
+                db.Open();
+
+                SqliteCommand updateCommand = new SqliteCommand("UPDATE MoneyItemTable SET ConsumeTime = @time , Event = @event , Amount = @amount , CoverImage = @cover WHERE Id = @id;");
+                updateCommand.Parameters.AddWithValue("@time", moneyItem.ConsumeTime);
+                updateCommand.Parameters.AddWithValue("@event", moneyItem.Event);
+                updateCommand.Parameters.AddWithValue("@amount", moneyItem.Amount);
+                updateCommand.Parameters.AddWithValue("@cover", moneyItem.CoverImage);
+                updateCommand.Parameters.AddWithValue("@id", id);
+                updateCommand.ExecuteReader();
+                db.Close();
+            }
         }
 
         public double SearchAsync(DateTime date)
