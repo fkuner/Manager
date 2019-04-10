@@ -95,11 +95,11 @@ namespace Manager.Services
             {
                 db.Open();
 
-                SqliteCommand updateCommand = new SqliteCommand("UPDATE MoneyItemTable SET ConsumeTime = @time , Event = @event , Amount = @amount , CoverImage = @cover WHERE Id = @id;");
+                SqliteCommand updateCommand = new SqliteCommand("UPDATE MoneyItemTable SET ConsumeTime = @time , Event = @event , Amount = @amount WHERE Id = @id;", db);
                 updateCommand.Parameters.AddWithValue("@time", moneyItem.ConsumeTime);
                 updateCommand.Parameters.AddWithValue("@event", moneyItem.Event);
                 updateCommand.Parameters.AddWithValue("@amount", moneyItem.Amount);
-                updateCommand.Parameters.AddWithValue("@cover", moneyItem.CoverImage);
+                //updateCommand.Parameters.AddWithValue("@cover", moneyItem.CoverImage);
                 updateCommand.Parameters.AddWithValue("@id", id);
                 updateCommand.ExecuteReader();
                 db.Close();
