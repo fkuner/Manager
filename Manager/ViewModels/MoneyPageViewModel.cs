@@ -166,6 +166,7 @@ namespace Manager.ViewModels
                 {
                     MoneyItems.Add(moneyItem);
                 }
+                ThisMonthMoney = "当月消费额:" + _moneyItemService.SearchAsync(DateTime.Now).ToString();
             }));
 
         /// <summary>

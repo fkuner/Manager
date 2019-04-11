@@ -42,6 +42,8 @@ namespace Manager
             var viewModel = (MoneyPageViewModel)this.DataContext;
             viewModel.AddMoneyItem = item;
             viewModel.AddCommand.Execute(null);
+            viewModel.RefreshCommand.Execute(null);
+            MoneyListView.SelectedIndex = viewModel.MoneyItems.Count()-1;
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
@@ -54,6 +56,7 @@ namespace Manager
             item.ConsumeTime = ShowDate.Date.DateTime;
             item.Event = ShowEvent.Text;
             item.Amount = float.Parse(ShowMoney.Text);
+            item.CoverImage = Item.CoverImage;
             viewModel.ChangeMoneyItem = item;
             viewModel.ChangeCommand.Execute(null);
         }
@@ -64,6 +67,7 @@ namespace Manager
             var Item = MoneyListView.SelectedItem as MoneyItem;
             viewModel.DeleteMoneyItem = Item;
             viewModel.DeleteCommand.Execute(null);
+            viewModel.RefreshCommand.Execute(null);
         }
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
