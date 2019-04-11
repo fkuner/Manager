@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Controls;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using Manager.Models;
@@ -17,8 +18,16 @@ namespace Manager.ViewModels
     /// </summary>
     public class MemoPageViewModel : ViewModelBase
     {
+
+        /// <summary>
+        /// 备忘录服务
+        /// </summary>
         private IMemoItemService _memoItemService;
 
+        /// <summary>
+        /// 导航服务
+        /// </summary>
+        private INavigationService _navigationService;
         /// <summary>
         /// 所有MemoItem。
         /// </summary>
@@ -35,9 +44,20 @@ namespace Manager.ViewModels
         private RelayCommand _addCommand;
 
         /// <summary>
+        /// 导航到备忘录详细页命令
+        /// </summary>
+        private RelayCommand<MemoItem> _openToMemoDetailPageCommand;
+
+        /// <summary>
+        /// 设置Frame命令
+        /// </summary>
+        private RelayCommand<Frame> _setCommand;
+
+        /// <summary>
         /// 要添加的备忘录
         /// </summary>
         private MemoItem _addMemoItem;
+
 
         /// <summary>
         /// 所有MemoItem。
@@ -81,9 +101,30 @@ namespace Manager.ViewModels
 
             }));
 
+        /// <summary>
+        /// 导航到备忘录详细页命令
+        /// </summary>
+        /// <param name="memoItemService"></param>
+        public RelayCommand<MemoItem> OpenToMemoDetailPageCommand =>
+            _openToMemoDetailPageCommand ?? (_openToMemoDetailPageCommand =
+                new RelayCommand<MemoItem>(memoItem => {
+                    _navigationService.NavagateToMemoDetailPage(memoItem);
+                }));
 
-        public MemoPageViewModel(IMemoItemService memoItemService)
+        /// <summary>
+        /// 设置Frame命令
+        /// </summary>
+        public RelayCommand<Frame> SetCommand => 
+            _setCommand ?? (_setCommand = new RelayCommand<Frame>(frame =>
         {
+            _navigationService.SetMemoDetailFrame(frame);
+        }));
+
+
+        public MemoPageViewModel(IMemoItemService memoItemService,INavigationService navigationService)
+        {
+            _memoItemService = memoItemService;
+            _navigationService = navigationService;
             MemoItems = new ObservableCollection<MemoItem>();
             MemoItems.Clear();
             foreach (MemoItem memoItem in memoItemService.ListAsync())

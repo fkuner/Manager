@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Manager.Models;
+using Manager.ViewModels;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -33,45 +34,36 @@ namespace Manager
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-
+            MoneyItem item = new MoneyItem();
+            item.ConsumeTime = ShowDate.Date.DateTime;
+            item.Event = ShowEvent.Text;
+            item.Amount = float.Parse(ShowMoney.Text);
+            item.CoverImage = "Assets/image.jpg";
+            var viewModel = (MoneyPageViewModel)this.DataContext;
+            viewModel.AddMoneyItem = item;
+            viewModel.AddCommand.Execute(null);
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-
+            var viewModel = (MoneyPageViewModel)this.DataContext;
+            var Item = MoneyListView.SelectedItem as MoneyItem;
+            viewModel.Id = Item.Id;
+            MoneyItem item = new MoneyItem();
+            item.Id = Item.Id;
+            item.ConsumeTime = ShowDate.Date.DateTime;
+            item.Event = ShowEvent.Text;
+            item.Amount = float.Parse(ShowMoney.Text);
+            viewModel.ChangeMoneyItem = item;
+            viewModel.ChangeCommand.Execute(null);
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-        private void SearchOpition_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (e.RemovedItems.Count > 0)
-            {
-                if (SearchOpition.SelectedItem.ToString() != SearchOpition.Items[2].ToString())
-                {
-                    SearchBox1.Visibility = Visibility.Collapsed;
-                    SearchBox2.Visibility = Visibility.Collapsed;
-                    SearchBox3.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    SearchBox1.Visibility = Visibility.Visible;
-                    SearchBox2.Visibility = Visibility.Visible;
-                    SearchBox3.Visibility = Visibility.Collapsed;
-                }
-            }
-        }
-
-        private void Search_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void AppBarButton_Click(object sender, RoutedEventArgs e)
-        {
-
+            var viewModel = (MoneyPageViewModel)this.DataContext;
+            var Item = MoneyListView.SelectedItem as MoneyItem;
+            viewModel.DeleteMoneyItem = Item;
+            viewModel.DeleteCommand.Execute(null);
         }
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
@@ -80,6 +72,25 @@ namespace Manager
             ShowDate.Date = money.ConsumeTime;
             ShowMoney.Text = money.Amount.ToString();
             ShowEvent.Text = money.Event;
+        }
+
+        private void Result_Click(object sender, RoutedEventArgs e)
+        {
+            DateTime time = ChooseDate.Date.DateTime;
+            var viewModel = (MoneyPageViewModel)this.DataContext;
+            viewModel.Date = time;
+            viewModel.SearchCommand.Execute(null);
+        }
+
+        private void Sure_Click(object sender, RoutedEventArgs e)
+        {
+            //这里是设置最大值和提醒差额并存入文件
+        }
+
+        private void MonthConsume_DataContextChanged(FrameworkElement sender, DataContextChangedEventArgs args)
+        {
+            var viewModel = (MoneyPageViewModel)this.DataContext;
+
         }
     }
 }

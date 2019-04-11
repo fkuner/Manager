@@ -125,8 +125,10 @@
     </Compile>
     <Compile Include="Services\IMemoItemService.cs" />
     <Compile Include="Services\IMoneyItemService.cs" />
+    <Compile Include="Services\INavigationService.cs" />
     <Compile Include="Services\MemoItemService.cs" />
     <Compile Include="Services\MoneyItemService.cs" />
+    <Compile Include="Services\NavigationService.cs" />
     <Compile Include="ToolsPage.xaml.cs">
       <DependentUpon>ToolsPage.xaml</DependentUpon>
     </Compile>
@@ -159,6 +161,7 @@
     <Compile Include="Services\TodoItemService.cs" />
     <Compile Include="Services\ToolItemService.cs" />
     <Compile Include="ViewModelLocator.cs" />
+    <Compile Include="ViewModels\MemoDetailPageViewModel.cs" />
     <Compile Include="ViewModels\MemoPageViewModel.cs" />
     <Compile Include="ViewModels\ToolsPageViewModel.cs" />
     <Compile Include="ViewModels\TodoPageViewModel.cs" />
