@@ -39,11 +39,11 @@ namespace Manager
     {
 
         //private List<TodoItem> todoItems;
-        
+        private List<string> Items;
         public TodoPage()
         {
             this.InitializeComponent();
-            
+            DataTransferManager.GetForCurrentView().DataRequested += ShareRequested;
             DataContext = ViewModelLocator.Instance.TodoPageViewModel;
         }
 
@@ -121,52 +121,26 @@ namespace Manager
         }
 
 
-        private async void  AppBarButton_Click(object sender, RoutedEventArgs e)
+        private async void  Add_Click(object sender, RoutedEventArgs e)
         {
 
 
-            TextBox textbox = new TextBox();
             //testTextBlock.Text = textbox.Text;
 
             TodoItem todoItem = new TodoItem();
-            textbox.Name = "test";
             todoItem.Content = "添加任务";
-            todoItem.ID = 1;
-            //stackPanel1.Children.Add(textbox);
-           // todoItems.Add(todoItem);
+            
+            var viewModel = (TodoPageViewModel)this.DataContext;
+            viewModel.TodoItems.Add(todoItem);
+            
 
-            //TodoItemService todoItemService = new TodoItemService();
-            //await todoItemService.AddAsync(todoItem);
+           
         }
-        private void click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void AppBarButton_Click_1(object sender, RoutedEventArgs e)
+        private void Reshare_Click(object sender, RoutedEventArgs e)
         {
             DataTransferManager.ShowShareUI();
         }
 
-        private void TestButton_Click(object sender, RoutedEventArgs e)
-        {
-            TextBlock textBlock = new TextBlock();
-        }
-
-
-        private void SSvae_OnClick(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void CheckBox_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-
-        }
-        /// <summary>
-        /// Share
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="args"></param>
         private void ShareRequested(DataTransferManager sender, DataRequestedEventArgs args)
         {
             var deferral = args.Request.GetDeferral();
@@ -178,6 +152,49 @@ namespace Manager
             deferral.Complete();
         }
 
+        private void CheckBox_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
+        }
+        private void Delete_click(object sender, RoutedEventArgs e)
+        {
+            var viewModel = (TodoPageViewModel)this.DataContext;
+            var Item = TodoListView.SelectedItem as TodoItem;
+            viewModel.DeleteTodoItem = Item;
+            viewModel.DeleteCommand.Execute(null);
+        }
+        /// <summary>
+        /// Share
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        /// 
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            var viewModel = (TodoPageViewModel)this.DataContext;
+            var Item = TodoListView.SelectedItem as TodoItem;
+
+        // Getting the currently selected ListBoxItem
+        // Note that the ListBox must have
+        // IsSynchronizedWithCurrentItem set to True for this to work
+        /*ListBoxItem myListBoxItem =
+            (ListBoxItem)(ToolListView.ItemContainerGenerator.ContainerFromItem(ToolListView.Items.CurrentItem));
+
+        // Getting the ContentPresenter of myListBoxItem
+        ContentPresenter myContentPresenter = FindVisualChild<ContentPresenter>(myListBoxItem);
+
+        // Finding textBlock from the DataTemplate that is set on that ContentPresenter
+        DataTemplate myDataTemplate = myContentPresenter.ContentTemplate;
+        TextBlock myTextBlock = (TextBlock)myDataTemplate.FindName("textBlock", myContentPresenter);
+
+        // Do something to the DataTemplate-generated TextBlock
+        MessageBox.Show("The text of the TextBlock of the selected list item: "
+                        + myTextBlock.Text);*/
+             Item.Content = "haha";
+            viewModel.AddTodoItem = Item;
+            viewModel.AddCommand.Execute(null);
+        }
+    
         /// <summary>
         /// 通知栏
         /// </summary>
@@ -216,5 +233,7 @@ namespace Manager
             ToastNotificationManager.CreateToastNotifier().AddToSchedule(toast);
 
         }
+
+       
     }
 }

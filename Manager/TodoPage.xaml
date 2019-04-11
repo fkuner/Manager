@@ -52,20 +52,33 @@
             </Border>
 
         </DataTemplate>
-        <DataTemplate x:Key="imageGridView_DefaultitemTemplate"
+        <!--<DataTemplate x:Key="imageGridView_DefaultitemTemplate"
                      >
-            <!-- Create image grid -->
             <Grid Height="{Binding ItemSize, ElementName=page}"
                      Width="{Binding ItemSize, ElementName=page}">
+                <Image x:Name="ItemImage0"  
+                       Source="/Assets/UWP-Cliff.jpg">
 
-                <!-- Place image in grid, stretching it to fill the pane-->
-                <Image x:Name="ItemImage"
-               Source="/Assets/UWP-ji-0.jpg"
-               Stretch="UniformToFill">
+                </Image>
+                <Image x:Name="ItemImage1"  
+                      Source="/Assets/UWP-Grapes.jpg">
+
+                </Image>
+                <Image x:Name="ItemImage2"  
+                       Source="/Assets/UWP-Cliff.jpg">
+
+                </Image>
+                <Image x:Name="ItemImage3"  
+                       Source="/Assets/UWP-Cliff.jpg">
+
+                </Image>
+                <Image x:Name="ItemImage4"  
+                       Source="/Assets/UWP-Cliff.jpg">
+
                 </Image>
 
-            </Grid>
-        </DataTemplate>
+            </Grid> ItemTemplate="{StaticResource imageGridView_DefaultitemTemplate}
+        </DataTemplate>-->
     </Page.Resources>
 
 
@@ -79,14 +92,14 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <FlipView ItemTemplate="{StaticResource imageGridView_DefaultitemTemplate}"  Grid.Row="0"
+        <FlipView   Grid.Row="0"
                    
-                  >
-            <Image Height="200"  Width="1500" Stretch="UniformToFill" Source="/Assets/UWP-ji-0.jpg" AutomationProperties.Name="Cliff"/>
-            <Image Height="200"  Width="1500" Stretch="UniformToFill" Source="/Assets/UWP-ji-0.jpg" AutomationProperties.Name="Grapes"/>
-            <Image Height="200"  Width="1500" Stretch="UniformToFill" Source="/Assets/UWP-ji-0.jpg" AutomationProperties.Name="Rainier"/>
-            <Image Height="200"  Width="1500" Stretch="UniformToFill" Source="/Assets/UWP-ji-0.jpg" AutomationProperties.Name="Sunset"/>
-            <Image Height="200"  Width="1500" Stretch="UniformToFill" Source="/Assets/UWP-ji-0.jpg" AutomationProperties.Name="Valley"/>
+           >
+            <Image Height="200"  Width="1500" Stretch="UniformToFill" Source="/Assets/UWP-Cliff.jpg" AutomationProperties.Name="Cliff"/>
+            <Image Height="200"  Width="1500"  Stretch="UniformToFill" Source="/Assets/UWP-Grapes.jpg" AutomationProperties.Name="Grapes"/>
+            <Image Height="200"  Width="1500"  Stretch="UniformToFill" Source="/Assets/UWP-ji-0.jpg" AutomationProperties.Name="Rainier"/>
+            <Image Height="200"  Width="1500"  Stretch="UniformToFill" Source="/Assets/UWP-ji-0.jpg" AutomationProperties.Name="Sunset"/>
+            <Image Height="200"  Width="1500"  Stretch="UniformToFill" Source="/Assets/UWP-ji-0.jpg" AutomationProperties.Name="Valley"/>
         </FlipView>
 
         <CommandBar Background="Transparent" 
@@ -95,19 +108,20 @@
                     Grid.Row="1"
                     HorizontalAlignment="Stretch"
                     Margin="0,0,0,0">
-            <AppBarButton Icon="Add" Label="Add" Click="AppBarButton_Click"/>
+            <AppBarButton Icon="Add" Label="Add" Click="Add_Click"/>
             <AppBarButton Icon="Clock" Label="Clock" Click="Clock_OnClick" />
-            <AppBarButton Icon="Save" Label="Save" ></AppBarButton>
-            <AppBarButton Icon="ReShare" Label="Share" Click="AppBarButton_Click_1"/>
+            <AppBarButton Icon="Save" Label="Save" Click="Save_Click"></AppBarButton>
+            <AppBarButton Icon="ReShare" Label="Share" Click="Reshare_Click"/>
             <AppBarButton Icon="Edit" Label="Edit"/>
             <AppBarButton Icon="Mail" Label="Mail" Click="MainButton_Click"/>
-            <AppBarButton Icon="Delete" Label="Delete"/>
+            <AppBarButton Icon="Delete" Label="Delete" Click="Delete_click"/>
+            <AppBarButton Icon="Refresh" Label="Refresh" Command="{Binding RefreshCommand}"/>
         </CommandBar>
 
 
 
         <!-- Add the GridView here. -->
-        <ListView   x:Name="ListView"
+        <ListView   x:Name="TodoListView"
             Grid.Row="2" 
             ItemTemplate="{StaticResource ListViewItemTemplate1}"
             ItemsSource="{Binding TodoItems}"
