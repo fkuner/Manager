@@ -40,5 +40,22 @@ namespace Manager.Services
         /// <param name="date"></param>
         /// <returns></returns>
         double SearchAsync(DateTime date);
+
+        /// <summary>
+        /// 将最大消费额和差值保存到文件中
+        /// </summary>
+        /// <param name="maxConsume"></param>
+        /// <param name="difference"></param>
+        void SaveAsync(double Consume);
+
+        /// <summary>
+        /// 清空操作
+        /// </summary>
+        void ClearAsync();
+
+        /// <summary>
+        /// 读取最大消费额和差值
+        /// </summary>
+        List<double> ReadAsync();
     }
 }
