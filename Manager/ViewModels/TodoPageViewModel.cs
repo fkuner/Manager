@@ -109,6 +109,7 @@ namespace Manager.ViewModels
         /// <param name="todoItemService"></param>
         public TodoPageViewModel(ITodoItemService todoItemService)
         {
+            _todoItemService = todoItemService;
             TodoItems = new ObservableCollection<TodoItem>();
             TodoItems.Clear();
             foreach (TodoItem todoitem in todoItemService.ListAsync())

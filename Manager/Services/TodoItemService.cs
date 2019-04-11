@@ -72,6 +72,7 @@ namespace Manager.Services
                 db.Open();
 
                 SqliteCommand deleteCommand = new SqliteCommand("DELETE FROM TodoItemTable WHERE ID = @id AND Content = @content AND DateCreated = @date;");
+                deleteCommand.Connection = db;
                 deleteCommand.Parameters.AddWithValue("@id", todoItem.ID);
                 deleteCommand.Parameters.AddWithValue("@content", todoItem.Content);
                 deleteCommand.Parameters.AddWithValue("@date", todoItem.DateCreated);
@@ -79,6 +80,8 @@ namespace Manager.Services
                 db.Close();
             }
         }
+
+        
 
         public int FindMemoItem(List<TodoItem> TodoItems, TodoItem todoItem)
         {
