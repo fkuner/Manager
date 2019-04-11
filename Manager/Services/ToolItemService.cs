@@ -93,7 +93,17 @@ namespace Manager.Services
 
         public void ChangeAsync(int id, ToolItem toolItem)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            using (SqliteConnection db = new SqliteConnection("Filename=sqliteData.db"))
+            {
+                db.Open();
+
+                SqliteCommand updateCommand = new SqliteCommand("UPDATE ToolItemTable SET Content = @content WHERE Id = @id;");
+                updateCommand.Parameters.AddWithValue("@content", toolItem.Content);
+                updateCommand.Parameters.AddWithValue("@id", id);
+                updateCommand.ExecuteReader();
+                db.Close();
+            }
         }
     }
 }

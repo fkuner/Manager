@@ -41,8 +41,7 @@ namespace Manager.Services
                 SqliteCommand insertCommand = new SqliteCommand();
                 insertCommand.Connection = db;
 
-                insertCommand.CommandText = "INSERT INTO TodoItemTable VALUES (@id, @content, @date);";
-                insertCommand.Parameters.AddWithValue("@id", todoItem.ID);
+                insertCommand.CommandText = "INSERT INTO TodoItemTable (Content, DateCreated) VALUES (@content, @date);";
                 insertCommand.Parameters.AddWithValue("@content", todoItem.Content);
                 insertCommand.Parameters.AddWithValue("@date", todoItem.DateCreated);
                 insertCommand.ExecuteReader();
@@ -52,7 +51,18 @@ namespace Manager.Services
 
         public void ChangeAsync(int id, TodoItem todoItem)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            using (SqliteConnection db = new SqliteConnection("Filename=sqliteData.db"))
+            {
+                db.Open();
+
+                SqliteCommand updateCommand = new SqliteCommand("UPDATE TodoItemTable SET Content = @content , DateCreated = @date WHERE Id = @id;");
+                updateCommand.Parameters.AddWithValue("@content", todoItem.Content);
+                updateCommand.Parameters.AddWithValue("@date", todoItem.DateCreated);
+                updateCommand.Parameters.AddWithValue("@id", id);
+                updateCommand.ExecuteReader();
+                db.Close();
+            }
         }
 
         public void DeleteAsync(TodoItem todoItem)
@@ -73,6 +83,7 @@ namespace Manager.Services
         public int FindMemoItem(List<TodoItem> TodoItems, TodoItem todoItem)
         {
             throw new NotImplementedException();
+
         }
 
         //private TodoItem _TodoItem;
