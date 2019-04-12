@@ -136,7 +136,7 @@
                     </Button.Flyout>
                 </Button>
 
-                <TextBlock Name="MonthConsume" Text="{Binding ThisMonthMoney}" Margin="0,0,0,10" Height="38" DataContextChanged="MonthConsume_DataContextChanged"/>
+                <TextBlock Name="MonthConsume" Text="{Binding ThisMonthMoney,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" Margin="0,0,0,10" Height="38"/>
 
                 <Button Content="设置最高消费额"
                         HorizontalAlignment="Left" 
@@ -145,16 +145,19 @@
                     <Button.Flyout>
                         <Flyout x:Name="MyFlyout2">
                             <StackPanel>
-                                <TextBlock 
+                                <TextBlock
                             Text="设置月消费限额:"
                             FontSize="15"/>
                                 <TextBox
+                                    Name="MaxConsume"
                             PlaceholderText="这里填写当月最大消费额"/>
                                 <TextBlock
                              Text="设置提醒消费额差:"
                              FontSize="15"/>
                                 <TextBox
+                                    Name="Difference"
                              PlaceholderText="这里填写提醒时的消费额差"/>
+                                <TextBlock Name="ShowDeal" Text="{Binding ShowMessage}"/>
                                 <StackPanel Orientation="Horizontal">
                                     <Button Content="确定" Name="Sure" Click="Sure_Click"/>
                                 </StackPanel>

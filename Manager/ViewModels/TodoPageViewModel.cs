@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
 using Manager.Models;
 using Manager.Services;
 using System;
@@ -109,6 +110,7 @@ namespace Manager.ViewModels
         /// <param name="todoItemService"></param>
         public TodoPageViewModel(ITodoItemService todoItemService)
         {
+            _todoItemService = todoItemService;
             TodoItems = new ObservableCollection<TodoItem>();
             TodoItems.Clear();
             foreach (TodoItem todoitem in todoItemService.ListAsync())
@@ -116,6 +118,5 @@ namespace Manager.ViewModels
                 TodoItems.Add(todoitem);
             }
         }
-
     }
 }
