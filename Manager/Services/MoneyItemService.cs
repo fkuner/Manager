@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Manager.Models;
 using Microsoft.Data.Sqlite;
+using System.IO;
+using System.Text;
 
 namespace Manager.Services
 {
@@ -29,6 +31,13 @@ namespace Manager.Services
                 SqliteCommand createTable = new SqliteCommand(tableCommand, db);
 
                 createTable.ExecuteReader();
+
+                String tableCommand1 = "CREATE TABLE IF NOT EXISTS SetTable " +
+                    "(Id INTEGER PRIMARY KEY," +
+                    "Amount DOUBLE NOT NULL);";
+                SqliteCommand createTable1 = new SqliteCommand(tableCommand1, db);
+
+                createTable1.ExecuteReader();
             }
         }
 
@@ -126,6 +135,56 @@ namespace Manager.Services
                 db.Close();
             }
             return sum;
+        }
+
+        public void ClearAsync()
+        {
+            using (SqliteConnection db = new SqliteConnection("Filename=sqliteData.db"))
+            {
+                db.Open();
+
+                SqliteCommand deleteCommand = new SqliteCommand();
+                deleteCommand.Connection = db;
+                deleteCommand.CommandText = "DELETE FROM SetTable";
+                deleteCommand.ExecuteReader();
+
+                db.Close();
+            }
+        }
+
+        public void SaveAsync(double Consume)
+        {
+            using (SqliteConnection db = new SqliteConnection("Filename=sqliteData.db"))
+            {
+                db.Open();
+
+                SqliteCommand insertCommand = new SqliteCommand();
+                insertCommand.Connection = db;
+
+                insertCommand.CommandText = "INSERT INTO SetTable VALUES (NULL,@amount);";
+                insertCommand.Parameters.AddWithValue("@amount", Consume);
+                insertCommand.ExecuteReader();
+
+                db.Close();
+            }
+        }
+
+        public List<double> ReadAsync()
+        {
+            List<double> List = new List<double>();
+            using (SqliteConnection db = new SqliteConnection("Filename=sqliteData.db"))
+            {
+                db.Open();
+                SqliteCommand selectCommand = new SqliteCommand
+            ("SELECT * from SetTable", db);
+                SqliteDataReader query = selectCommand.ExecuteReader();
+                while (query.Read())
+                {
+                    List.Add(Convert.ToDouble(query["Amount"]));
+                }
+                db.Close();
+            }
+            return List;
         }
     }
 }
