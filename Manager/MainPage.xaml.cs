@@ -1,5 +1,8 @@
-﻿using Manager.Helper;
+﻿using GalaSoft.MvvmLight.Messaging;
+using Manager.Helper;
+using Manager.Models;
 using Manager.Pages;
+using Manager.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -17,6 +20,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
+using Manager.Services;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -38,7 +42,26 @@ namespace Manager
         public MainPage()
         {
             this.InitializeComponent();
-            
+            Messenger.Default.Register<PropertyChangedMessage<string>>(this, message =>
+            {
+                TodoItemService todoItemService = new TodoItemService();
+                if (message.PropertyName == MoneyPageViewModel.PropertyName)
+                {
+                    if (message.OldValue != message.NewValue && message.OldValue != null && message.NewValue != null)
+                    {
+                        double num = Convert.ToDouble(message.NewValue.Substring(message.NewValue.IndexOf(':') + 1));
+                        double num2 = MoneyPageViewModel._maxConsume;
+                        if (MoneyPageViewModel._maxConsume - num <= MoneyPageViewModel._difference)
+                        {
+                            TodoItem item = new TodoItem();
+                            item.Content = "当前距离消费限额仅剩:" + (MoneyPageViewModel._maxConsume - num).ToString() + "元";
+                            item.DateCreated = DateTime.Now;
+                            todoItemService.AddAsync(item);
+                        }
+                    }
+                }
+            });
+
             PageFrame.Navigate(typeof(MemoPage));
             
         }

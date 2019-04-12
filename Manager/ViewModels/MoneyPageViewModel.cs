@@ -332,6 +332,8 @@ namespace Manager.ViewModels
             if (List.Count() > 0)
             {
                 ShowMessage = "当前设置最大值:" + List[0].ToString() + "\n当前设置差值:" + List[1].ToString();
+                MaxConsume = List[0];
+                Difference = List[1];
             }
             ThisMonthMoney = "当月消费额:"+moneyItemService.SearchAsync(DateTime.Now).ToString();
         }
