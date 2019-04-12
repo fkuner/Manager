@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
 using Manager.Models;
 using Manager.Services;
 using System;
@@ -116,6 +117,23 @@ namespace Manager.ViewModels
             {
                 TodoItems.Add(todoitem);
             }
+            Messenger.Default.Register<PropertyChangedMessage<string>>(this, message =>
+             {
+                 if (message.PropertyName == MoneyPageViewModel.PropertyName)
+                 {
+                     if (message.OldValue != message.NewValue &&message.OldValue!=null&& message.NewValue!=null)
+                     {
+                         double num = Convert.ToDouble(message.NewValue.Substring(message.NewValue.IndexOf(':') + 1));
+                         if (MoneyPageViewModel._maxConsume - num <= MoneyPageViewModel._difference)
+                         {
+                             TodoItem item = new TodoItem();
+                             item.Content = "当前距离消费限额仅剩:" + (MoneyPageViewModel._maxConsume - num).ToString() + "元";
+                             item.DateCreated = DateTime.Now;
+                             todoItemService.AddAsync(item);
+                         }
+                     }
+                 }
+             });
         }
 
     }

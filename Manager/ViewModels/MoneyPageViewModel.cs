@@ -17,6 +17,7 @@ namespace Manager.ViewModels
     public class MoneyPageViewModel : ViewModelBase
     {
         private IMoneyItemService _moneyItemService;
+        public const string PropertyName = "ThisMonthMoney";
 
         //下面是定义的私有变量
         /// <summary>
@@ -47,12 +48,12 @@ namespace Manager.ViewModels
         /// <summary>
         /// 这里表示设定的月最高消费
         /// </summary>
-        private double _maxConsume;
+        public static double _maxConsume;
 
         /// <summary>
         /// 这里表示差值
         /// </summary>
-        private double _difference;
+        public static double _difference;
 
         /// <summary>
         /// 这里表示显示的最大消费额等
@@ -157,8 +158,17 @@ namespace Manager.ViewModels
         /// </summary>
         public string ThisMonthMoney
         {
-            get => _thismonthmoney;
-            set => Set(nameof(ThisMonthMoney), ref _thismonthmoney, value);
+            get
+            {
+                return _thismonthmoney;
+            }
+
+            set
+            {
+                string oldValue = _thismonthmoney;
+                _thismonthmoney = value;
+                RaisePropertyChanged(() => ThisMonthMoney, oldValue, value, true);
+            }
         }
 
         /// <summary>
@@ -229,12 +239,12 @@ namespace Manager.ViewModels
                 {
                     MoneyItems.Add(moneyItem);
                 }
-                ThisMonthMoney = "当月消费额:" + _moneyItemService.SearchAsync(DateTime.Now).ToString();
                 List<double> List = _moneyItemService.ReadAsync();
                 if (List.Count() > 0)
                 {
                     ShowMessage = "当前设置最大值:" + List[0].ToString() + "\n当前设置差值:" + List[1].ToString();
                 }
+                ThisMonthMoney = "当月消费额:" + _moneyItemService.SearchAsync(DateTime.Now).ToString();
             }));
 
         /// <summary>
@@ -318,12 +328,12 @@ namespace Manager.ViewModels
             {
                 MoneyItems.Add(moneyItem);
             }
-            ThisMonthMoney = "当月消费额:"+moneyItemService.SearchAsync(DateTime.Now).ToString();
             List<double> List = moneyItemService.ReadAsync();
             if (List.Count() > 0)
             {
                 ShowMessage = "当前设置最大值:" + List[0].ToString() + "\n当前设置差值:" + List[1].ToString();
             }
+            ThisMonthMoney = "当月消费额:"+moneyItemService.SearchAsync(DateTime.Now).ToString();
         }
     }
 }

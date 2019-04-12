@@ -136,7 +136,7 @@
                     </Button.Flyout>
                 </Button>
 
-                <TextBlock Name="MonthConsume" Text="{Binding ThisMonthMoney}" Margin="0,0,0,10" Height="38"/>
+                <TextBlock Name="MonthConsume" Text="{Binding ThisMonthMoney,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}" Margin="0,0,0,10" Height="38"/>
 
                 <Button Content="设置最高消费额"
                         HorizontalAlignment="Left" 
