@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
 using Manager.Models;
 using Manager.Services;
 
@@ -44,6 +45,11 @@ namespace Manager.ViewModels
         private RelayCommand _addCommand;
 
         /// <summary>
+        /// 删除备忘录条目命令
+        /// </summary>
+        private RelayCommand _deleteCommand;
+
+        /// <summary>
         /// 导航到备忘录详细页命令
         /// </summary>
         private RelayCommand<MemoItem> _openToMemoDetailPageCommand;
@@ -58,6 +64,10 @@ namespace Manager.ViewModels
         /// </summary>
         private MemoItem _addMemoItem;
 
+        /// <summary>
+        /// 要删除的备忘录
+        /// </summary>
+        private MemoItem _deleteMemoItem;
 
         /// <summary>
         /// 所有MemoItem。
@@ -78,6 +88,14 @@ namespace Manager.ViewModels
         }
 
         /// <summary>
+        /// 要删除的备忘录
+        /// </summary>
+        public MemoItem DeleteMemoItem
+        {
+            get => _deleteMemoItem;
+            set => Set(nameof(DeleteMemoItem), ref _deleteMemoItem, value);
+        }
+        /// <summary>
         /// 刷新备忘录命令。
         /// </summary>
         public RelayCommand RefreshCommand =>
@@ -96,9 +114,17 @@ namespace Manager.ViewModels
         public RelayCommand AddCommand =>
             _addCommand ?? (_addCommand = new RelayCommand(async () =>
             {
-
                 _memoItemService.AddAsync(_addMemoItem); 
 
+            }));
+
+        /// <summary>
+        /// 删除备忘录命令
+        /// </summary>
+        public RelayCommand DeleteCommand =>
+            _deleteCommand ?? (_deleteCommand = new RelayCommand(async () =>
+            {
+                _memoItemService.DeleteAsync(_deleteMemoItem);
             }));
 
         /// <summary>
@@ -131,6 +157,13 @@ namespace Manager.ViewModels
             {
                 MemoItems.Add(memoItem);
             }
+
+            //Messenger:信使
+            //Recipient:收件人
+            Messenger.Default.Register<MemoItem>(this,"Message", msg =>
+            {
+                AddMemoItem = msg;
+            });
         }
     }
 }

@@ -103,7 +103,7 @@
        
 
         <TextBlock
-            Text="My Items"
+            Text="Memo"
             HorizontalAlignment="Center"
             Margin="12,8,8,8"
             Style="{ThemeResource TitleTextBlockStyle}" />
@@ -115,16 +115,34 @@
             ItemTemplate="{StaticResource MasterListViewItemTemplate}"
             IsItemClickEnabled="True"
             ItemsSource="{Binding MemoItems}"
-            ItemClick="MasterListView_ItemClick"> 
+            ItemClick="MasterListView_ItemClick">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />
                 </Style>
             </ListView.ItemContainerStyle>
         </ListView>
+        
+        <CommandBar Background="Transparent" 
+                    IsOpen="False" 
+                    DefaultLabelPosition="Right"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    Margin="0,0,0,0">
+            <AppBarButton Icon="Add" Label="Add" Click="Add_OnClick" />
+            <AppBarButton Icon="Clock" Label="Clock" />
+            <AppBarButton Icon="Save" Label="Save" Click="Save_OnClick"/>
+            <AppBarButton Icon="ReShare" Label="Share" />
+            <AppBarButton Icon="Edit" Label="Edit" />
+            <AppBarButton Icon="Mail" Label="Mail" />
+            <AppBarButton Icon="Delete" Label="Delete" Click="Delete_OnClick" />
+            <AppBarButton Icon="Refresh" Label="Refresh" Command="{Binding RefreshCommand}"/>
+        </CommandBar>
         <Frame x:Name="DetailFrame"
-               Grid.RowSpan="2"
                Grid.Column="1"
+               Grid.Row="1"
                IsTabStop="True">
         </Frame>
         

@@ -48,8 +48,8 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
         <Grid>
@@ -76,7 +76,7 @@
 
         <!--这下面是右半部分的，止观，忠心劝告，布局一定不要多用绝对布局-->
         <Grid Grid.Column="1">
-            <StackPanel Orientation="Vertical" Margin="10,0,50,0">
+            <StackPanel Orientation="Vertical" Margin="10,0,20,0">
                 <DatePicker Name="ShowDate"
                             Header="选择日期"
                             HorizontalAlignment="Stretch"

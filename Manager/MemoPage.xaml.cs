@@ -17,9 +17,11 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
+using GalaSoft.MvvmLight.Messaging;
 using GalaSoft.MvvmLight.Views;
 using Manager.Services;
 using MemoDetailPage = Manager.Pages.MemoDetailPage;
+using MemoItem = Manager.Models.MemoItem;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -38,6 +40,7 @@ namespace Manager
             this.InitializeComponent();
             DataContext = ViewModelLocator.Instance.MemoPageViewModel;
             this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
+            this.Unloaded += (sender, e) => Messenger.Default.Unregister(this);
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -82,7 +85,6 @@ namespace Manager
                 viewModel.OpenToMemoDetailPageCommand.Execute(e.ClickedItem as MemoItem);
                 
             }
-            
         }
 
         private void LayoutRoot_Loaded(object sender, RoutedEventArgs e)
@@ -92,5 +94,28 @@ namespace Manager
         }
 
         
+        private void Add_OnClick(object sender, RoutedEventArgs e)
+        {
+            MemoItem memoItem = new MemoItem();
+            memoItem.DateCreated=DateTime.Now;
+            memoItem.Text = "";
+            memoItem.Title = "";
+            var viewModel = (MemoPageViewModel)this.DataContext;
+            viewModel.MemoItems.Add(memoItem);
+        }
+
+        private void Save_OnClick(object sender, RoutedEventArgs e)
+        {
+            var viewModel = (MemoPageViewModel)this.DataContext;
+            viewModel.AddCommand.Execute(null);
+        }
+
+        private void Delete_OnClick(object sender, RoutedEventArgs e)
+        {
+            var viewModel = (MemoPageViewModel)this.DataContext;
+            var Item = MasterListView.SelectedItem as MemoItem;
+            viewModel.DeleteMemoItem = Item;
+            viewModel.DeleteCommand.Execute(null);
+        }
     }
 }

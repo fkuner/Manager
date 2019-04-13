@@ -155,5 +155,11 @@ namespace Manager.Pages
             e.Handled = true;
             OnBackRequested();
         }
+
+        private void TextBox_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            var viewmodel = (MemoDetailPageViewModel) this.DataContext;
+            viewmodel.SendCommand.Execute(null);
+        }
     }
 }

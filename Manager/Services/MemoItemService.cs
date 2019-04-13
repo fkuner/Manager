@@ -20,7 +20,7 @@ namespace Manager.Services
                 db.Open();
 
                 String tableCommand = "CREATE TABLE IF NOT EXISTS MemoItemTable " +
-                    "(Id INTEGER PRIMARY KEY NOT NULL," +
+                    "(Id INTEGER PRIMARY KEY AUTOINCREMENT," +
                     "DateCreated DATE," +
                     "Title NVACHAR(2048) NULL," +
                     "Text NVACHAR(2048) NULL);";
@@ -41,8 +41,7 @@ namespace Manager.Services
                 SqliteCommand insertCommand = new SqliteCommand();
                 insertCommand.Connection = db;
 
-                insertCommand.CommandText = "INSERT INTO MemoItemTable VALUES (@id,@date,@title,@text);";
-                insertCommand.Parameters.AddWithValue("@id", memoItem.Id);
+                insertCommand.CommandText = "INSERT INTO MemoItemTable (DateCreated,Title,Text) VALUES (@date,@title,@text);";
                 insertCommand.Parameters.AddWithValue("@date", memoItem.DateCreated);
                 insertCommand.Parameters.AddWithValue("@title", memoItem.Title);
                 insertCommand.Parameters.AddWithValue("@text", memoItem.Text);
@@ -50,8 +49,6 @@ namespace Manager.Services
                 db.Close();
             }
         }
-
-      
 
         public void DeleteAsync(MemoItem memoItem)
         {
@@ -61,6 +58,8 @@ namespace Manager.Services
                 db.Open();
 
                 SqliteCommand deleteCommand = new SqliteCommand("DELETE FROM MemoItemTable WHERE Id = @id AND DateCreated = @date AND Title = @title AND Text = @text;");
+                deleteCommand.Connection = db;
+
                 deleteCommand.Parameters.AddWithValue("@id", memoItem.Id);
                 deleteCommand.Parameters.AddWithValue("@date", memoItem.DateCreated);
                 deleteCommand.Parameters.AddWithValue("@title", memoItem.Title);
@@ -79,6 +78,7 @@ namespace Manager.Services
                 db.Open();
                 SqliteCommand selectCommand = new SqliteCommand
             ("SELECT * from MemoItemTable", db);
+                selectCommand.Connection = db;
                 SqliteDataReader query = selectCommand.ExecuteReader();
                 while (query.Read())
                 {
@@ -96,6 +96,7 @@ namespace Manager.Services
                 db.Open();
 
                 SqliteCommand updateCommand = new SqliteCommand("UPDATE MemoItemTable SET DateCreated = @date , Title = @title , Text = @text WHERE Id = @id;");
+                updateCommand.Connection = db;
                 updateCommand.Parameters.AddWithValue("@date", memoItem.DateCreated);
                 updateCommand.Parameters.AddWithValue("@title", memoItem.Title);
                 updateCommand.Parameters.AddWithValue("@text", memoItem.Text);
