@@ -79,7 +79,7 @@
                     <Style x:Key="ListBodyTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource BodyTextBlockStyle}"/>
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
-
+            <x:Double x:Key="Breakpoint640Plus">641</x:Double>
         </ResourceDictionary>
     </Application.Resources>
 

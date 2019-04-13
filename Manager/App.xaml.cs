@@ -17,6 +17,16 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Core;
 using Manager.Services;
+using System.Reflection;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using Windows.ApplicationModel.Core;
+using Windows.Foundation.Metadata;
+using Windows.Storage;
+using Windows.System.Profile;
+using Windows.UI;
+using Windows.UI.ViewManagement;
+
 
 namespace Manager
 {
@@ -25,6 +35,7 @@ namespace Manager
     /// </summary>
     sealed partial class App : Application
     {
+        private const string SelectedAppThemeKey = "SelectedAppTheme";
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -37,6 +48,41 @@ namespace Manager
             MoneyItemService.InitializeDatabase();
             MemoItemService.InitializeDatabase();
             TodoItemService.InitializeDatabase();
+        }
+
+        /// <summary>
+        /// Gets or sets (with LocalSettings persistence) the RequestedTheme of the root element.
+        /// </summary>
+        public static ElementTheme RootTheme
+        {
+            get
+            {
+                if (Window.Current.Content is FrameworkElement rootElement)
+                {
+                    return rootElement.RequestedTheme;
+                }
+
+                return ElementTheme.Default;
+            }
+            set
+            {
+                if (Window.Current.Content is FrameworkElement rootElement)
+                {
+                    rootElement.RequestedTheme = value;
+                }
+
+                ApplicationData.Current.LocalSettings.Values[SelectedAppThemeKey] = value.ToString();
+            }
+        }
+
+
+        public static TEnum GetEnum<TEnum>(string text) where TEnum : struct
+        {
+            if (!typeof(TEnum).GetTypeInfo().IsEnum)
+            {
+                throw new InvalidOperationException("Generic parameter 'TEnum' must be an enum.");
+            }
+            return (TEnum)Enum.Parse(typeof(TEnum), text);
         }
 
         /// <summary>

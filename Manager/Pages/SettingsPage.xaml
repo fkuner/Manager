@@ -8,7 +8,130 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition />
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="WideLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="{StaticResource Breakpoint640Plus}" />
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="NarrowLayout">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="contentSV.Padding" Value="14,0" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <ScrollViewer
+            x:Name="contentSV"
+            Grid.Row="1"
+            Padding="20,0,0,0"
+            IsTabStop="False"
+            UseSystemFocusVisuals="False"
+            VerticalScrollBarVisibility="Auto"
+            VerticalScrollMode="Auto">
+            <StackPanel HorizontalAlignment="Left">
+                <TextBlock
+                    Style="{StaticResource TitleTextBlockStyle}"
+                    Margin="0,4,0,0"
+                    FontWeight="Normal"
+                    Text="Theme Mode" />
+                <StackPanel x:Name="ThemePanel" Margin="0,10,0,0">
+                    <RadioButton Tag="Light" Checked="OnThemeRadioButtonChecked" Content="Light" />
+                    <!--KeyDown="OnThemeRadioButtonKeyDown"                  前面内容本为上面的RadioButton的属性-->
+                    <RadioButton Tag="Dark" Checked="OnThemeRadioButtonChecked" Content="Dark" />
+                    <RadioButton Tag="Default" Checked="OnThemeRadioButtonChecked" Content="Use system setting" />
+                </StackPanel>
+                <TextBlock
+                    Style="{StaticResource TitleTextBlockStyle}"
+                    Margin="0,40,0,0"
+                    FontWeight="Normal"
+                    Text="Sound" />
+                <StackPanel Margin="0,10,0,0">
+                    <ToggleSwitch x:Name="soundToggle" Header="Controls provide audible feedback" Toggled="soundToggle_Toggled" OffContent="Off" OnContent="On" Margin="0,0,0,4"/>
+                    <CheckBox x:Name="spatialSoundBox" Unchecked="spatialSoundBox_Unchecked" Checked="spatialSoundBox_Checked" IsEnabled="False" Content="Spatial Audio"/>
+                </StackPanel>
+                <TextBlock
+                    Style="{StaticResource TitleTextBlockStyle}"
+                    Margin="0,40,0,0"
+                    FontWeight="Normal"
+                    Text="About" />
+                <RichTextBlock MaxWidth="840" IsTextSelectionEnabled="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" SelectionChanged="RichTextBlock_SelectionChanged">
+                    <Paragraph>
+                        <Run Text="This app is the interactive companion to the "/>
+                        <Hyperlink NavigateUri="https://developer.microsoft.com/windows/apps/design">
+                            <Run Text="Fluent Design System web site"/>
+                        </Hyperlink>
+                        <Run Text=" . The source code to this app is available on "/>
+                        <Hyperlink NavigateUri="https://github.com/Microsoft/Xaml-Controls-Gallery">
+                            <Run Text="https://github.com/Microsoft/Xaml-Controls-Gallery"/>
+                        </Hyperlink>
+                        <Run Text=" ."/>
+                    </Paragraph>
+                    <Paragraph Margin="0,10,0,0">
+                        <Run Text="To clone the source repository:"/>
+                    </Paragraph>
+                    <Paragraph Margin="20,10,0,10">
+                        <Run Text="git clone "/>
+                        <Hyperlink NavigateUri="https://github.com/Microsoft/Xaml-Controls-Gallery">
+                            <Run Text="https://github.com/Microsoft/Xaml-Controls-Gallery"/>
+                        </Hyperlink>
+                    </Paragraph>
+                    <Paragraph>
+                        <Run Text="To contact the authors, "/>
+                        <Hyperlink NavigateUri="mailto:ControlsGallery@microsoft.com">
+                            <Run Text="mailto:ControlsGallery@microsoft.com"/>
+                        </Hyperlink>
+                        <Run Text=" ."/>
+                    </Paragraph>
+                </RichTextBlock>
+                <TextBlock Margin="0,10,0,0">
+                    Version: 
+                    <Run Text=" 2019 Alpha" />
+                </TextBlock>
+                <Button Click="OnFeedbackButtonClick" Content="Feedback" Margin="0,8,0,0" Visibility="Collapsed" />
 
+                <TextBlock
+                    Style="{StaticResource TitleTextBlockStyle}"
+                    Margin="0,40,0,0"
+                    FontWeight="Normal"
+                    Text="Dependencies and References" />
+                <RichTextBlock IsTextSelectionEnabled="True" MaxWidth="840" Margin="0,10,0,0">
+                    <Paragraph Margin="0,10,0,10">
+                        <Hyperlink NavigateUri="https://aka.ms/winui-toolkit">Windows UI Library (Preview)</Hyperlink>
+                    </Paragraph>
+                </RichTextBlock>
+                <RichTextBlock IsTextSelectionEnabled="True" MaxWidth="840" Margin="0,10,0,0">
+                    <Paragraph Margin="0,10,0,10">
+                        <Hyperlink NavigateUri="https://github.com/WilliamABradley/ColorCode-Universal">ColorCode-Universal</Hyperlink>
+                    </Paragraph>
+                </RichTextBlock>
+
+                <TextBlock
+                    Style="{StaticResource TitleTextBlockStyle}"
+                    Margin="0,40,0,0"
+                    FontWeight="Normal"
+                    Text="Disclaimer" />
+                <RichTextBlock MaxWidth="840" Margin="0,10,0,50" IsTextSelectionEnabled="True">
+                    <Paragraph>THIS CODE AND INFORMATION IS PROVIDED ‘AS IS’ WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A PARTICULAR PURPOSE.</Paragraph>
+                    <Paragraph>
+                        <LineBreak /> Copyright (c) Microsoft Corporation. All rights reserved.
+                    </Paragraph>
+                    <Paragraph Margin="0,10,0,10">
+                        <Hyperlink NavigateUri="https://go.microsoft.com/fwlink/?LinkId=822631">Microsoft Services Agreement</Hyperlink> ,
+                        <Hyperlink NavigateUri="https://go.microsoft.com/fwlink/?LinkId=521839">Microsoft Privacy Statement</Hyperlink>
+                    </Paragraph>
+                </RichTextBlock>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>
