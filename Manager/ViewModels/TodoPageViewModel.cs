@@ -35,6 +35,11 @@ namespace Manager.ViewModels
         private RelayCommand _addCommand;
 
         /// <summary>
+        /// 更改提醒事项条目命令
+        /// </summary>
+        private RelayCommand<int> _changeCommand;
+
+        /// <summary>
         /// 删除提醒事项条目命令
         /// </summary>
         private RelayCommand _deleteCommand;
@@ -43,6 +48,11 @@ namespace Manager.ViewModels
         /// 要添加的提醒事项
         /// </summary>
         private TodoItem _addTodoItem;
+
+        /// <summary>
+        /// 要更改的提醒事项
+        /// </summary>
+        private TodoItem _changeTodoItem;
 
         /// <summary>
         /// 要删除的提醒事项
@@ -65,6 +75,15 @@ namespace Manager.ViewModels
         {
             get => _addTodoItem;
             set => Set(nameof(AddTodoItem), ref _addTodoItem, value);
+        }
+
+        /// <summary>
+        /// 要更改的提醒事项
+        /// </summary>
+        public TodoItem ChangeTodoItem
+        {
+            get => _changeTodoItem;
+            set => Set(nameof(ChangeTodoItem), ref _changeTodoItem, value);
         }
 
         /// <summary>
@@ -93,6 +112,15 @@ namespace Manager.ViewModels
         public RelayCommand AddCommand =>
             _addCommand ?? (_addCommand = new RelayCommand(async () => {
                 _todoItemService.AddAsync(_addTodoItem);
+            }));
+
+        /// <summary>
+        /// 更改提醒事项命令
+        /// </summary>
+        public RelayCommand<int> ChangeCommand =>
+            _changeCommand ?? (_changeCommand = new RelayCommand<int>(a =>
+            {
+                _todoItemService.ChangeAsync(a, _changeTodoItem);
             }));
 
         /// <summary>

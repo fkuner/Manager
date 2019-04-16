@@ -93,9 +93,9 @@ namespace Manager
             MasterListView.SelectedItem = _lastSelectedItem;
         }
 
-        
         private void Add_OnClick(object sender, RoutedEventArgs e)
         {
+
             MemoItem memoItem = new MemoItem();
             memoItem.DateCreated=DateTime.Now;
             memoItem.Text = "";
@@ -109,20 +109,26 @@ namespace Manager
 
         private void Save_OnClick(object sender, RoutedEventArgs e)
         {
-            var viewModel = (MemoPageViewModel)this.DataContext;
-            var Item=MasterListView.SelectedItem as MemoItem;
-            viewModel.ChangeMemoItem = Item;
-            viewModel.ChangeCommand.Execute(Item.Id);
-            viewModel.RefreshCommand.Execute(null);
+            if (MasterListView.SelectedItem != null)
+            {
+                var viewModel = (MemoPageViewModel)this.DataContext;
+                var Item = MasterListView.SelectedItem as MemoItem;
+                viewModel.ChangeMemoItem = Item;
+                viewModel.ChangeCommand.Execute(Item.Id);
+                viewModel.RefreshCommand.Execute(null);
+            } 
         }
 
         private void Delete_OnClick(object sender, RoutedEventArgs e)
         {
-            var viewModel = (MemoPageViewModel)this.DataContext;
-            var Item = MasterListView.SelectedItem as MemoItem;
-            viewModel.DeleteMemoItem = Item;
-            viewModel.DeleteCommand.Execute(null);
-            viewModel.RefreshCommand.Execute(null);
+            if (MasterListView.SelectedItem != null)
+            {
+                var viewModel = (MemoPageViewModel)this.DataContext;
+                var Item = MasterListView.SelectedItem as MemoItem;
+                viewModel.DeleteMemoItem = Item;
+                viewModel.DeleteCommand.Execute(null);
+                viewModel.RefreshCommand.Execute(null);
+            }
         }
     }
 }

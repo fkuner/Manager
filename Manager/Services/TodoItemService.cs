@@ -57,6 +57,7 @@ namespace Manager.Services
                 db.Open();
 
                 SqliteCommand updateCommand = new SqliteCommand("UPDATE TodoItemTable SET Content = @content , DateCreated = @date WHERE Id = @id;");
+                updateCommand.Connection = db;
                 updateCommand.Parameters.AddWithValue("@content", todoItem.Content);
                 updateCommand.Parameters.AddWithValue("@date", todoItem.DateCreated);
                 updateCommand.Parameters.AddWithValue("@id", id);

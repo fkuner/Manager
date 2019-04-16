@@ -53,39 +53,46 @@ namespace Manager
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            var viewModel = (MoneyPageViewModel)this.DataContext;
-            var Item = MoneyListView.SelectedItem as MoneyItem;
-            viewModel.Id = Item.Id;
-            MoneyItem item = new MoneyItem();
-            item.Id = Item.Id;
-            item.ConsumeTime = ShowDate.Date.DateTime;
-            item.Event = ShowEvent.Text;
-            item.Amount = float.Parse(ShowMoney.Text);
-            item.CoverImage = Item.CoverImage;
-            viewModel.ChangeMoneyItem = item;
-            viewModel.ChangeCommand.Execute(null);
-            viewModel.RefreshCommand.Execute(null);
-            int index = 0;
-            foreach(MoneyItem moneyItem in viewModel.MoneyItems)
+            if (MoneyListView.SelectedItem != null)
             {
-                if(moneyItem.Id == Item.Id)
+                var viewModel = (MoneyPageViewModel)this.DataContext;
+                var Item = MoneyListView.SelectedItem as MoneyItem;
+                viewModel.Id = Item.Id;
+                MoneyItem item = new MoneyItem();
+                item.Id = Item.Id;
+                item.ConsumeTime = ShowDate.Date.DateTime;
+                item.Event = ShowEvent.Text;
+                item.Amount = float.Parse(ShowMoney.Text);
+                item.CoverImage = Item.CoverImage;
+                viewModel.ChangeMoneyItem = item;
+                viewModel.ChangeCommand.Execute(null);
+                viewModel.RefreshCommand.Execute(null);
+                int index = 0;
+                foreach (MoneyItem moneyItem in viewModel.MoneyItems)
                 {
-                    MoneyListView.SelectedIndex = index;
-                    break;
+                    if (moneyItem.Id == Item.Id)
+                    {
+                        MoneyListView.SelectedIndex = index;
+                        break;
+                    }
+                    index++;
                 }
-                index++;
             }
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-            var viewModel = (MoneyPageViewModel)this.DataContext;
-            var Item = MoneyListView.SelectedItem as MoneyItem;
-            if (Item != null)
+            
+            if (MoneyListView.SelectedItem != null)
             {
-                viewModel.DeleteMoneyItem = Item;
-                viewModel.DeleteCommand.Execute(null);
-                viewModel.RefreshCommand.Execute(null);
+                var viewModel = (MoneyPageViewModel)this.DataContext;
+                var Item = MoneyListView.SelectedItem as MoneyItem;
+                if (Item != null)
+                {
+                    viewModel.DeleteMoneyItem = Item;
+                    viewModel.DeleteCommand.Execute(null);
+                    viewModel.RefreshCommand.Execute(null);
+                }
             }
         }
 

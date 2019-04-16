@@ -25,6 +25,7 @@ using Manager.ViewModels;
 using Manager.Services;
 using Windows.ApplicationModel.DataTransfer;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using Windows.Data.Xml.Dom;
 using Windows.UI.Notifications;
 
@@ -119,13 +120,16 @@ namespace Manager
             await Windows.ApplicationModel.Email.EmailManager.ShowComposeNewEmailAsync(emailMessage);
         }
 
-
         private async void  Add_Click(object sender, RoutedEventArgs e)
         {
             TodoItem todoItem = new TodoItem();
             todoItem.Content = "添加任务";  
-            var viewModel = (TodoPageViewModel)this.DataContext;
+            todoItem.DateCreated=DateTime.Now;
+            var viewModel = (TodoPageViewModel) this.DataContext;
             viewModel.TodoItems.Add(todoItem);
+            viewModel.AddTodoItem = todoItem;
+            viewModel.AddCommand.Execute(null);
+            viewModel.RefreshCommand.Execute(null);
         }
         private void Reshare_Click(object sender, RoutedEventArgs e)
         {
@@ -143,16 +147,17 @@ namespace Manager
             deferral.Complete();
         }
 
-        private void CheckBox_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-
-        }
+       
         private void Delete_click(object sender, RoutedEventArgs e)
         {
-            var viewModel = (TodoPageViewModel)this.DataContext;
-            var Item = TodoListView.SelectedItem as TodoItem;
-            viewModel.DeleteTodoItem = Item;
-            viewModel.DeleteCommand.Execute(null);
+            if (TodoListView.SelectedItem != null)
+            {
+                var viewModel = (TodoPageViewModel)this.DataContext;
+                var Item = TodoListView.SelectedItem as TodoItem;
+                viewModel.DeleteTodoItem = Item;
+                viewModel.DeleteCommand.Execute(null);
+                viewModel.RefreshCommand.Execute(null);
+            }
         }
         /// <summary>
         /// Share
@@ -162,12 +167,18 @@ namespace Manager
         /// 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            var viewModel = (TodoPageViewModel)this.DataContext;
-            var Item = TodoListView.SelectedItem as TodoItem;
-            viewModel.AddTodoItem = Item;
-            viewModel.AddCommand.Execute(null);
+            if (TodoListView.SelectedItem != null)
+            {
+                var viewModel = (TodoPageViewModel)this.DataContext;
+                var Item = TodoListView.SelectedItem as TodoItem;
+                Debug.WriteLine(Item.Content);
+                viewModel.ChangeTodoItem = Item;
+                viewModel.ChangeCommand.Execute(Item.ID);
+                viewModel.RefreshCommand.Execute(null);
+            }
         }
-    
+        
+
         /// <summary>
         /// 通知栏
         /// </summary>
@@ -177,28 +188,46 @@ namespace Manager
         {
             var type = ToastTemplateType.ToastText02;
             var content = ToastNotificationManager.GetTemplateContent(type);
-            //生成XML
-            XmlNodeList toastxml = content.GetElementsByTagName("text");
-            toastxml[0].AppendChild(content.CreateTextNode("标题"));
-            toastxml[1].AppendChild(content.CreateTextNode("内容"));
-            //设置时间、次数等参数
-            //DateTime due = DateTime.Parse("2019-04-08 21:21:00");
-            DateTime due = DateTime.Now.AddMinutes(1);
-            TimeSpan span = TimeSpan.FromMinutes(1);
-            UInt32 time = 3;
-            ScheduledToastNotification toast = new ScheduledToastNotification(content, due, span, time);
-            //设置Toast的id
-            toast.Id = "toast1";
-            
-            var node = content.SelectSingleNode("/toast");
-            var audio = content.CreateElement("audio");
-            audio.SetAttribute("src", "ms-winsoundevent:Notification.IM");
-            audio.SetAttribute("loop", "false");
-            node.AppendChild(audio);
-            ToastNotificationManager.CreateToastNotifier().AddToSchedule(toast);
+
+            if (TodoListView.SelectedItem != null)
+            {
+                var todoItem = TodoListView.SelectedItem as TodoItem;
+
+                //生成XML
+                XmlNodeList toastxml = content.GetElementsByTagName("text");
+                toastxml[0].AppendChild(content.CreateTextNode(todoItem.Content));
+                toastxml[1].AppendChild(content.CreateTextNode(todoItem.DateCreated.ToString()));
+
+                //设置时间、次数等参数
+
+                string setDateTime = ConvertToDateTime(MyDatePicker, MyTimePicker);
+                DateTime due = DateTime.Parse(setDateTime);
+                TimeSpan span = TimeSpan.FromMinutes(1);
+                UInt32 time = 3;
+                ScheduledToastNotification toast = new ScheduledToastNotification(content, due, span, time);
+                //设置Toast的id
+                toast.Id = "toast1";
+
+                var node = content.SelectSingleNode("/toast");
+                var audio = content.CreateElement("audio");
+                audio.SetAttribute("src", "ms-winsoundevent:Notification.IM");
+                audio.SetAttribute("loop", "false");
+                node.AppendChild(audio);
+                ToastNotificationManager.CreateToastNotifier().AddToSchedule(toast);
+            }
 
         }
 
-       
+        private string ConvertToDateTime(DatePicker date, TimePicker time)
+        {
+            string year = date.Date.Year.ToString();
+            string month = date.Date.Month.ToString();
+            string day = date.Date.Day.ToString();
+            String setTime = time.Time.ToString();
+            String setDateTime = year + '/' + month + '/' + day + ' ' + setTime;
+            return setDateTime;
+        }
+
+
     }
 }

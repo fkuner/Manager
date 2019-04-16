@@ -16,10 +16,7 @@
 
             <Border BorderThickness="0,0.5,0,0.5"  BorderBrush="Gray"  HorizontalAlignment="Stretch"
                         Margin="0" Background="#FFFFFFFF">
-
-
                 <Grid>
-
                     <Grid.RowDefinitions>
                         <RowDefinition  Height="AUTO"></RowDefinition>
                     </Grid.RowDefinitions>
@@ -29,21 +26,21 @@
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <CheckBox Grid.Column="0"
-                              Tapped="CheckBox_Tapped"
-                              Width="10"
-                             />
+                              Width="10" />
                     <TextBox 
                             Name="textbox"
                             Height="50"  
                             HorizontalAlignment="Left"  
                             Grid.Column="2"
                             Width="1280"
-                            Text="{x:Bind Content}" BorderThickness="0"                     
+                            Text="{Binding Content,Mode=TwoWay}" BorderThickness="0"                     
                             AutomationProperties.Name="customized TextBox" 
                             FontFamily="Arial"
                             FontSize="32" 
                             FontStyle="Italic"
                             CharacterSpacing="200" 
+                            IsTextPredictionEnabled="True"
+                            IsTemplateFocusTarget="True"
                             Foreground="CornflowerBlue" >
                     </TextBox>
 
@@ -100,25 +97,48 @@
             <Image Height="200"  Width="1500"  Stretch="UniformToFill" Source="/Assets/UWP-ji-0.jpg" AutomationProperties.Name="Valley"/>
         </FlipView>
 
+        
         <CommandBar Background="Transparent" 
                     IsOpen="False" 
                     DefaultLabelPosition="Right"
                     Grid.Row="1"
                     HorizontalAlignment="Stretch"
                     Margin="0,0,0,0">
-            <AppBarButton Icon="Add" Label="Add" Click="Add_Click"/>
-            <AppBarButton Icon="Clock" Label="Clock" Click="Clock_OnClick" />
-            <AppBarButton Icon="Save" Label="Save" Click="Save_Click"></AppBarButton>
-            <AppBarButton Icon="ReShare" Label="Share" Click="Reshare_Click"/>
-            <AppBarButton Icon="Mail" Label="Mail" Click="MainButton_Click"/>
-            <AppBarButton Icon="Delete" Label="Delete" Click="Delete_click"/>
-        </CommandBar>
+            <AppBarButton Icon="Add" Label="Add" Click="Add_Click" />
+            <!-- <AppBarButton Icon="Save"  -->
+            <!--                Label="Save"  -->
+            <!--                Click="Save_Click" /> -->
+            <AppBarElementContainer>
+                <Button Content="Save" Background="White" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch"
+                        Click="Save_Click" VerticalAlignment="Stretch" Height="40" FontSize="12" Width="71.2"/>
+            </AppBarElementContainer>
+            <AppBarButton Icon="Clock" Label="Clock" >
+                <AppBarButton.Flyout>
+                    <Flyout>
+                        <StackPanel>
+                            <DatePicker Name="MyDatePicker"></DatePicker>
+                            <RelativePanel>
+                                <TimePicker Name="MyTimePicker"></TimePicker>
+                                <Button Content="设定" Click="Clock_OnClick" RelativePanel.RightOf="MyTimePicker"/>
+                            </RelativePanel>
+                        </StackPanel>
+                    </Flyout>
+                </AppBarButton.Flyout>
+            </AppBarButton>
+            <AppBarButton Icon="ReShare" Label="Share" Click="Reshare_Click" />
+            <AppBarButton Icon="Mail" Label="Mail" Click="MainButton_Click" />
+            <AppBarButton Icon="Delete" Label="Delete" Click="Delete_click" />
+            
+           
+</CommandBar>
 
 
 
         <!-- Add the GridView here. -->
         <ListView   x:Name="TodoListView"
-            Grid.Row="2" 
+            Grid.Row="2"
+            SelectionMode="Extended"
+            IsItemClickEnabled="True"
             ItemTemplate="{StaticResource ListViewItemTemplate1}"
             ItemsSource="{Binding TodoItems}"
        ></ListView>

@@ -190,6 +190,8 @@
     <Content Include="Assets\image.jpg" />
     <Content Include="Assets\Image2.jpg" />
     <Content Include="Assets\Money.jpg" />
+    <Content Include="Assets\save.png" />
+    <Content Include="Assets\save.svg" />
     <Content Include="Assets\schedule-icon.png" />
     <Content Include="Assets\SeaM.png" />
     <Content Include="Assets\ticket.jpg" />

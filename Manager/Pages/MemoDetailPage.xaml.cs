@@ -42,16 +42,18 @@ namespace Manager.Pages
         {
             base.OnNavigatedTo(e);
 
+           
             var viewModel = (MemoDetailPageViewModel) this.DataContext;
             viewModel.MemoItem=e.Parameter as MemoItem;
 
             if(viewModel.MemoItem!=null)
                 MyRichEditBox.Document.SetText(Windows.UI.Text.TextSetOptions.FormatRtf, viewModel.MemoItem.Text);
 
+           
             var backStack = Frame.BackStack;
             var backStackCount = backStack.Count;
 
-            if (backStackCount > 0 && Frame.ActualWidth <720)
+            if (backStackCount > 0 )
             {
                 var masterPageEntry = backStack[backStackCount - 1];
                 backStack.RemoveAt(backStackCount - 1);
@@ -67,7 +69,7 @@ namespace Manager.Pages
             }
 
             // Register for hardware and software back request from the system
-            if (Frame.ActualWidth > 720)
+            if (Frame.ActualWidth > 500)
             {
                 SystemNavigationManager systemNavigationManager = SystemNavigationManager.GetForCurrentView();
                 systemNavigationManager.BackRequested += DetailPage_BackRequested;
@@ -95,8 +97,10 @@ namespace Manager.Pages
         {
             // Page above us will be our master view.
             // Make sure we are using the "drill out" animation in this transition.
-
-            Frame.GoBack(new DrillInNavigationTransitionInfo());
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack(new DrillInNavigationTransitionInfo());
+            }
         }
 
         void NavigateBackForWideState(bool useTransition)
