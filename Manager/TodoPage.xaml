@@ -92,9 +92,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <FlipView   Grid.Row="0"
-                   
-           >
+        <FlipView   Grid.Row="0">
             <Image Height="200"  Width="1500" Stretch="UniformToFill" Source="/Assets/UWP-Cliff.jpg" AutomationProperties.Name="Cliff"/>
             <Image Height="200"  Width="1500"  Stretch="UniformToFill" Source="/Assets/UWP-Grapes.jpg" AutomationProperties.Name="Grapes"/>
             <Image Height="200"  Width="1500"  Stretch="UniformToFill" Source="/Assets/UWP-ji-0.jpg" AutomationProperties.Name="Rainier"/>
@@ -112,10 +110,8 @@
             <AppBarButton Icon="Clock" Label="Clock" Click="Clock_OnClick" />
             <AppBarButton Icon="Save" Label="Save" Click="Save_Click"></AppBarButton>
             <AppBarButton Icon="ReShare" Label="Share" Click="Reshare_Click"/>
-            <AppBarButton Icon="Edit" Label="Edit"/>
             <AppBarButton Icon="Mail" Label="Mail" Click="MainButton_Click"/>
             <AppBarButton Icon="Delete" Label="Delete" Click="Delete_click"/>
-            <AppBarButton Icon="Refresh" Label="Refresh" Command="{Binding RefreshCommand}"/>
         </CommandBar>
 
 

@@ -28,12 +28,14 @@ namespace Manager.Pages
     /// </summary>
     public sealed partial class MemoDetailPage : Page
     {
+        
 
         public MemoDetailPage()
         {
             this.InitializeComponent();
             DataContext = ViewModelLocator.Instance.MemoDetailPageViewModel;
             this.NavigationCacheMode = Windows.UI.Xaml.Navigation.NavigationCacheMode.Enabled;
+            
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -42,6 +44,9 @@ namespace Manager.Pages
 
             var viewModel = (MemoDetailPageViewModel) this.DataContext;
             viewModel.MemoItem=e.Parameter as MemoItem;
+
+            if(viewModel.MemoItem!=null)
+                MyRichEditBox.Document.SetText(Windows.UI.Text.TextSetOptions.FormatRtf, viewModel.MemoItem.Text);
 
             var backStack = Frame.BackStack;
             var backStackCount = backStack.Count;
@@ -159,6 +164,24 @@ namespace Manager.Pages
         private void TextBox_OnTextChanged(object sender, TextChangedEventArgs e)
         {
             var viewmodel = (MemoDetailPageViewModel) this.DataContext;
+            viewmodel.SendCommand.Execute(null);
+        }
+
+        private void MyRichEditBox_OnTextChanged(object sender, RoutedEventArgs e)
+         {
+            var viewmodel = (MemoDetailPageViewModel)this.DataContext;
+            string s = "";
+            //MyRichEditBox.Document.GetText(Windows.UI.Text.TextGetOptions.FormatRtf, out s);
+            MyRichEditBox.Document.GetText(Windows.UI.Text.TextGetOptions.UseObjectText,out s);
+            viewmodel.MemoItem.Text = s;
+            if (s.Length < 10)
+            {
+                viewmodel.MemoItem.Title = s.Substring(0, s.Length);
+            }
+            else
+            {
+                viewmodel.MemoItem.Title = s.Substring(0, 10);
+            }
             viewmodel.SendCommand.Execute(null);
         }
     }

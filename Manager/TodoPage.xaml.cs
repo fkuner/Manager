@@ -71,7 +71,6 @@ namespace Manager
             };
             await ComposeEmail(contact, subject, messageBody);
             
-
             //如果要挑选人脉中的联系人
             /*
             ContactPicker contactPicker = new ContactPicker();
@@ -123,18 +122,10 @@ namespace Manager
 
         private async void  Add_Click(object sender, RoutedEventArgs e)
         {
-
-
-            //testTextBlock.Text = textbox.Text;
-
             TodoItem todoItem = new TodoItem();
-            todoItem.Content = "添加任务";
-            
+            todoItem.Content = "添加任务";  
             var viewModel = (TodoPageViewModel)this.DataContext;
             viewModel.TodoItems.Add(todoItem);
-            
-
-           
         }
         private void Reshare_Click(object sender, RoutedEventArgs e)
         {
@@ -173,24 +164,6 @@ namespace Manager
         {
             var viewModel = (TodoPageViewModel)this.DataContext;
             var Item = TodoListView.SelectedItem as TodoItem;
-
-        // Getting the currently selected ListBoxItem
-        // Note that the ListBox must have
-        // IsSynchronizedWithCurrentItem set to True for this to work
-        /*ListBoxItem myListBoxItem =
-            (ListBoxItem)(ToolListView.ItemContainerGenerator.ContainerFromItem(ToolListView.Items.CurrentItem));
-
-        // Getting the ContentPresenter of myListBoxItem
-        ContentPresenter myContentPresenter = FindVisualChild<ContentPresenter>(myListBoxItem);
-
-        // Finding textBlock from the DataTemplate that is set on that ContentPresenter
-        DataTemplate myDataTemplate = myContentPresenter.ContentTemplate;
-        TextBlock myTextBlock = (TextBlock)myDataTemplate.FindName("textBlock", myContentPresenter);
-
-        // Do something to the DataTemplate-generated TextBlock
-        MessageBox.Show("The text of the TextBlock of the selected list item: "
-                        + myTextBlock.Text);*/
-             Item.Content = "haha";
             viewModel.AddTodoItem = Item;
             viewModel.AddCommand.Execute(null);
         }
@@ -216,15 +189,7 @@ namespace Manager
             ScheduledToastNotification toast = new ScheduledToastNotification(content, due, span, time);
             //设置Toast的id
             toast.Id = "toast1";
-            //if (state == 0)
-            //{
-            //    var node = content.SelectSingleNode("/toast");
-            //    var audio = content.CreateElement("audio");
-            //    audio.SetAttribute("silent", "true");
-            //    node.AppendChild(audio);
-            //}
-            //else
-            //{
+            
             var node = content.SelectSingleNode("/toast");
             var audio = content.CreateElement("audio");
             audio.SetAttribute("src", "ms-winsoundevent:Notification.IM");

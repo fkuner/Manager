@@ -102,12 +102,18 @@ namespace Manager
             memoItem.Title = "";
             var viewModel = (MemoPageViewModel)this.DataContext;
             viewModel.MemoItems.Add(memoItem);
+            viewModel.AddMemoItem = memoItem;
+            viewModel.AddCommand.Execute(null);
+            viewModel.RefreshCommand.Execute(null);
         }
 
         private void Save_OnClick(object sender, RoutedEventArgs e)
         {
             var viewModel = (MemoPageViewModel)this.DataContext;
-            viewModel.AddCommand.Execute(null);
+            var Item=MasterListView.SelectedItem as MemoItem;
+            viewModel.ChangeMemoItem = Item;
+            viewModel.ChangeCommand.Execute(Item.Id);
+            viewModel.RefreshCommand.Execute(null);
         }
 
         private void Delete_OnClick(object sender, RoutedEventArgs e)
@@ -116,6 +122,7 @@ namespace Manager
             var Item = MasterListView.SelectedItem as MemoItem;
             viewModel.DeleteMemoItem = Item;
             viewModel.DeleteCommand.Execute(null);
+            viewModel.RefreshCommand.Execute(null);
         }
     }
 }

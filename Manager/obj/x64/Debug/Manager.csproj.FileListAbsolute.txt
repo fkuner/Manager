@@ -468,3 +468,8 @@ F:\Manager\Manager\obj\x64\Debug\TodoPage.xbf
 F:\Manager\Manager\obj\x64\Debug\MoneyPage.xbf
 F:\Manager\Manager\obj\x64\Debug\MemoPage.xbf
 F:\Manager\Manager\obj\x64\Debug\Pages\ToolsDetailPage.xbf
+E:\source\repos\Manager\Manager\obj\x64\Debug\Helper\BlankPage1.g.i.cs
+E:\source\repos\Manager\Manager\obj\x64\Debug\Helper\BlankPage1.g.cs
+E:\source\repos\Manager\Manager\obj\x64\Debug\Helper\BlankPage1.xaml
+E:\source\repos\Manager\Manager\obj\x64\Debug\Helper\BlankPage1.xbf
+E:\source\repos\Manager\Manager\bin\x64\Debug\Helper\BlankPage1.xbf

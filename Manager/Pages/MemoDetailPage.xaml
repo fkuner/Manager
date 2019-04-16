@@ -5,6 +5,7 @@
     xmlns:local="using:Manager.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:manager="using:Manager"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -16,22 +17,18 @@
 
     <!-- Don't realize our content by default. See PageRoot_Loaded. -->
     <Grid>
-        <StackPanel x:Name="RootPanel" >
-            <TextBox
-                Margin="8,0"
-                BorderThickness="0,0,0,0"
-                HorizontalAlignment="Left"
-                Width="100"
-                Text="{Binding MemoItem.Title, Mode=TwoWay}" />
-            <Line Name="Line"
-                  Stroke="Red"
-                  X2="400"/>
-            <!-- <Button Content="保存" Command="{Binding SendCommand}" /> -->
-            <TextBox
-                BorderThickness="10,10,10,10"
-                AllowFocusWhenDisabled="True"
-                TextChanged="TextBox_OnTextChanged"
-                Text="{Binding MemoItem.Text, Mode=TwoWay}" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel x:Name="RootPanel"
+                    Grid.Row="1">
+            <RichEditBox TextChanged="MyRichEditBox_OnTextChanged"
+                         HorizontalAlignment="Stretch"
+                         IsSpellCheckEnabled="True"
+                         BorderThickness="0"
+                         Name="MyRichEditBox"/>
         </StackPanel>
         
     </Grid>

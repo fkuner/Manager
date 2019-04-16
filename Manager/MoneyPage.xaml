@@ -27,16 +27,16 @@
 
         <Style TargetType="TextBlock" x:Key="ListTextStyle">
             <Setter Property="HorizontalAlignment" Value="Left"/>
-            <Setter Property="FontSize" Value="15"/>
-            <Setter Property="FontWeight" Value="Bold"/>
-            <Setter Property="FontStyle" Value="Italic"/>
-            <Setter Property="Foreground" Value="Black"/>
+            <!-- <Setter Property="FontSize" Value="15"/> -->
+            <!-- <Setter Property="FontWeight" Value="Bold"/> -->
+            <!-- <Setter Property="FontStyle" Value="Italic"/> -->
+            <!-- <Setter Property="Foreground" Value="Black"/> -->
             <Setter Property="Margin" Value="0,0,0,5"/>
         </Style>
 
         <DataTemplate x:Key="MoneyDataTemplate" x:DataType="models:MoneyItem" >
             <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-                <Image Name="image" Source="{x:Bind CoverImage}" HorizontalAlignment="Center" Width="150"/>
+                <!-- <Image Name="image" Source="{x:Bind CoverImage}" HorizontalAlignment="Center" Width="150"/> -->
                 <StackPanel Margin="20,20,0,0">
                     <TextBlock Text="{x:Bind ConsumeTime}" Style="{StaticResource ListTextStyle}"/>
                     <TextBlock Text="{x:Bind Event}" Style="{StaticResource ListTextStyle}"/>
@@ -60,7 +60,7 @@
 
             <!--这里是上面的搜索框，有三种搜索模式，思源，以后搜索框我看标准一般是AutoSuggestBox, 当然TextBox也行-->
             <StackPanel>
-                <TextBlock Text="Financial Management" HorizontalAlignment="Center" FontSize="23" FontWeight="Bold" FontStyle="Italic" Foreground="CornflowerBlue"/>
+                <TextBlock Text="Money" HorizontalAlignment="Center"  Style="{ThemeResource TitleTextBlockStyle}"/>
             </StackPanel>
 
             <!--这里是我写的ListView的部分，微软大法好，Bob的笑容由我来守护-->

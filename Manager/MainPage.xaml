@@ -19,7 +19,7 @@
                 <NavigationViewItem Icon="Memo"  Content="Memo" Tag="MemoPage"/>
                 <NavigationViewItem Icon="Accept"  Content="Todo" Tag="TodoPage" />
                 <NavigationViewItem Icon="Account"  Content="Money" Tag="MoneyPage" />
-                <NavigationViewItem Icon="Repair"  Content="Tools" Tag="ToolsPage" />
+                <!-- <NavigationViewItem Icon="Repair"  Content="Tools" Tag="ToolsPage" /> -->
             </NavigationView.MenuItems>
 
             

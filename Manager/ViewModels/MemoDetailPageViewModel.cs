@@ -54,5 +54,7 @@ namespace Manager.ViewModels
         }
 
         #endregion
+
+        
     }
 }

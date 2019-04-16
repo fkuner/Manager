@@ -69,7 +69,7 @@ namespace Manager
 
         private readonly List<(string Tag, Type Page)> _pages = new List<(string Tag, Type Page)>
         {
-            ("ToolsPage", typeof(ToolsPage)),
+//            ("ToolsPage", typeof(ToolsPage)),
             ("TodoPage", typeof(TodoPage)),
             ("MoneyPage", typeof(MoneyPage)),
             ("MemoPage",typeof(MemoPage)),
@@ -89,9 +89,9 @@ namespace Manager
 
                 switch (item.Tag)
                 {
-                    case "ToolsPage":
-                        PageFrame.Navigate(typeof(ToolsPage));
-                        break;
+//                    case "ToolsPage":
+//                        PageFrame.Navigate(typeof(ToolsPage));
+//                        break;
 
                     case "TodoPage":
                         PageFrame.Navigate(typeof(TodoPage));

@@ -119,6 +119,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Helper\BlankPage1.xaml.cs">
+      <DependentUpon>BlankPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\BlankPage1ViewModel.cs" />
+    <Compile Include="Helper\ConvertFromRTF.cs" />
+    <Compile Include="Helper\RtfStringSetter.cs" />
     <Compile Include="Models\MemoItem.cs" />
     <Compile Include="Pages\MemoDetailPage.xaml.cs">
       <DependentUpon>MemoDetailPage.xaml</DependentUpon>
@@ -129,6 +135,7 @@
     <Compile Include="Services\MemoItemService.cs" />
     <Compile Include="Services\MoneyItemService.cs" />
     <Compile Include="Services\NavigationService.cs" />
+    <Compile Include="System\Windows\Forms.cs" />
     <Compile Include="ToolsPage.xaml.cs">
       <DependentUpon>ToolsPage.xaml</DependentUpon>
     </Compile>
@@ -208,6 +215,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Helper\BlankPage1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\MemoDetailPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

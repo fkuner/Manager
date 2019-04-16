@@ -50,6 +50,10 @@ namespace Manager.ViewModels
         private RelayCommand _deleteCommand;
 
         /// <summary>
+        /// 更改备忘录命令
+        /// </summary>
+        private RelayCommand<int> _changeCommand;
+        /// <summary>
         /// 导航到备忘录详细页命令
         /// </summary>
         private RelayCommand<MemoItem> _openToMemoDetailPageCommand;
@@ -64,10 +68,16 @@ namespace Manager.ViewModels
         /// </summary>
         private MemoItem _addMemoItem;
 
+        
         /// <summary>
         /// 要删除的备忘录
         /// </summary>
         private MemoItem _deleteMemoItem;
+
+        /// <summary>
+        /// 要更改的备忘录
+        /// </summary>
+        private MemoItem _changeMemoItem;
 
         /// <summary>
         /// 所有MemoItem。
@@ -94,6 +104,14 @@ namespace Manager.ViewModels
         {
             get => _deleteMemoItem;
             set => Set(nameof(DeleteMemoItem), ref _deleteMemoItem, value);
+        }
+        /// <summary>
+        /// 要增加的备忘录
+        /// </summary>
+        public MemoItem ChangeMemoItem
+        {
+            get => _changeMemoItem;
+            set => Set(nameof(ChangeMemoItem), ref _changeMemoItem, value);
         }
         /// <summary>
         /// 刷新备忘录命令。
@@ -127,6 +145,13 @@ namespace Manager.ViewModels
                 _memoItemService.DeleteAsync(_deleteMemoItem);
             }));
 
+        public RelayCommand<int> ChangeCommand =>
+            _changeCommand ?? (_changeCommand =new RelayCommand<int>( a =>
+            {
+                _memoItemService.ChangeAsync(a,_changeMemoItem);
+            }));
+
+
         /// <summary>
         /// 导航到备忘录详细页命令
         /// </summary>
@@ -136,6 +161,7 @@ namespace Manager.ViewModels
                 new RelayCommand<MemoItem>(memoItem => {
                     _navigationService.NavagateToMemoDetailPage(memoItem);
                 }));
+
 
         /// <summary>
         /// 设置Frame命令

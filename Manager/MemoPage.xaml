@@ -42,6 +42,7 @@
                     Text="time"
                     Grid.Column="1"
                     Margin="12,1,0,0"
+                    
                     Style="{ThemeResource ListCaptionAltTextblockStyle}" />
             </Grid>
         </DataTemplate>
@@ -137,8 +138,7 @@
             <AppBarButton Icon="ReShare" Label="Share" />
             <AppBarButton Icon="Edit" Label="Edit" />
             <AppBarButton Icon="Mail" Label="Mail" />
-            <AppBarButton Icon="Delete" Label="Delete" Click="Delete_OnClick" />
-            <AppBarButton Icon="Refresh" Label="Refresh" Command="{Binding RefreshCommand}"/>
+            <AppBarButton Icon="Delete" Label="Delete" Click="Delete_OnClick"/>
         </CommandBar>
         <Frame x:Name="DetailFrame"
                Grid.Column="1"
