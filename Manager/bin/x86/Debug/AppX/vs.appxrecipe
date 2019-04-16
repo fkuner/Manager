@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>LAPTOP-TLCHLAO5</Machine>
-    <WindowsUser>Lenovo</WindowsUser>
+    <Machine>DESKTOP-JFR5DB1</Machine>
+    <WindowsUser>asus</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,16 +10,16 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>aebf8c9e-6e81-4157-90f3-5107610e58a9</PackageIdentityName>
     <PackageIdentityPublisher>CN=Lenovo</PackageIdentityPublisher>
-    <IntermediateOutputPath>E:\source\repos\Manager\Manager\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\asus\Desktop\Manager\Manager\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
-    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>E:\source\repos\Manager\Manager\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>2FD805DFE42F5F7E6F0C10A237563E5135D43B46DDE3F1A3386DEA0F99E038E6</RegisteredManifestChecksum>
+    <WindowsSdkPath>E:\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>C:\Users\asus\Desktop\Manager\Manager\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>D6AD726EFFEECF9FC47E8EC3B3FA5AB8E9CABE275508E148A046BC58C586E65A</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>aebf8c9e-6e81-4157-90f3-5107610e58a9_1.0.0.0_x86__pthpn8nb9xcaa</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>aebf8c9e-6e81-4157-90f3-5107610e58a9_pthpn8nb9xcaa!App</RegisteredUserModeAppID>
     <RegisteredPackageID>aebf8c9e-6e81-4157-90f3-5107610e58a9</RegisteredPackageID>
@@ -27,42 +27,42 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\asus\Desktop\Manager\Manager\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-08T17:59:52.463</Modified>
+      <Modified>2019-04-14T05:03:59.061</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Manager.exe">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\bin\x86\Debug\Manager.exe">
       <PackagePath>entrypoint\Manager.exe</PackagePath>
-      <Modified>2019-04-08T17:59:51.160</Modified>
+      <Modified>2019-04-14T05:03:57.048</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\commonservicelocator\2.0.2\lib\netstandard2.0\CommonServiceLocator.dll">
+    <AppxPackagedFile Include="C:\Users\asus\.nuget\packages\commonservicelocator\2.0.2\lib\netstandard2.0\CommonServiceLocator.dll">
       <PackagePath>CommonServiceLocator.dll</PackagePath>
       <Modified>2018-01-03T04:27:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\microsoft.data.sqlite\1.1.1\lib\netstandard1.3\Microsoft.Data.Sqlite.dll">
+    <AppxPackagedFile Include="C:\Users\asus\.nuget\packages\microsoft.data.sqlite\1.1.1\lib\netstandard1.3\Microsoft.Data.Sqlite.dll">
       <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
       <Modified>2017-04-27T10:53:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\mvvmlightlibs\5.4.1.1\lib\uap10.0\GalaSoft.MvvmLight.Extras.dll">
+    <AppxPackagedFile Include="C:\Users\asus\.nuget\packages\mvvmlightlibs\5.4.1.1\lib\uap10.0\GalaSoft.MvvmLight.Extras.dll">
       <PackagePath>GalaSoft.MvvmLight.Extras.dll</PackagePath>
       <Modified>2018-02-04T15:10:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\mvvmlightlibs\5.4.1.1\lib\uap10.0\GalaSoft.MvvmLight.Platform.dll">
+    <AppxPackagedFile Include="C:\Users\asus\.nuget\packages\mvvmlightlibs\5.4.1.1\lib\uap10.0\GalaSoft.MvvmLight.Platform.dll">
       <PackagePath>GalaSoft.MvvmLight.Platform.dll</PackagePath>
       <Modified>2018-02-04T15:10:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\mvvmlightlibs\5.4.1.1\lib\uap10.0\GalaSoft.MvvmLight.dll">
+    <AppxPackagedFile Include="C:\Users\asus\.nuget\packages\mvvmlightlibs\5.4.1.1\lib\uap10.0\GalaSoft.MvvmLight.dll">
       <PackagePath>GalaSoft.MvvmLight.dll</PackagePath>
       <Modified>2018-02-04T15:10:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\newtonsoft.json\12.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\asus\.nuget\packages\newtonsoft.json\12.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
       <Modified>2018-11-27T10:07:34.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\observablecollectionex\1.4.57\lib\netstandard2.0\ObservableCollectionEx.dll">
+    <AppxPackagedFile Include="C:\Users\asus\.nuget\packages\observablecollectionex\1.4.57\lib\netstandard2.0\ObservableCollectionEx.dll">
       <PackagePath>ObservableCollectionEx.dll</PackagePath>
       <Modified>2017-09-09T02:50:54.000</Modified>
     </AppxPackagedFile>
@@ -70,192 +70,200 @@
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2018-11-29T02:27:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\sqlite\3.13.0\runtimes\win10-x86\nativeassets\uap10.0\sqlite3.dll">
+    <AppxPackagedFile Include="C:\Users\asus\.nuget\packages\sqlite\3.13.0\runtimes\win10-x86\nativeassets\uap10.0\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
       <Modified>2016-10-18T13:37:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
+    <AppxPackagedFile Include="E:\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2018-10-22T17:33:40.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\background.jpg">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\background.jpg">
       <PackagePath>Assets\background.jpg</PackagePath>
-      <Modified>2019-04-07T07:34:59.214</Modified>
+      <Modified>2019-04-13T09:30:21.614</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\image.jpg">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\image.jpg">
       <PackagePath>Assets\image.jpg</PackagePath>
-      <Modified>2019-04-07T07:34:59.217</Modified>
+      <Modified>2019-04-13T09:30:21.622</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\Image2.jpg">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\Image2.jpg">
       <PackagePath>Assets\Image2.jpg</PackagePath>
-      <Modified>2019-04-07T07:34:59.180</Modified>
+      <Modified>2019-04-13T09:30:21.557</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\Money.jpg">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\Money.jpg">
       <PackagePath>Assets\Money.jpg</PackagePath>
-      <Modified>2019-04-07T07:34:59.181</Modified>
+      <Modified>2019-04-13T09:30:21.560</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\ticket.jpg">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\ticket.jpg">
       <PackagePath>Assets\ticket.jpg</PackagePath>
-      <Modified>2019-04-07T07:34:59.226</Modified>
+      <Modified>2019-04-13T09:30:21.634</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\UWP-ji-0.jpg">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\UWP-Cliff.jpg">
+      <PackagePath>Assets\UWP-Cliff.jpg</PackagePath>
+      <Modified>2019-04-13T09:30:21.604</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\UWP-Grapes.jpg">
+      <PackagePath>Assets\UWP-Grapes.jpg</PackagePath>
+      <Modified>2019-04-13T09:30:21.606</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\UWP-ji-0.jpg">
       <PackagePath>Assets\UWP-ji-0.jpg</PackagePath>
-      <Modified>2019-04-07T07:34:59.211</Modified>
+      <Modified>2019-04-13T09:30:21.608</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\CM.png">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\CM.png">
       <PackagePath>Assets\CM.png</PackagePath>
-      <Modified>2019-04-07T07:34:59.179</Modified>
+      <Modified>2019-04-13T09:30:21.554</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\coffee-icon.png">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\coffee-icon.png">
       <PackagePath>Assets\coffee-icon.png</PackagePath>
-      <Modified>2019-04-07T07:34:59.215</Modified>
+      <Modified>2019-04-13T09:30:21.616</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\color-logo.png">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\color-logo.png">
       <PackagePath>Assets\color-logo.png</PackagePath>
-      <Modified>2019-04-07T07:34:59.216</Modified>
+      <Modified>2019-04-13T09:30:21.618</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\complete-icon.png">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\complete-icon.png">
       <PackagePath>Assets\complete-icon.png</PackagePath>
-      <Modified>2019-04-07T07:34:59.216</Modified>
+      <Modified>2019-04-13T09:30:21.619</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\donut-icon.png">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\donut-icon.png">
       <PackagePath>Assets\donut-icon.png</PackagePath>
-      <Modified>2019-04-07T07:34:59.217</Modified>
+      <Modified>2019-04-13T09:30:21.620</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\schedule-icon.png">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\schedule-icon.png">
       <PackagePath>Assets\schedule-icon.png</PackagePath>
-      <Modified>2019-04-07T07:34:59.218</Modified>
+      <Modified>2019-04-13T09:30:21.623</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\SeaM.png">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\SeaM.png">
       <PackagePath>Assets\SeaM.png</PackagePath>
-      <Modified>2019-04-07T07:34:59.182</Modified>
+      <Modified>2019-04-13T09:30:21.562</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\UWP-031-A.png">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\UWP-031-A.png">
       <PackagePath>Assets\UWP-031-A.png</PackagePath>
-      <Modified>2019-04-07T07:34:59.191</Modified>
+      <Modified>2019-04-13T09:30:21.577</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\UWP-031-B.png">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\UWP-031-B.png">
       <PackagePath>Assets\UWP-031-B.png</PackagePath>
-      <Modified>2019-04-07T07:34:59.196</Modified>
+      <Modified>2019-04-13T09:30:21.585</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\UWP-031-C.png">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\UWP-031-C.png">
       <PackagePath>Assets\UWP-031-C.png</PackagePath>
-      <Modified>2019-04-07T07:34:59.201</Modified>
+      <Modified>2019-04-13T09:30:21.592</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\UWP-031-D.png">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\UWP-031-D.png">
       <PackagePath>Assets\UWP-031-D.png</PackagePath>
-      <Modified>2019-04-07T07:34:59.210</Modified>
+      <Modified>2019-04-13T09:30:21.602</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\white-logo.png">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\white-logo.png">
       <PackagePath>Assets\white-logo.png</PackagePath>
-      <Modified>2019-04-07T07:34:59.227</Modified>
+      <Modified>2019-04-13T09:30:21.635</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2019-04-07T07:34:59.181</Modified>
+      <Modified>2019-04-13T09:30:21.559</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-07T07:34:59.183</Modified>
+      <Modified>2019-04-13T09:30:21.564</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-07T07:34:59.183</Modified>
+      <Modified>2019-04-13T09:30:21.565</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-07T07:34:59.184</Modified>
+      <Modified>2019-04-13T09:30:21.567</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-07T07:34:59.184</Modified>
+      <Modified>2019-04-13T09:30:21.568</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-07T07:34:59.185</Modified>
+      <Modified>2019-04-13T09:30:21.569</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-07T07:34:59.211</Modified>
+      <Modified>2019-04-13T09:30:21.610</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2019-04-07T07:34:59.244</Modified>
+      <Modified>2019-04-13T09:30:21.672</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Manager.xr.xml">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\bin\x86\Debug\Manager.xr.xml">
       <PackagePath>Manager.xr.xml</PackagePath>
-      <Modified>2019-04-08T17:52:13.303</Modified>
+      <Modified>2019-04-14T05:03:56.504</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-04-08T17:59:50.788</Modified>
+      <Modified>2019-04-14T05:03:56.588</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Pages\MemoDetailPage.xbf">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\bin\x86\Debug\Pages\MemoDetailPage.xbf">
       <PackagePath>Pages\MemoDetailPage.xbf</PackagePath>
-      <Modified>2019-04-08T17:59:50.789</Modified>
+      <Modified>2019-04-14T05:03:56.589</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\ToolsPage.xbf">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\bin\x86\Debug\ToolsPage.xbf">
       <PackagePath>ToolsPage.xbf</PackagePath>
-      <Modified>2019-04-08T17:59:50.790</Modified>
+      <Modified>2019-04-14T05:03:56.589</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\TodoPage.xbf">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\bin\x86\Debug\TodoPage.xbf">
       <PackagePath>TodoPage.xbf</PackagePath>
-      <Modified>2019-04-08T17:59:50.791</Modified>
+      <Modified>2019-04-14T05:03:56.589</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\MoneyPage.xbf">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\bin\x86\Debug\MoneyPage.xbf">
       <PackagePath>MoneyPage.xbf</PackagePath>
-      <Modified>2019-04-08T17:59:50.767</Modified>
+      <Modified>2019-04-14T05:03:56.566</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-04-08T17:59:50.792</Modified>
+      <Modified>2019-04-14T05:03:56.590</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\MemoPage.xbf">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\bin\x86\Debug\MemoPage.xbf">
       <PackagePath>MemoPage.xbf</PackagePath>
-      <Modified>2019-04-08T17:59:50.793</Modified>
+      <Modified>2019-04-14T05:03:56.590</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Pages\ToolsDetailPage.xbf">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\bin\x86\Debug\Pages\ToolsDetailPage.xbf">
       <PackagePath>Pages\ToolsDetailPage.xbf</PackagePath>
-      <Modified>2019-04-08T17:59:50.793</Modified>
+      <Modified>2019-04-14T05:03:56.590</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Pages\SettingsPage.xbf">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\bin\x86\Debug\Pages\SettingsPage.xbf">
       <PackagePath>Pages\SettingsPage.xbf</PackagePath>
-      <Modified>2019-04-08T17:59:50.793</Modified>
+      <Modified>2019-04-14T05:03:56.588</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.17763.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
       <Modified>2018-10-22T17:41:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
+    <AppxPackagedFile Include="E:\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2018-10-22T16:44:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lenovo\.nuget\packages\microsoft.ui.xaml\2.0.181018004\build\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
+    <AppxPackagedFile Include="C:\Users\asus\.nuget\packages\microsoft.ui.xaml\2.0.181018004\build\..\lib\uap10.0\Microsoft.UI.Xaml.winmd">
       <PackagePath>WinMetadata\Microsoft.UI.Xaml.winmd</PackagePath>
       <Modified>2018-12-18T14:06:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-04-08T11:34:04.894</Modified>
+      <Modified>2019-04-13T09:33:52.763</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="E:\source\repos\Manager\Manager\bin\x86\Debug\Core\Manager.exe">
+    <AppxPackagedFile Include="C:\Users\asus\Desktop\Manager\Manager\bin\x86\Debug\Core\Manager.exe">
       <PackagePath>Manager.exe</PackagePath>
-      <Modified>2019-04-08T17:59:52.452</Modified>
+      <Modified>2019-04-14T05:03:59.043</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
-    <ResolvedSDKReference Include="C:\Users\Lenovo\.nuget\packages\microsoft.ui.xaml\2.0.181018004\build\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.0.appx">
+    <ResolvedSDKReference Include="C:\Users\asus\.nuget\packages\microsoft.ui.xaml\2.0.181018004\build\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.0.appx">
       <Name>Microsoft.UI.Xaml.2.0</Name>
       <Version>2.1810.18003.0</Version>
       <Architecture>x86</Architecture>
       <FrameworkIdentity>Name = Microsoft.UI.Xaml.2.0, MinVersion = 2.1810.18003.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
-      <AppxLocation>C:\Users\Lenovo\.nuget\packages\microsoft.ui.xaml\2.0.181018004\build\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.0.appx</AppxLocation>
+      <AppxLocation>C:\Users\asus\.nuget\packages\microsoft.ui.xaml\2.0.181018004\build\..\tools\AppX\x86\Release\Microsoft.UI.Xaml.2.0.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>

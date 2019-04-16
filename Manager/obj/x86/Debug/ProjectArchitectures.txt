@@ -1,1 +1,1 @@
-C:\Users\asus\Desktop\Manager\Manager\Manager\Manager.csproj;x86
+C:\Users\asus\Desktop\Manager\Manager\Manager.csproj;x86
