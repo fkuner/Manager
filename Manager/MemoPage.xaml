@@ -39,10 +39,9 @@
                     Style="{ThemeResource ListBodyTextBlockStyle}" />
 
                 <TextBlock
-                    Text="time"
+                    Text="{x:Bind DateCreated}"
                     Grid.Column="1"
                     Margin="12,1,0,0"
-                    
                     Style="{ThemeResource ListCaptionAltTextblockStyle}" />
             </Grid>
         </DataTemplate>
@@ -133,10 +132,8 @@
                     VerticalAlignment="Stretch"
                     Margin="0,0,0,0">
             <AppBarButton Icon="Add" Label="Add" Click="Add_OnClick" />
-            <AppBarButton Icon="Clock" Label="Clock" />
             <AppBarButton Icon="Save" Label="Save" Click="Save_OnClick"/>
             <AppBarButton Icon="ReShare" Label="Share" />
-            <AppBarButton Icon="Edit" Label="Edit" />
             <AppBarButton Icon="Mail" Label="Mail" />
             <AppBarButton Icon="Delete" Label="Delete" Click="Delete_OnClick"/>
         </CommandBar>

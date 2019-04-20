@@ -112,10 +112,22 @@ namespace Manager
             if (MasterListView.SelectedItem != null)
             {
                 var viewModel = (MemoPageViewModel)this.DataContext;
-                var Item = MasterListView.SelectedItem as MemoItem;
+                var item1 = MasterListView.SelectedItem;
+                var Item = MasterListView.SelectedItem as MemoItem ?? _lastSelectedItem;
                 viewModel.ChangeMemoItem = Item;
                 viewModel.ChangeCommand.Execute(Item.Id);
                 viewModel.RefreshCommand.Execute(null);
+                int index = 0;
+                foreach (MemoItem memoItem in viewModel.MemoItems)
+                {
+                    if (memoItem.Id == Item.Id)
+                    {
+                        MasterListView.SelectedItem = memoItem;
+                        _lastSelectedItem = memoItem;
+                        viewModel.OpenToMemoDetailPageCommand.Execute(_lastSelectedItem);
+                        break;
+                    }
+                }
             } 
         }
 

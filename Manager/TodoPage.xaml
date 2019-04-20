@@ -15,7 +15,7 @@
                       x:DataType="Models:TodoItem">
 
             <Border BorderThickness="0,0.5,0,0.5"  BorderBrush="Gray"  HorizontalAlignment="Stretch"
-                        Margin="0" Background="#FFFFFFFF">
+                        Margin="0" Background="{ThemeResource AppBarItemBackgroundThemeBrush}">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition  Height="AUTO"></RowDefinition>
@@ -105,11 +105,8 @@
                     HorizontalAlignment="Stretch"
                     Margin="0,0,0,0">
             <AppBarButton Icon="Add" Label="Add" Click="Add_Click" />
-            <!-- <AppBarButton Icon="Save"  -->
-            <!--                Label="Save"  -->
-            <!--                Click="Save_Click" /> -->
             <AppBarElementContainer>
-                <Button Content="Save" Background="White" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch"
+                <Button Content="Save" Background="{StaticResource AppBarItemBackgroundThemeBrush}" BorderThickness="1,1,1,1" HorizontalAlignment="Stretch"
                         Click="Save_Click" VerticalAlignment="Stretch" Height="40" FontSize="12" Width="71.2"/>
             </AppBarElementContainer>
             <AppBarButton Icon="Clock" Label="Clock" >
@@ -129,7 +126,6 @@
             <AppBarButton Icon="Mail" Label="Mail" Click="MainButton_Click" />
             <AppBarButton Icon="Delete" Label="Delete" Click="Delete_click" />
             
-           
 </CommandBar>
 
 
