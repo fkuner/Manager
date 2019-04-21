@@ -473,3 +473,8 @@ E:\source\repos\Manager\Manager\obj\x64\Debug\Helper\BlankPage1.g.cs
 E:\source\repos\Manager\Manager\obj\x64\Debug\Helper\BlankPage1.xaml
 E:\source\repos\Manager\Manager\obj\x64\Debug\Helper\BlankPage1.xbf
 E:\source\repos\Manager\Manager\bin\x64\Debug\Helper\BlankPage1.xbf
+F:\Manager\Manager\obj\x64\Debug\Helper\BlankPage1.g.i.cs
+F:\Manager\Manager\obj\x64\Debug\Helper\BlankPage1.g.cs
+F:\Manager\Manager\obj\x64\Debug\Helper\BlankPage1.xaml
+F:\Manager\Manager\obj\x64\Debug\Helper\BlankPage1.xbf
+F:\Manager\Manager\bin\x64\Debug\Helper\BlankPage1.xbf

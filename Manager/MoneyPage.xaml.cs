@@ -62,7 +62,14 @@ namespace Manager
                 item.Id = Item.Id;
                 item.ConsumeTime = ShowDate.Date.DateTime;
                 item.Event = ShowEvent.Text;
-                item.Amount = float.Parse(ShowMoney.Text);
+                if(ShowMoney.Text != null &&
+                (Regex.IsMatch(ShowMoney.Text, "^([0-9]{1,}[.][0-9]*)$") || Regex.IsMatch(ShowMoney.Text, "^([0-9]{1,})$"))){
+                    item.Amount = float.Parse(ShowMoney.Text);
+                }
+                else
+                {
+                    item.Amount = Item.Amount;
+                }
                 item.CoverImage = Item.CoverImage;
                 viewModel.ChangeMoneyItem = item;
                 viewModel.ChangeCommand.Execute(null);
