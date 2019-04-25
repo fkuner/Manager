@@ -1,6 +1,11 @@
 # Manager
 ## 简介
 基于.Net和UWP平台的个人管理应用
+## 环境配置
+1. OS:Windows10（版本：1809）
+2. VS2017
+3. .Net Core2.1
+4. DataBase：Sqlite
 ## 功能
 #### 备忘录
 添加、修改、删除备忘录
@@ -22,8 +27,4 @@
 背景配置
 
 关于我们
-## 环境配置
-1. OS:Windows10（版本：1809）
-2. VS2017
-3. .Net Core2.1
-4. DataBase：Sqlite
+
